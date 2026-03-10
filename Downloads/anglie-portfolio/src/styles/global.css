@@ -1,0 +1,49 @@
+:root {
+  --black: #080808;
+  --white: #f0ede8;
+  --orange: #ff4400;
+  --blue: #1a1aff;
+  --gray: #111111;
+  --mid: #1a1a1a;
+  --border: #222222;
+  --muted: #666666;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+a { cursor: none; }
+button { cursor: none; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+::selection {
+  background: var(--orange);
+  color: var(--black);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--border); }
+::-webkit-scrollbar-thumb:hover { background: var(--orange); }

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de instalación — Anglie Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root { --black:#080808; --white:#f0ede8; --orange:#ff4400; --blue:#1a1aff; --gray:#111; --mid:#1a1a1a; --border:#222; --green:#00e676; --mono:'DM Mono',monospace; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;min-height:100vh}
+header{padding:2rem 3rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.h-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:var(--orange)}
+.h-sub{font-size:0.72rem;color:#444;font-family:var(--mono);margin-top:0.2rem}
+.badge{display:flex;align-items:center;gap:0.5rem;font-size:0.68rem;color:var(--green);font-family:var(--mono)}
+.dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
+.container{max-width:860px;margin:0 auto;padding:3rem 2rem}
+.intro{text-align:center;margin-bottom:4rem}
+.intro h1{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1;margin-bottom:1rem}
+.intro h1 span{color:var(--orange)}
+.intro p{font-size:0.92rem;color:#666;line-height:1.7;max-width:500px;margin:0 auto}
+
+/* PROGRESS */
+.progress-bar{display:flex;gap:0;margin-bottom:3rem;overflow-x:auto;padding-bottom:0.5rem}
+.prog-step{flex:1;min-width:80px;padding:0.75rem 0.5rem;text-align:center;font-family:var(--mono);font-size:0.6rem;color:#444;text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid #1e1e1e;cursor:pointer;transition:all 0.2s;white-space:nowrap}
+.prog-step:hover{color:#888}
+.prog-step.active{color:var(--orange);border-bottom-color:var(--orange)}
+.prog-step.done{color:var(--green);border-bottom-color:var(--green)}
+
+/* STEPS */
+.step{display:none}
+.step.active{display:block}
+
+.step-header{margin-bottom:2rem}
+.step-num{font-family:var(--mono);font-size:0.65rem;color:var(--orange);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.5rem}
+.step-title{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;margin-bottom:0.5rem}
+.step-desc{font-size:0.9rem;color:#666;line-height:1.7}
+
+/* CONTENT BLOCKS */
+.block{background:var(--mid);border:1px solid var(--border);padding:1.5rem;margin-bottom:1rem}
+.block-title{font-size:0.7rem;color:#555;text-transform:uppercase;letter-spacing:0.12em;font-family:var(--mono);margin-bottom:1rem}
+.block p{font-size:0.88rem;color:#888;line-height:1.7;margin-bottom:0.75rem}
+.block p:last-child{margin-bottom:0}
+.block strong{color:var(--white);font-weight:500}
+.block a{color:var(--orange);text-decoration:none}
+.block a:hover{text-decoration:underline}
+
+/* CODE BLOCKS */
+.code-wrap{position:relative;background:#060606;border:1px solid #1e1e1e;padding:1.2rem 1.5rem;margin:0.75rem 0;overflow-x:auto}
+.code-wrap code{font-family:var(--mono);font-size:0.82rem;color:#ccc;white-space:pre;display:block;line-height:1.7}
+.code-wrap code .cmd{color:var(--orange)}
+.code-wrap code .comment{color:#444}
+.code-wrap code .str{color:var(--green)}
+.copy-btn{position:absolute;top:0.75rem;right:0.75rem;background:#1a1a1a;border:1px solid #2a2a2a;color:#555;font-family:var(--mono);font-size:0.6rem;padding:0.3rem 0.65rem;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer;transition:all 0.2s}
+.copy-btn:hover{border-color:var(--orange);color:var(--orange)}
+
+/* CHECKLIST */
+.checklist{list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin:1rem 0}
+.check-item{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.85rem;color:#888;line-height:1.5}
+.check-box{width:18px;height:18px;border:1px solid #333;flex-shrink:0;margin-top:0.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+.check-box:hover{border-color:var(--orange)}
+.check-box.checked{background:var(--orange);border-color:var(--orange);color:var(--black);font-size:0.7rem}
+.check-item.checked-item span{color:#555;text-decoration:line-through;text-decoration-color:#333}
+
+/* TIP BOX */
+.tip{padding:1rem 1.2rem;background:rgba(255,68,0,0.04);border:1px solid rgba(255,68,0,0.15);border-left:2px solid var(--orange);font-size:0.82rem;color:#888;line-height:1.7;margin:1rem 0}
+.tip strong{color:var(--orange)}
+.tip-green{border-color:rgba(0,230,118,0.3);border-left-color:var(--green);background:rgba(0,230,118,0.03)}
+.tip-green strong{color:var(--green)}
+
+/* NAV BUTTONS */
+.nav-btns{display:flex;justify-content:space-between;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+.btn-prev,.btn-next{font-family:'Syne',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.85rem 2rem;border:none;cursor:pointer;transition:all 0.2s}
+.btn-prev{background:transparent;color:#444;border:1px solid #222}
+.btn-prev:hover{border-color:#555;color:#888}
+.btn-next{background:var(--orange);color:var(--black)}
+.btn-next:hover{background:var(--white);transform:translateY(-2px)}
+.btn-next:disabled{opacity:0.3;pointer-events:none}
+
+/* URL PREVIEW */
+.url-preview{background:#060606;border:1px solid var(--border);padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem;margin:1rem 0}
+.url-dots{display:flex;gap:5px}
+.url-dot{width:10px;height:10px;border-radius:50%}
+.url-bar{flex:1;background:#111;border:1px solid #1e1e1e;padding:0.4rem 0.8rem;font-family:var(--mono);font-size:0.78rem;color:var(--green)}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="h-title">Guía de instalación — Portafolio Anglie</div>
+    <div class="h-sub">// React + Vite + GitHub Pages · Gratis · Paso a paso</div>
+  </div>
+  <div class="badge"><div class="dot"></div> 6 pasos · ~45 minutos</div>
+</header>
+
+<div class="container">
+  <div class="intro">
+    <h1>De cero a<br><span>publicada</span> en internet</h1>
+    <p>Sigue estos pasos en orden. Al final tendrás tu portafolio en <strong style="color:var(--green)">anglieparedes.github.io</strong> — gratis, sin pagar hosting.</p>
+  </div>
+
+  <div class="progress-bar">
+    <div class="prog-step active" onclick="goStep(0)">01 · Node.js</div>
+    <div class="prog-step" onclick="goStep(1)">02 · GitHub</div>
+    <div class="prog-step" onclick="goStep(2)">03 · El proyecto</div>
+    <div class="prog-step" onclick="goStep(3)">04 · Subir código</div>
+    <div class="prog-step" onclick="goStep(4)">05 · GitHub Pages</div>
+    <div class="prog-step" onclick="goStep(5)">06 · ¡Listo! 🎉</div>
+  </div>
+
+  <!-- STEP 1 -->
+  <div class="step active" id="step-0">
+    <div class="step-header">
+      <div class="step-num">Paso 01 de 06</div>
+      <div class="step-title">Instalar Node.js</div>
+      <div class="step-desc">Node.js es el motor que necesitas para ejecutar React y Vite en tu computador. Es gratuito y oficial.</div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Descargar e instalar</div>
+      <p>Ve a <a href="https://nodejs.org" target="_blank">nodejs.org</a> y descarga la versión <strong>LTS</strong> (la recomendada). Es la que dice "Recommended For Most Users".</p>
+      <p>Instala normalmente haciendo clic en "Next" en todo. No necesitas cambiar ninguna opción.</p>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Verificar la instalación</div>
+      <p>Abre la <strong>Terminal</strong> (en Mac: busca "Terminal" en Spotlight. En Windows: busca "cmd" o "PowerShell") y escribe:</p>
+      <div class="code-wrap">
+        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        <code><span class="cmd">node --version</span>
+<span class="comment"># Debería mostrar algo como: v20.15.0</span>
+
+<span class="cmd">npm --version</span>
+<span class="comment"># Debería mostrar algo como: 10.7.0</span></code>
+      </div>
+      <p>Si ves números de versión, ¡perfecto! Node.js está instalado correctamente.</p>
+    </div>
+
+    <div class="tip tip-green">
+      <strong>Tip:</strong> Si ya tienes Node instalado con una versión anterior a v18, actualízalo descargando la versión LTS nuevamente desde nodejs.org.
+    </div>
+
+    <ul class="checklist">
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Descargué Node.js LTS desde nodejs.org</span></li>
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Instalé Node.js haciendo clic en Next en todo</span></li>
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Verifiqué con <code style="font-family:var(--mono);color:var(--orange);font-size:0.8rem">node --version</code> y me mostró un número</span></li>
+    </ul>
+
+    <div class="nav-btns">
+      <button class="btn-prev" disabled>← Anterior</button>
+      <button class="btn-next" onclick="goStep(1)">Siguiente →</button>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step" id="step-1">
+    <div class="step-header">
+      <div class="step-num">Paso 02 de 06</div>
+      <div class="step-title">Crear cuenta en GitHub</div>
+      <div class="step-desc">GitHub es donde vas a guardar tu código y publicar tu web gratis. Es como el Google Drive del código.</div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Crear la cuenta</div>
+      <p>Ve a <a href="https://github.com" target="_blank">github.com</a> y créate una cuenta con tu email. El <strong>nombre de usuario importa</strong> — será parte de tu URL.</p>
+      <div class="tip"><strong>Importante:</strong> Elige un username profesional. Lo ideal es <strong>anglieparedes</strong> o <strong>anglie-paredes</strong>. Tu portafolio quedará en: <code style="color:var(--green);font-family:var(--mono)">anglieparedes.github.io</code></div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Crear el repositorio</div>
+      <p>Una vez con tu cuenta, crea un nuevo repositorio (repo = carpeta de proyecto en GitHub):</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-top:0.5rem">
+        <li style="font-size:0.85rem;color:#888;display:flex;gap:0.6rem;"><span style="color:var(--orange);font-family:var(--mono)">1.</span> Haz clic en el botón verde "<strong>New</strong>" o el ícono "+"</li>
+        <li style="font-size:0.85rem;color:#888;display:flex;gap:0.6rem;"><span style="color:var(--orange);font-family:var(--mono)">2.</span> En "Repository name" escribe exactamente: <code style="font-family:var(--mono);color:var(--green);font-size:0.8rem">anglieparedes.github.io</code></li>
+        <li style="font-size:0.85rem;color:#888;display:flex;gap:0.6rem;"><span style="color:var(--orange);font-family:var(--mono)">3.</span> Márcalo como <strong>Public</strong></li>
+        <li style="font-size:0.85rem;color:#888;display:flex;gap:0.6rem;"><span style="color:var(--orange);font-family:var(--mono)">4.</span> Haz clic en "Create repository"</li>
+      </ul>
+      <div class="tip tip-green" style="margin-top:1rem"><strong>El nombre del repo es clave:</strong> Si tu usuario es <code style="font-family:var(--mono)">anglieparedes</code>, el repo debe llamarse <code style="font-family:var(--mono)">anglieparedes.github.io</code> para que funcione como dominio principal gratuito.</div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Instalar Git en tu computador</div>
+      <p>Git es la herramienta para enviar tu código a GitHub. Descárgala en <a href="https://git-scm.com" target="_blank">git-scm.com</a> e instálala con todas las opciones por defecto.</p>
+      <div class="code-wrap">
+        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        <code><span class="comment"># Verifica que Git está instalado:</span>
+<span class="cmd">git --version</span>
+<span class="comment"># Resultado: git version 2.x.x</span></code>
+      </div>
+    </div>
+
+    <ul class="checklist">
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Creé cuenta en GitHub con username profesional</span></li>
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Creé el repo llamado <code style="font-family:var(--mono);color:var(--orange);font-size:0.8rem">anglieparedes.github.io</code></span></li>
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Instalé Git y verifiqué con <code style="font-family:var(--mono);color:var(--orange);font-size:0.8rem">git --version</code></span></li>
+    </ul>
+
+    <div class="nav-btns">
+      <button class="btn-prev" onclick="goStep(0)">← Anterior</button>
+      <button class="btn-next" onclick="goStep(2)">Siguiente →</button>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step" id="step-2">
+    <div class="step-header">
+      <div class="step-num">Paso 03 de 06</div>
+      <div class="step-title">Instalar y probar el proyecto</div>
+      <div class="step-desc">Descarga la carpeta del proyecto que te entregué, instala las dependencias y míralo en tu computador antes de publicarlo.</div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Descomprimir el proyecto</div>
+      <p>Descarga el archivo <strong>anglie-portfolio.zip</strong> que te entregué y descomprímelo en una carpeta fácil de encontrar, por ejemplo en tu Escritorio o en Documentos.</p>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Abrir la terminal en la carpeta del proyecto</div>
+      <p><strong>Mac:</strong> Arrastra la carpeta al ícono de Terminal, o abre Terminal y escribe <code style="font-family:var(--mono);color:var(--orange)">cd </code> (con espacio) y arrastra la carpeta.</p>
+      <p><strong>Windows:</strong> Abre la carpeta en el Explorador de Archivos, haz clic derecho en un espacio vacío y elige "Abrir en Terminal".</p>
+      <div class="code-wrap">
+        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        <code><span class="comment"># Verificar que estás en la carpeta correcta:</span>
+<span class="cmd">ls</span>
+<span class="comment"># Deberías ver: package.json  src/  index.html  vite.config.js</span></code>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Instalar dependencias y ejecutar</div>
+      <div class="code-wrap">
+        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        <code><span class="comment"># 1. Instalar React, Vite y Framer Motion (solo la primera vez)</span>
+<span class="cmd">npm install</span>
+
+<span class="comment"># 2. Ver el portafolio en tu navegador</span>
+<span class="cmd">npm run dev</span></code>
+      </div>
+      <p>Después de <code style="font-family:var(--mono);color:var(--orange)">npm run dev</code> verás algo como:</p>
+      <div class="code-wrap">
+        <code><span class="str">  VITE v5.x.x  ready in 320 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.x.x:5173/</span></code>
+      </div>
+      <p>Abre <a href="http://localhost:5173" target="_blank">http://localhost:5173</a> en tu navegador y verás tu portafolio. 🎉</p>
+    </div>
+
+    <div class="tip"><strong>Para detener el servidor:</strong> En la terminal presiona <code style="font-family:var(--mono)">Ctrl + C</code></div>
+
+    <ul class="checklist">
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Descomprimí el proyecto en mi computador</span></li>
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Ejecuté <code style="font-family:var(--mono);color:var(--orange);font-size:0.8rem">npm install</code> sin errores</span></li>
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Vi el portafolio en <code style="font-family:var(--mono);color:var(--green);font-size:0.8rem">localhost:5173</code></span></li>
+    </ul>
+
+    <div class="nav-btns">
+      <button class="btn-prev" onclick="goStep(1)">← Anterior</button>
+      <button class="btn-next" onclick="goStep(3)">Siguiente →</button>
+    </div>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step" id="step-3">
+    <div class="step-header">
+      <div class="step-num">Paso 04 de 06</div>
+      <div class="step-title">Subir el código a GitHub</div>
+      <div class="step-desc">Ahora conectamos tu carpeta local con el repo de GitHub y subimos el código. Solo necesitas hacer esto una vez.</div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Configurar Git (solo la primera vez)</div>
+      <div class="code-wrap">
+        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        <code><span class="comment"># Reemplaza con tu nombre y email de GitHub</span>
+<span class="cmd">git config --global user.name "Anglie Paredes"</span>
+<span class="cmd">git config --global user.email "aeparedest@gmail.com"</span></code>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Subir el proyecto</div>
+      <div class="code-wrap">
+        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        <code><span class="comment"># 1. Inicializar Git en la carpeta</span>
+<span class="cmd">git init</span>
+
+<span class="comment"># 2. Agregar todos los archivos</span>
+<span class="cmd">git add .</span>
+
+<span class="comment"># 3. Primer commit (guardar los cambios)</span>
+<span class="cmd">git commit -m "✨ portafolio inicial"</span>
+
+<span class="comment"># 4. Conectar con tu repo de GitHub</span>
+<span class="comment"># (reemplaza 'anglieparedes' con tu usuario)</span>
+<span class="cmd">git remote add origin https://github.com/anglieparedes/anglieparedes.github.io.git</span>
+
+<span class="comment"># 5. Subir el código</span>
+<span class="cmd">git push -u origin main</span></code>
+      </div>
+      <p>GitHub te pedirá tu <strong>usuario y contraseña</strong> (o un token personal si tienes 2FA activado).</p>
+    </div>
+
+    <div class="tip"><strong>Para el futuro:</strong> Cada vez que cambies algo en el código, solo necesitas ejecutar:<br><code style="font-family:var(--mono);color:var(--orange)">git add . && git commit -m "descripción del cambio" && git push</code></div>
+
+    <ul class="checklist">
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Configuré mi nombre y email en Git</span></li>
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Hice el primer commit y push</span></li>
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Puedo ver los archivos en github.com/anglieparedes/anglieparedes.github.io</span></li>
+    </ul>
+
+    <div class="nav-btns">
+      <button class="btn-prev" onclick="goStep(2)">← Anterior</button>
+      <button class="btn-next" onclick="goStep(4)">Siguiente →</button>
+    </div>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step" id="step-4">
+    <div class="step-header">
+      <div class="step-num">Paso 05 de 06</div>
+      <div class="step-title">Activar GitHub Pages</div>
+      <div class="step-desc">Ahora activamos el deploy automático. Cada vez que subas código, tu web se actualiza sola gracias al workflow que ya viene incluido en el proyecto.</div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Activar GitHub Actions Pages</div>
+      <p>En tu repo de GitHub, ve a:</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin:0.75rem 0">
+        <li style="font-size:0.85rem;color:#888;display:flex;gap:0.6rem;"><span style="color:var(--orange);font-family:var(--mono)">1.</span> Haz clic en <strong>Settings</strong> (pestaña arriba a la derecha)</li>
+        <li style="font-size:0.85rem;color:#888;display:flex;gap:0.6rem;"><span style="color:var(--orange);font-family:var(--mono)">2.</span> En el menú izquierdo, busca <strong>Pages</strong></li>
+        <li style="font-size:0.85rem;color:#888;display:flex;gap:0.6rem;"><span style="color:var(--orange);font-family:var(--mono)">3.</span> En "Source" selecciona <strong>GitHub Actions</strong></li>
+        <li style="font-size:0.85rem;color:#888;display:flex;gap:0.6rem;"><span style="color:var(--orange);font-family:var(--mono)">4.</span> Guarda los cambios</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Ver el deploy en acción</div>
+      <p>Ve a la pestaña <strong>Actions</strong> de tu repo. Verás un workflow corriendo (círculo amarillo). Cuando termine y se ponga verde ✅, tu web está publicada.</p>
+      <p>El primer deploy tarda ~2-3 minutos. Los siguientes son más rápidos.</p>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Tu URL gratuita</div>
+      <div class="url-preview">
+        <div class="url-dots">
+          <div class="url-dot" style="background:#ff5f57"></div>
+          <div class="url-dot" style="background:#febc2e"></div>
+          <div class="url-dot" style="background:#28c840"></div>
+        </div>
+        <div class="url-bar">🔒 anglieparedes.github.io</div>
+      </div>
+      <p>¡Esta es tu web! Compártela en LinkedIn, en tu CV, en tu firma de email. Es profesional, tiene HTTPS y es 100% gratis.</p>
+    </div>
+
+    <div class="tip tip-green"><strong>Deploy automático:</strong> El archivo <code style="font-family:var(--mono)">.github/workflows/deploy.yml</code> que viene en el proyecto hace que cada vez que hagas <code style="font-family:var(--mono)">git push</code>, GitHub automáticamente construya y publique tu web. ¡Sin hacer nada más!</div>
+
+    <ul class="checklist">
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Activé GitHub Pages con "GitHub Actions" como source</span></li>
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Vi el workflow correr en la pestaña Actions</span></li>
+      <li class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Entré a anglieparedes.github.io y vi mi portafolio 🎉</span></li>
+    </ul>
+
+    <div class="nav-btns">
+      <button class="btn-prev" onclick="goStep(3)">← Anterior</button>
+      <button class="btn-next" onclick="goStep(5)">Siguiente →</button>
+    </div>
+  </div>
+
+  <!-- STEP 6 -->
+  <div class="step" id="step-5">
+    <div class="step-header">
+      <div class="step-num">Paso 06 de 06</div>
+      <div class="step-title">¡Publicada! Próximos pasos 🎉</div>
+      <div class="step-desc">Tu portafolio está live en internet. Ahora te cuento cómo personalizarlo y qué sigue.</div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Cómo actualizar contenido</div>
+      <p>Todo el contenido editable está en los archivos <code style="font-family:var(--mono);color:var(--orange)">.jsx</code> dentro de <code style="font-family:var(--mono);color:var(--orange)">src/components/</code>. Cada sección tiene su propio archivo:</p>
+      <div class="code-wrap">
+        <code><span class="comment"># Proyectos → edita Projects.jsx (el array 'projects')</span>
+<span class="comment"># Experiencia → edita Experience.jsx (el array 'jobs')</span>
+<span class="comment"># Educación → edita Education.jsx (el array 'items')</span>
+<span class="comment"># Planes RRSS → edita Services.jsx (el array 'plans')</span>
+<span class="comment"># Contacto → edita Contact.jsx (el array 'contactItems')</span></code>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Para conectar el formulario de verdad (EmailJS)</div>
+      <div class="code-wrap">
+        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        <code><span class="comment"># 1. Instalar EmailJS</span>
+<span class="cmd">npm install @emailjs/browser</span>
+
+<span class="comment"># 2. Crea cuenta gratuita en emailjs.com</span>
+<span class="comment"># 3. En Contact.jsx descomenta las líneas de emailjs</span>
+<span class="comment"># 4. Reemplaza SERVICE_ID, TEMPLATE_ID y PUBLIC_KEY</span></code>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Para agregar dominio .cl propio (futuro)</div>
+      <div class="code-wrap">
+        <code><span class="comment"># 1. Compra anglieparedes.cl en nic.cl (~$10.000/año)</span>
+<span class="comment"># 2. Crea cuenta gratuita en cloudflare.com</span>
+<span class="comment"># 3. En Cloudflare: agrega tu dominio y apunta DNS a GitHub</span>
+<span class="comment"># 4. En GitHub Pages settings: agrega custom domain</span>
+<span class="comment"># 5. En vite.config.js: cambia base a '/'  ← ya está listo</span></code>
+      </div>
+    </div>
+
+    <div class="tip tip-green">
+      <strong>Flujo de trabajo para siempre:</strong><br>
+      Editas código → <code style="font-family:var(--mono)">git add . && git commit -m "cambio" && git push</code> → GitHub Pages actualiza tu web automáticamente en ~2 minutos.
+    </div>
+
+    <div style="margin-top:2rem;padding:2rem;background:var(--mid);border:1px solid var(--border);text-align:center">
+      <div style="font-size:2rem;margin-bottom:1rem">🚀</div>
+      <div style="font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:800;margin-bottom:0.5rem">¡Felicitaciones, Anglie!</div>
+      <div style="font-size:0.88rem;color:#666;line-height:1.7;max-width:400px;margin:0 auto">Tienes un portafolio profesional con React, Vite y Framer Motion. Agrega el link a tu LinkedIn hoy mismo.</div>
+      <div style="margin-top:1.5rem;display:inline-block;background:var(--orange);color:var(--black);padding:0.75rem 2rem;font-family:'Syne',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase">anglieparedes.github.io ✓</div>
+    </div>
+
+    <div class="nav-btns">
+      <button class="btn-prev" onclick="goStep(4)">← Anterior</button>
+      <button class="btn-next" disabled>¡Listo! 🎉</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let current = 0
+
+function goStep(n) {
+  document.querySelectorAll('.step').forEach((s,i) => s.classList.toggle('active', i === n))
+  document.querySelectorAll('.prog-step').forEach((p,i) => {
+    p.classList.toggle('active', i === n)
+    p.classList.toggle('done', i < n)
+  })
+  current = n
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+function toggleCheck(box) {
+  box.classList.toggle('checked')
+  box.textContent = box.classList.contains('checked') ? '✓' : ''
+  const item = box.closest('.check-item')
+  item.classList.toggle('checked-item', box.classList.contains('checked'))
+}
+
+function copyCode(btn) {
+  const code = btn.nextElementSibling.textContent
+  navigator.clipboard.writeText(code).then(() => {
+    btn.textContent = '✓ Copiado'
+    setTimeout(() => btn.textContent = 'Copiar', 2000)
+  })
+}
+</script>
+</body>
+</html>
