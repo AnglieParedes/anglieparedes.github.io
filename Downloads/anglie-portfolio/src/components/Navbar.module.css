@@ -18,7 +18,7 @@
 }
 .links a {
   font-size: 0.78rem; letter-spacing: 0.12em;
-  text-transform: uppercase; color: #777;
+  text-transform: uppercase; color: #aaa;
   text-decoration: none; transition: color 0.2s;
   font-family: var(--font-display); font-weight: 600;
 }

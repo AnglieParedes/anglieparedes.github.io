@@ -16,15 +16,15 @@
 }
 .row:hover::before { width: 2px; }
 
-.date { font-size: 0.72rem; color: #333; font-family: var(--font-mono); padding-top: 0.2rem; line-height: 1.6; }
+.date { font-size: 0.72rem; color: #888; font-family: var(--font-mono); padding-top: 0.2rem; line-height: 1.6; }
 .company { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; }
 .role { font-size: 0.8rem; color: var(--orange); margin-bottom: 0.5rem; }
-.desc { font-size: 0.8rem; color: #555; line-height: 1.7; }
+.desc { font-size: 0.8rem; color: #aaa; line-height: 1.7; }
 
 .badge {
   font-size: 0.62rem; font-family: var(--font-mono);
   padding: 0.3rem 0.75rem; text-transform: uppercase;
-  border: 1px solid #222; color: #444;
+  border: 1px solid #222; color: #888;
   align-self: flex-start; white-space: nowrap; letter-spacing: 0.05em;
 }
 .live { border-color: var(--orange); color: var(--orange); }

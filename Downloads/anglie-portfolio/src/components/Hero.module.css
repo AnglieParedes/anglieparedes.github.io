@@ -41,7 +41,7 @@ h1 {
 .accent { color: var(--orange); }
 
 .sub {
-  font-size: 1rem; color: #888;
+  font-size: 1rem; color: #bbb;
   font-weight: 300; line-height: 1.75;
   max-width: 380px; margin-bottom: 3rem;
 }
@@ -60,7 +60,7 @@ h1 {
 .btnPrimary:hover { background: var(--white); transform: translateY(-2px); }
 
 .btnOutline {
-  border: 1px solid #2a2a2a; color: #777;
+  border: 1px solid #2a2a2a; color: #aaa;
   padding: 0.9rem 2.2rem;
   font-family: var(--font-display); font-weight: 600;
   font-size: 0.82rem; letter-spacing: 0.1em;
@@ -74,7 +74,7 @@ h1 {
   display: flex; align-items: center; gap: 0.75rem;
   margin-top: 4rem;
   font-size: 0.65rem; letter-spacing: 0.2em;
-  text-transform: uppercase; color: #333;
+  text-transform: uppercase; color: #888;
   font-family: var(--font-mono);
 }
 .scrollLine {
@@ -118,9 +118,9 @@ h1 {
 }
 .ft0 { top: 18%; left: 5%; background: var(--orange); color: var(--black); transform: rotate(-4deg); }
 .ft1 { top: 36%; right: 4%; background: var(--blue); color: #fff; transform: rotate(3deg); }
-.ft2 { bottom: 32%; left: 6%; background: #111; border: 1px solid #333; color: #999; transform: rotate(-2deg); }
+.ft2 { bottom: 32%; left: 6%; background: #111; border: 1px solid #333; color: #bbb; transform: rotate(-2deg); }
 .ft3 { bottom: 20%; right: 8%; border: 1px solid rgba(255,68,0,0.4); color: var(--orange); background: rgba(255,68,0,0.05); transform: rotate(2deg); }
-.ft4 { top: 55%; left: 3%; background: var(--black); border: 1px solid #222; color: #666; transform: rotate(-1deg); }
+.ft4 { top: 55%; left: 3%; background: var(--black); border: 1px solid #222; color: #aaa; transform: rotate(-1deg); }
 
 @media (max-width: 768px) {
   .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 6rem; }

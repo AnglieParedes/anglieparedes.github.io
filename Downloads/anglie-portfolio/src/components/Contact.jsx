@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import FadeUp from './FadeUp'
 import styles from './Contact.module.css'
 
@@ -20,14 +21,22 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setSending(true)
-    // EmailJS integration — reemplaza los IDs cuando configures tu cuenta
-    // import emailjs from '@emailjs/browser'
-    // await emailjs.send('SERVICE_ID', 'TEMPLATE_ID', form, 'PUBLIC_KEY')
-    await new Promise(r => setTimeout(r, 1200)) // simulación
-    setSending(false)
-    setSent(true)
-    setForm({ name: '', email: '', service: '', message: '' })
-    setTimeout(() => setSent(false), 4000)
+    try {
+      await emailjs.send(
+        'service_haeudti',
+        'template_mo6igye',
+        form,
+        'V1tGeCs7e_jyBeg3q'
+      )
+      setSent(true)
+      setForm({ name: '', email: '', service: '', message: '' })
+      setTimeout(() => setSent(false), 4000)
+    } catch (err) {
+      console.error(err)
+      alert('Error al enviar, intenta de nuevo.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
