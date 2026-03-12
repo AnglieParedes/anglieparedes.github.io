@@ -1,0 +1,58 @@
+.services { padding: 7rem 4rem; background: #0d0d0d; }
+.secLabel { font-size: 0.7rem; color: var(--orange); letter-spacing: 0.2em; text-transform: uppercase; font-family: var(--font-mono); display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+.secLabel::before { content: ''; width: 2rem; height: 1px; background: var(--orange); }
+.heading { font-family: var(--font-display); font-size: clamp(2.2rem,4.5vw,3.5rem); font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
+.divider { height: 1px; background: #1e1e1e; margin: 2rem 0 4rem; }
+
+.grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+
+.card {
+  background: var(--mid); padding: 2.5rem;
+  border: 1px solid var(--border);
+  position: relative; overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+  display: flex; flex-direction: column;
+}
+.card:hover { border-color: #333; transform: translateY(-4px); }
+.card.featured { background: var(--blue); border-color: var(--blue); }
+.card.featured:hover { border-color: var(--orange); }
+
+.badge {
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  background: var(--orange); color: var(--black);
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 0.25rem 0.65rem;
+  font-family: var(--font-mono);
+}
+
+.planName { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; margin-bottom: 0.75rem; }
+.price { font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--orange); line-height: 1; }
+.featured .price { color: var(--white); }
+.period { font-size: 0.75rem; color: #bbb; margin-top: 0.3rem; font-family: var(--font-mono); }
+.featured .period { color: rgba(255,255,255,0.75); }
+
+.cardDivider { height: 1px; background: #2a2a2a; margin: 1.5rem 0; }
+.featured .cardDivider { background: rgba(255,255,255,0.12); }
+
+.features { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; flex: 1; }
+.features li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.82rem; color: #aaa; line-height: 1.5; }
+.featured .features li { color: rgba(255,255,255,0.75); }
+.arrow { color: var(--orange); flex-shrink: 0; font-family: var(--font-mono); }
+
+.planCta {
+  display: block; margin-top: 2rem;
+  border: 1px solid #333; padding: 0.75rem;
+  text-align: center; font-family: var(--font-display);
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; color: #aaa;
+  transition: all 0.2s;
+}
+.planCta:hover { border-color: var(--orange); color: var(--orange); }
+.featured .planCta { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.7); }
+.featured .planCta:hover { border-color: var(--orange); color: var(--orange); background: rgba(255,68,0,0.1); }
+
+@media (max-width: 768px) {
+  .services { padding: 5rem 1.5rem; }
+  .grid { grid-template-columns: 1fr; }
+}

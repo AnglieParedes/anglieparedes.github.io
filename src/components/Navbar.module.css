@@ -1,0 +1,73 @@
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.2rem 3rem;
+  transition: background 0.3s, border-color 0.3s;
+  border-bottom: 1px solid transparent;
+}
+.nav.scrolled {
+  background: rgba(8,8,8,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom-color: #1a1a1a;
+}
+.logo img { height: 38px; width: auto; }
+
+.links {
+  display: flex; gap: 2.5rem; list-style: none;
+}
+.links a {
+  font-size: 0.78rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: #aaa;
+  text-decoration: none; transition: color 0.2s;
+  font-family: var(--font-display); font-weight: 600;
+}
+.links a:hover { color: var(--orange); }
+
+.cta {
+  background: var(--orange); color: var(--black);
+  padding: 0.6rem 1.6rem;
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.75rem; letter-spacing: 0.12em;
+  text-transform: uppercase; text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+.cta:hover { background: var(--white); transform: translateY(-1px); }
+
+.burger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; padding: 4px;
+}
+.burger span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--white); transition: all 0.3s;
+}
+.x1 { transform: rotate(45deg) translate(4px, 4px) !important; }
+.x2 { transform: rotate(-45deg) translate(4px, -4px) !important; }
+
+@media (max-width: 768px) {
+  .nav { padding: 1rem 1.5rem; }
+  .burger { display: flex; }
+  .cta { display: none; }
+  .links {
+    position: fixed; top: 64px; left: 0; right: 0;
+    background: rgba(8,8,8,0.97);
+    backdrop-filter: blur(20px);
+    flex-direction: column; gap: 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid #1a1a1a;
+    transform: translateY(-120%);
+    transition: transform 0.4s ease;
+    pointer-events: none;
+  }
+  .links.open {
+    transform: translateY(0);
+    pointer-events: all;
+  }
+  .links li { padding: 0; }
+  .links a {
+    display: block; padding: 1rem 2rem;
+    border-bottom: 1px solid #111;
+    font-size: 0.85rem;
+  }
+}

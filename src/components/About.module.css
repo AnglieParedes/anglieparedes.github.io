@@ -1,0 +1,49 @@
+.about { padding: 7rem 4rem; background: var(--black); }
+.secLabel {
+  font-size: 0.7rem; color: var(--orange);
+  letter-spacing: 0.2em; text-transform: uppercase;
+  font-family: var(--font-mono);
+  display: flex; align-items: center; gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.secLabel::before { content: ''; width: 2rem; height: 1px; background: var(--orange); }
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight: 800; line-height: 1;
+  letter-spacing: -0.02em;
+}
+.divider { height: 1px; background: #1e1e1e; margin: 2rem 0 4rem; }
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+
+.statsRow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-bottom: 2.5rem; }
+.stat { background: var(--mid); padding: 1.5rem; border: 1px solid #1e1e1e; text-align: center; }
+.statN { font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--orange); display: block; line-height: 1; }
+.statL { font-size: 0.65rem; color: #aaa; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-top: 0.3rem; }
+
+p { font-size: 0.95rem; color: #aaa; font-weight: 300; line-height: 1.85; margin-bottom: 1.2rem; }
+p strong { color: var(--white); font-weight: 500; }
+
+.quote {
+  margin-top: 2rem; padding: 1.2rem 1.5rem;
+  border-left: 2px solid var(--orange);
+  background: rgba(255,68,0,0.03);
+  font-style: italic; color: #999; font-size: 0.88rem; line-height: 1.7;
+}
+
+.skillGroup { margin-bottom: 2rem; }
+.skillCat { font-size: 0.65rem; color: #aaa; text-transform: uppercase; letter-spacing: 0.15em; font-family: var(--font-mono); margin-bottom: 0.75rem; }
+.skillTags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tag {
+  border: 1px solid #222; padding: 0.35rem 0.85rem;
+  font-size: 0.78rem; color: #aaa; letter-spacing: 0.03em;
+  transition: border-color 0.2s, color 0.2s;
+}
+.tag:hover { border-color: var(--orange); color: var(--white); }
+
+@media (max-width: 768px) {
+  .about { padding: 5rem 1.5rem; }
+  .grid { grid-template-columns: 1fr; gap: 3rem; }
+  .statsRow { grid-template-columns: repeat(2, 1fr); }
+}

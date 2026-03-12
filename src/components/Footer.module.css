@@ -1,0 +1,14 @@
+.footer {
+  background: #060606; padding: 2.5rem 4rem;
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid #181818; flex-wrap: wrap; gap: 1rem;
+}
+.logo img { height: 34px; opacity: 0.8; transition: opacity 0.2s; }
+.logo:hover img { opacity: 1; }
+.copy { font-size: 0.7rem; color: #888; font-family: var(--font-mono); }
+.links { display: flex; gap: 2rem; }
+.links a { font-size: 0.7rem; color: #888; text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; font-family: var(--font-mono); transition: color 0.2s; }
+.links a:hover { color: var(--orange); }
+@media (max-width: 768px) {
+  .footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
+}
