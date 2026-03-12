@@ -27,7 +27,6 @@ export default function Hero() {
         <motion.p className={styles.sub} {...fadeUp(0.5)}>
           Diseñadora Gráfica & UX/UI · Branding · Web · Social Media.
           Creo experiencias digitales claras, estratégicas y con estilo.
-          desde Santiago, Chile.
         </motion.p>
 
         <motion.div className={styles.actions} {...fadeUp(0.65)}>
