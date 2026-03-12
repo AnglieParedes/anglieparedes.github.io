@@ -60,7 +60,7 @@ h1 {
 .btnPrimary:hover { background: var(--white); transform: translateY(-2px); }
 
 .btnOutline {
-  border: 1px solid #666666; color: #666666;
+  border: 1px solid #666666; color: #aaaaaa;
   padding: 0.9rem 2.2rem;
   font-family: var(--font-display); font-weight: 600;
   font-size: 0.82rem; letter-spacing: 0.1em;
