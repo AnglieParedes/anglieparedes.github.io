@@ -31,7 +31,7 @@ export default function Experience() {
                       <div key={ri} className={styles.roleItem}>
                         <div className={styles.roleItemHeader}>
                           <span className={styles.role}>{r.role}</span>
-                          <span className={styles.roleDate}>{r.date}</span>
+                          
                           
                         </div>
                         <div className={styles.desc}>{r.desc}</div>
