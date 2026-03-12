@@ -32,7 +32,7 @@ export default function Experience() {
                         <div className={styles.roleItemHeader}>
                           <span className={styles.role}>{r.role}</span>
                           <span className={styles.roleDate}>{r.date}</span>
-                          <span className={`${styles.badge} ${r.current ? styles.live : ''}`}>{r.current ? 'Actual' : r.badge}</span>
+                          
                         </div>
                         <div className={styles.desc}>{r.desc}</div>
                       </div>
