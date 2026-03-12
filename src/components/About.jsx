@@ -44,7 +44,7 @@ export default function About() {
           </div>
           <p>Diseñadora gráfica y web con más de 5 años de experiencia. Me especializo en Branding, UX/UI y Desarrollo Web — creando soluciones digitales que comunican, conectan y convierten. Sin importar dónde estés.</p>
           <p>Poseo sólidas habilidades para la <strong>identificación y resolución de problemas</strong>, investigación de usuarios y creación de interfaces intuitivas que aumentan conversiones.</p>
-          <p>Actualmente trabajo como <strong>Diseñadora Web en GDS Growth Digital Strategy</strong>, desarrollando soluciones digitales para clientes en Chile y Latinoamérica.</p>
+          <p>Actualmente trabajo como <strong>Desarrolladora Web en Morestudio</strong>, desarrollando soluciones digitales para clientes en Chile y Latinoamérica.</p>
           <blockquote className={styles.quote}>
             "Hagamos un mundo más sencillo por medio del diseño. Simple, lógico y con estilo."
           </blockquote>
