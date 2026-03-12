@@ -31,7 +31,7 @@ export default function Hero() {
 
         <motion.div className={styles.actions} {...fadeUp(0.65)}>
           <a href="#projects" className={styles.btnPrimary}>Ver proyectos</a>
-          <a href="#services" className={styles.btnOutline}>Ver servicios</a>
+          <a href="https://wa.me/56967531358" target="_blank" rel="noopener noreferrer" className={styles.btnOutline}>Ver servicios</a>
         </motion.div>
 
         <motion.div className={styles.scrollHint} {...fadeUp(0.85)}>
