@@ -36,7 +36,7 @@ p strong { color: var(--white); font-weight: 500; }
 .skillCat { font-size: 0.65rem; color: #aaa; text-transform: uppercase; letter-spacing: 0.15em; font-family: var(--font-mono); margin-bottom: 0.75rem; }
 .skillTags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .tag {
-  border: 1px solid #e0e0e0; padding: 0.35rem 0.85rem; color: #e0e0e0;
+  border: 1px solid #aaaaaa; padding: 0.35rem 0.85rem; color: #aaaaaa;
   font-size: 0.78rem; color: #aaa; letter-spacing: 0.03em;
   transition: border-color 0.2s, color 0.2s;
 }
