@@ -39,7 +39,7 @@ export default function Experience() {
                     ))}
                   </div>
                 </div>
-                <span className={`${styles.badge} ${styles.live} ${styles.badgeHidden}`}>{j.badge}</span>
+                <span className={`${styles.badge} ${styles.badgeHidden}`}>{j.badge}</span>
               </div>
             ) : (
               <div className={styles.row}>
