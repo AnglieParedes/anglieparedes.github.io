@@ -42,7 +42,7 @@ export default function About() {
               </div>
             ))}
           </div>
-          <p>Soy una profesional <strong>creativa y versátil</strong> con más de 5 años de experiencia en diseño. Especializada en Branding, Identidad Corporativa, Diseño UX/UI, Marketing y Desarrollo Web.</p>
+          <p>Diseñadora gráfica y web con más de 5 años de experiencia. Me especializo en Branding, UX/UI y Desarrollo Web — creando soluciones digitales que comunican, conectan y convierten. Sin importar dónde estés.</p>
           <p>Poseo sólidas habilidades para la <strong>identificación y resolución de problemas</strong>, investigación de usuarios y creación de interfaces intuitivas que aumentan conversiones.</p>
           <p>Actualmente trabajo como <strong>Diseñadora Web en GDS Growth Digital Strategy</strong>, desarrollando soluciones digitales para clientes en Chile y Latinoamérica.</p>
           <blockquote className={styles.quote}>
