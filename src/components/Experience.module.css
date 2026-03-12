@@ -24,7 +24,7 @@
 .badge {
   font-size: 0.62rem; font-family: var(--font-mono);
   padding: 0.3rem 0.75rem; text-transform: uppercase;
-  border: 1px solid #222; color: #888;
+  border: 1px solid #666666; color: #666666;
   align-self: flex-start; white-space: nowrap; letter-spacing: 0.05em;
 }
 .live { border-color: var(--orange); color: var(--orange); }
