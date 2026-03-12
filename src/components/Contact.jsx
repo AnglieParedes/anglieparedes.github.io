@@ -5,7 +5,6 @@ import styles from './Contact.module.css'
 
 const contactItems = [
   { icon: '✉', label: 'Email', value: 'aeparedest@gmail.com', href: 'mailto:aeparedest@gmail.com' },
-  { icon: '✉', label: 'Email alternativo', value: 'atparedes@icloud.com', href: 'mailto:atparedes@icloud.com' },
   { icon: '📱', label: 'WhatsApp', value: '+569 6753 1358', href: 'https://wa.me/56967531358' },
   { icon: 'in', label: 'LinkedIn', value: 'anglieparedes', href: 'https://linkedin.com/in/anglieparedes' },
   { icon: '📍', label: 'Ubicación', value: 'Santiago, Chile', href: null },
