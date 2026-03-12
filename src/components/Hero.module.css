@@ -118,7 +118,7 @@ h1 {
 }
 .ft0 { top: 18%; left: 5%; background: var(--orange); color: var(--black); transform: rotate(-4deg); }
 .ft1 { top: 36%; right: 4%; background: var(--blue); color: #fff; transform: rotate(3deg); }
-.ft2 { bottom: 32%; left: 6%; background: #111; border: 1px solid #333; color: #bbb; transform: rotate(-2deg); }
+.ft2 { bottom: 32%; left: 6%; background: #111; border: 1px solid #73230e; color: #fe4300; transform: rotate(-2deg); }
 .ft3 { bottom: 20%; right: 8%; border: 1px solid #666666; color: #aaaaaa; background: transparent; transform: rotate(2deg); }
 .ft4 { top: 55%; left: 3%; background: #1a1aff; border: 1px solid #1a1aff; color: #fff; transform: rotate(-1deg); }
 
