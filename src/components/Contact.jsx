@@ -4,7 +4,7 @@ import FadeUp from './FadeUp'
 import styles from './Contact.module.css'
 
 const contactItems = [
-  { icon: '✉', label: 'Email', value: 'aeparedest@gmail.com', href: 'mailto:aeparedest@gmail.com' },
+  { icon: '✉', label: 'Email', value: 'anglie.design@gmail.com', href: 'mailto:anglie.design@gmail.com' },
   { icon: '📱', label: 'WhatsApp', value: 'Contactar aquí', href: 'https://wa.me/56967531358' },
   { icon: 'in', label: 'LinkedIn', value: 'anglieparedes', href: 'https://linkedin.com/in/anglieparedes' },
   { icon: '📍', label: 'Ubicación', value: 'Santiago, Chile', href: null },
