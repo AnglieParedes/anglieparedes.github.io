@@ -9,7 +9,7 @@ export default function Footer() {
       </a>
       <div className={styles.copy}>© 2026 Anglie Paredes · Diseñadora Gráfica, Desarrollo web & UX/UI · Santiago, Chile</div>
       <div className={styles.links}>
-        <a href="mailto:aeparedest@gmail.com">Email</a>
+        <a href="mailto:anglie.design@gmail.com">Email</a>
         <a href="https://linkedin.com/in/anglieparedes" target="_blank" rel="noreferrer">LinkedIn</a>
         <a href="https://wa.me/56967531358" target="_blank" rel="noreferrer">WhatsApp</a>
       </div>
