@@ -18,6 +18,10 @@ const skills = [
     tags: ['WordPress','Elementor Pro','Shopify','HTML','CSS','JavaScript','WooCommerce','Cursor','VS Code'],
   },
   {
+    cat: 'Flujo de Trabajo',
+    tags: ['GitHub','Git','Node.js'],
+  },
+  {
     cat: 'Marketing & Analytics',
     tags: ['Google Analytics','Google Ads','Mailchimp','Metricool','Jira'],
   },
