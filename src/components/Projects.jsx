@@ -79,10 +79,11 @@ const projects = [
   },
   {
     num: '10', name: 'Belladona', cat: 'E-commerce',
-    type: 'Plantas 3D · WooCommerce + Google Ads + Mailchimp',
-    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Google Ads', 'Email Marketing'],
+    type: 'Plantas · WordPress + WooCommerce · Rediseño completo',
+    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'Google Ads', 'Email Marketing', 'SEO', 'Integraciones'],
     bg: '#0d1a0f', url: 'https://belladonahome.com',
-    detail: 'Tienda online para empresa de impresión 3D de plantas decorativas con Elementor Pro, Google Ads y Mailchimp.',
+    detail: 'Migración de hosting, rediseño completo de la tienda y desarrollo de nuevas funcionalidades. Integración de pasarelas de pago, Mailchimp, Wordfence, Yoast SEO y Google Analytics. Todo desarrollado en WordPress con Elementor Pro.',
+    mockup: { desktop: '/mockups/belladona-desktop.png', mobile: '/mockups/belladona-mobile.png' },
   },
   {
     num: '11', name: 'Shop y Shop', cat: 'E-commerce',
