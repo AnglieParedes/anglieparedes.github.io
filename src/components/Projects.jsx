@@ -67,7 +67,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'UX/UI'],
     bg: '#1a1200', url: 'https://besplus.cl/membresia/',
     urlLabel: 'Ver página membresía →',
-    detail: 'Proyecto en equipo. Mi participación: diseño y desarrollo completo de la página interna de Membresía, popup, cambios generales de diseño y maquetación de blogs con copy asistido con IA.',
+    detail: 'Proyecto en equipo. Mi participación: diseño y desarrollo completo de la página interna de Membresía, popup, cambios generales de diseño y maquetación de blogs.',
     mockup: { desktop: '/mockups/besplus-desktop.png', mobile: '/mockups/besplus-mobile.png' },
   },
   {
