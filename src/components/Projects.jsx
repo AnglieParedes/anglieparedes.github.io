@@ -52,7 +52,7 @@ const projects = [
   {
     num: '07', name: 'Opticallery — Landings', cat: 'Landing',
     type: 'Landings internas · WordPress · Diseño + desarrollo',
-    tags: ['Landing page', 'WordPress', 'UX/UI', 'WooCommerce'],
+    tags: ['Landing page', 'WordPress', 'Elementor Pro', 'UX/UI', 'WooCommerce'],
     bg: '#0a0a1a', url: 'https://opticallery.cl/product-category/lentes-aviador/',
     detail: 'Diseño y desarrollo de landings internas para categorías de productos: lentes aviador y lentes deportivos. Enfoque en experiencia de usuario y conversión.',
   },
