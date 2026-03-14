@@ -38,10 +38,10 @@ const projects = [
   },
   {
     num: '05', name: 'Bynines', cat: 'Corporativo',
-    type: 'Sitio web · WordPress',
-    tags: ['WordPress', 'Hosting', 'Diseño web', 'Responsive'],
-    bg: '#18100d', url: 'https://bynines.cl',
-    detail: 'Desarrollo y diseño web completo en WordPress.',
+    type: 'Sitio web · WordPress · En desarrollo',
+    tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'Responsive', 'UX/UI'],
+    bg: '#18100d', url: null,
+    detail: 'Desarrollo completo a cargo propio: diseño, maquetación, pasarela de pago y configuración general en WordPress con Elementor Pro. El logo fue provisto por la cliente. Actualmente en desarrollo — próximamente en bynines.cl.',
   },
   {
     num: '06', name: 'West5', cat: 'Corporativo',
