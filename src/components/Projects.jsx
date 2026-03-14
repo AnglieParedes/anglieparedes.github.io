@@ -113,6 +113,7 @@ const projects = [
 export default function Projects() {
   const [active, setActive] = useState('Todos')
   const [modal, setModal] = useState(null)
+  const [mobileFullscreen, setMobileFullscreen] = useState(false)
 
   const filtered = active === 'Todos' ? projects : projects.filter(p => p.cat === active)
 
@@ -193,18 +194,32 @@ export default function Projects() {
                   </div>
                   {modal.mockup.mobile && (
                     <div className={styles.mockupMobile}>
-                      <span className={styles.mockupLabel}>Mobile</span>
+                      <span className={styles.mockupLabel}>Mobile <span className={styles.clickHint}>· click para ampliar</span></span>
                       {modal.mockup.mobileScroll ? (
-                        <div className={styles.mobileFrame}>
-                          <div className={styles.mobileScreen}>
+                        <div className={styles.iphoneFrame} onClick={() => setMobileFullscreen(true)}>
+                          <div className={styles.iphoneNotch} />
+                          <div className={styles.iphoneScreen}>
                             <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={styles.mobileScrollImg} />
                           </div>
+                          <div className={styles.iphoneHome} />
                         </div>
                       ) : (
                         <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={styles.mockupImgMobile} />
                       )}
                     </div>
                   )}
+                </div>
+              )}
+              {mobileFullscreen && modal.mockup?.mobile && (
+                <div className={styles.fullscreenOverlay} onClick={() => setMobileFullscreen(false)}>
+                  <div className={styles.fullscreenIphone}>
+                    <div className={styles.iphoneNotchLg} />
+                    <div className={styles.fullscreenScreen}>
+                      <img src={modal.mockup.mobile} alt="mobile fullscreen" className={styles.fullscreenImg} />
+                    </div>
+                    <div className={styles.iphoneHomeLg} />
+                  </div>
+                  <span className={styles.fullscreenClose}>✕ cerrar</span>
                 </div>
               )}
               {modal.url && (
