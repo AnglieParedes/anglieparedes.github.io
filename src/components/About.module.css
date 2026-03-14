@@ -42,6 +42,10 @@ p strong { color: var(--white); font-weight: 500; }
 }
 .tag:hover { border-color: var(--orange); color: var(--white); }
 
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+
 @media (max-width: 768px) {
   .about { padding: 5rem 1.5rem; }
   .grid { grid-template-columns: 1fr; gap: 3rem; }
