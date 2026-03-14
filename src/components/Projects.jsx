@@ -40,7 +40,7 @@ const projects = [
     num: '05', name: 'Bynines', cat: 'Corporativo',
     type: 'Sitio web · WordPress · En desarrollo',
     tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'Responsive', 'UX/UI'],
-    bg: '#18100d', url: null,
+    bg: '#18100d', url: null, wip: true,
     detail: 'Desarrollo completo a cargo propio: diseño, maquetación, pasarela de pago y configuración general en WordPress con Elementor Pro. El logo fue provisto por la cliente. Actualmente en desarrollo — próximamente en bynines.cl.',
   },
   {
@@ -153,6 +153,7 @@ export default function Projects() {
                 <div className={styles.bgLabel}>{p.name.toUpperCase()}</div>
                 <div className={styles.hoverLayer} />
                 {p.highlight && <span className={styles.featBadge}>Destacado ◆</span>}
+                {p.wip && <span className={styles.wipBadge}>Próximamente</span>}
                 <div className={styles.info}>
                   <span className={styles.num}>{p.num}</span>
                   <div className={styles.name}>{p.name}</div>
@@ -176,7 +177,7 @@ export default function Projects() {
             <div className={styles.modal}>
               <button className={styles.close} onClick={() => setModal(null)}>✕</button>
               <div className={styles.modalNum}>{modal.num} — {modal.cat}</div>
-              <h3 className={styles.modalName}>{modal.name}</h3>
+              <h3 className={styles.modalName}>{modal.name} {modal.wip && <span className={styles.wipBadgeModal}>Próximamente</span>}</h3>
               <p className={styles.modalDetail}>{modal.detail}</p>
               <div className={styles.modalTags}>
                 {modal.tags.map(t => <span key={t} className={styles.tag}>{t}</span>)}

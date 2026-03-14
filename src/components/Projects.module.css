@@ -166,3 +166,20 @@
   transition: all 0.2s;
 }
 .modalLinkOutline:hover { background: var(--orange); color: var(--black); }
+
+/* WIP BADGE */
+.wipBadge {
+  position: absolute; top: 1.5rem; left: 1.5rem;
+  background: transparent; border: 1px solid #666;
+  color: #888; font-family: var(--font-mono);
+  font-size: 0.58rem; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 0.25rem 0.6rem;
+}
+.wipBadgeModal {
+  display: inline-block; background: transparent;
+  border: 1px solid #444; color: #777;
+  font-family: var(--font-mono); font-size: 0.6rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.2rem 0.55rem; vertical-align: middle;
+  margin-left: 0.6rem; font-weight: 400;
+}
