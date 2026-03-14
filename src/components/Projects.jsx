@@ -14,11 +14,11 @@ const projects = [
     detail: 'Desarrollo completo del e-commerce. Arquitectura de sistema de cotizaciones a medida en PHP: formulario con flujo de dos ramas (Clínica vs Mercado Público), almacenamiento interno en WordPress y panel personalizado para gestionar y responder cada lead.',
   },
   {
-    num: '02', name: 'Isabel Aliaga', cat: 'Corporativo',
-    type: 'Sitio personal · WordPress · Morestudio',
-    tags: ['WordPress', 'Diseño web', 'Elementor'],
-    bg: '#1a0d1a', url: 'https://isabelaliaga.morestudio.cl',
-    detail: 'Desarrollo completo en WordPress para cliente de Morestudio. Pendiente migración a dominio propio.',
+    num: '02', name: 'Isabel Aliaga', cat: 'Landing',
+    type: 'Terapias psicológicas online · WordPress · Morestudio',
+    tags: ['WordPress', 'Elementor Pro', 'HTML', 'CSS', 'JavaScript'],
+    bg: '#1a0d1a', url: 'https://isabelaliaga.cl',
+    detail: 'Diseño y desarrollo completo de sitio web para psicóloga online. Desarrollado en WordPress con Elementor Pro, HTML, CSS, JavaScript y complementos adicionales. Enfocado en transmitir confianza, calidez y facilitar el contacto con potenciales pacientes.',
   },
   {
     num: '03', name: 'Dimet', cat: 'Corporativo',
