@@ -76,7 +76,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'HTML', 'CSS', 'UX/UI', 'Branding', 'Identidad corporativa', 'Google Ads', 'Meta Ads', 'Email Marketing', 'Social Media', 'Integraciones', 'Facto'],
     bg: '#1a0d0d', url: null,
     detail: 'Proyecto propio y uno de los más completos de mi trayectoria. Desarrollo web completo en WordPress con Elementor Pro, HTML y CSS personalizado. Migración de hosting, diseño UX/UI, integración de pasarelas de pago, sistema de facturación Facto y SMTP. Identidad corporativa y branding desde cero: logo, packaging y copys. Estrategia digital completa: Google Ads, Meta Ads, campañas de email marketing y creación de contenido para Instagram. +3.258 seguidores orgánicos.',
-    mockup: { desktop: '/mockups/gatisshop-desktop.png', mobile: '/mockups/gatisshop-mobile.webp', mobileScroll: true },
+    mockup: { desktop: '/mockups/gatisshop-desktop.png', mobile: '/mockups/gatisshop-mobile.jpg', mobileScroll: true },
   },
   {
     num: '10', name: 'Belladona', cat: 'E-commerce',
