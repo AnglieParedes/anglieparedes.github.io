@@ -101,9 +101,9 @@ const projects = [
   {
     num: '13', name: 'AA Shopping', cat: 'E-commerce',
     type: 'Multitienda · Shopify + Pasarelas de pago',
-    tags: ['Shopify', 'Flow', 'Pago Fácil'],
+    tags: ['Shopify', 'Integraciones', 'Flow', 'Pago Fácil', 'Mercado Pago'],
     bg: '#1a1200', url: 'https://aashopping.cl',
-    detail: 'Tienda multirubro en Shopify con integración de Mercado Pago, Flow y Pago Fácil.',
+    detail: 'Tienda multirubro en Shopify. Mi participación: integración de pasarelas de pago Flow y Pago Fácil al sitio existente.',
   },
 ]
 
