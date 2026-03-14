@@ -93,10 +93,11 @@ const projects = [
   },
   {
     num: '12', name: 'Proservit', cat: 'E-commerce',
-    type: 'Áreas Verdes · WordPress Corporativo',
-    tags: ['WordPress', 'Hosting', 'UX/UI', 'Responsive'],
+    type: 'Sitio corporativo · WordPress · Diseño + desarrollo',
+    tags: ['WordPress', 'Hosting', 'Elementor Pro', 'UX/UI', 'Responsive', 'CSS'],
     bg: '#0d0d1a', url: 'https://proservit.cl',
-    detail: 'Sitio corporativo con portafolio de proyectos, servicios y formulario de contacto.',
+    detail: 'Desarrollo completo del sitio web para empresa de servicios de construcción, instalación y reparación. Diseño, maquetación y configuración general en WordPress con Elementor Pro y CSS personalizado.',
+    mockup: { desktop: '/mockups/proservit-desktop.png' },
   },
   {
     num: '13', name: 'AA Shopping', cat: 'E-commerce',
@@ -183,15 +184,17 @@ export default function Projects() {
                 {modal.tags.map(t => <span key={t} className={styles.tag}>{t}</span>)}
               </div>
               {modal.mockup && (
-                <div className={styles.mockupRow}>
+                <div className={modal.mockup.mobile ? styles.mockupRow : styles.mockupRowSingle}>
                   <div className={styles.mockupDesktop}>
                     <span className={styles.mockupLabel}>Desktop</span>
                     <img src={modal.mockup.desktop} alt={modal.name + ' desktop'} className={styles.mockupImgDesktop} />
                   </div>
-                  <div className={styles.mockupMobile}>
-                    <span className={styles.mockupLabel}>Mobile</span>
-                    <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={styles.mockupImgMobile} />
-                  </div>
+                  {modal.mockup.mobile && (
+                    <div className={styles.mockupMobile}>
+                      <span className={styles.mockupLabel}>Mobile</span>
+                      <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={styles.mockupImgMobile} />
+                    </div>
+                  )}
                 </div>
               )}
               {modal.url && (
