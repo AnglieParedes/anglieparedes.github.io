@@ -19,6 +19,7 @@ const projects = [
     tags: ['WordPress', 'Elementor Pro', 'HTML', 'CSS', 'JavaScript'],
     bg: '#1a0d1a', url: 'https://isabelaliaga.cl',
     detail: 'Diseño y desarrollo completo de sitio web para psicóloga online. Desarrollado en WordPress con Elementor Pro, HTML, CSS, JavaScript y complementos adicionales. Enfocado en transmitir confianza, calidez y facilitar el contacto con potenciales pacientes.',
+    mockup: { desktop: '/mockups/isabel-desktop.png', mobile: '/mockups/isabel-mobile.png' },
   },
   {
     num: '03', name: 'Dimet', cat: 'Corporativo',
@@ -172,6 +173,18 @@ export default function Projects() {
               <div className={styles.modalTags}>
                 {modal.tags.map(t => <span key={t} className={styles.tag}>{t}</span>)}
               </div>
+              {modal.mockup && (
+                <div className={styles.mockupRow}>
+                  <div className={styles.mockupDesktop}>
+                    <span className={styles.mockupLabel}>Desktop</span>
+                    <img src={modal.mockup.desktop} alt={modal.name + ' desktop'} className={styles.mockupImgDesktop} />
+                  </div>
+                  <div className={styles.mockupMobile}>
+                    <span className={styles.mockupLabel}>Mobile</span>
+                    <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={styles.mockupImgMobile} />
+                  </div>
+                </div>
+              )}
               {modal.url && (
                 <a href={modal.url} target="_blank" rel="noreferrer" className={styles.modalLink}>
                   Visitar sitio web →

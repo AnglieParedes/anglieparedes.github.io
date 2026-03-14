@@ -110,3 +110,39 @@
   .wide { grid-column: span 1; }
   .wideCard { aspect-ratio: 4/3; }
 }
+
+.mockupRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: start;
+}
+.mockupDesktop, .mockupMobile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.mockupLabel {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #555;
+  font-family: var(--font-mono);
+}
+.mockupImgDesktop {
+  width: 100%;
+  border: 1px solid #222;
+  display: block;
+  max-height: 320px;
+  object-fit: cover;
+  object-position: top;
+}
+.mockupImgMobile {
+  width: 90px;
+  border: 1px solid #222;
+  display: block;
+  max-height: 320px;
+  object-fit: cover;
+  object-position: top;
+}
