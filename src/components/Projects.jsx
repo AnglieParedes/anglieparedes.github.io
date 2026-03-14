@@ -9,9 +9,10 @@ const projects = [
   {
     num: '01', name: 'Techdent', cat: 'Sistema / Dev', highlight: true,
     type: 'E-commerce dental · WordPress + WooCommerce + PHP',
-    tags: ['WordPress', 'WooCommerce', 'PHP', 'Cotizaciones'],
+    tags: ['WordPress', 'WooCommerce', 'PHP', 'Cotizaciones', 'Relbase', 'UX/UI'],
     bg: '#0d1200', url: 'https://techdent.cl',
-    detail: 'Desarrollo completo del e-commerce. Arquitectura de sistema de cotizaciones a medida en PHP: formulario con flujo de dos ramas (Clínica vs Mercado Público), almacenamiento interno en WordPress y panel personalizado para gestionar y responder cada lead.',
+    detail: 'Proyecto colaborativo en equipo. Mi participación: rediseño y desarrollo del home actual, integración al sistema de facturación Relbase, sistema completo de cotizaciones en PHP (formulario con flujo Clínica vs Mercado Público, almacenamiento interno y panel de gestión de leads), y sistema de etiqueta "Llega hoy" con cálculo de fecha de despacho en tiempo real.',
+    mockup: { desktop: '/mockups/techdent-desktop.png', mobile: '/mockups/techdent-mobile.png' },
   },
   {
     num: '02', name: 'Isabel Aliaga', cat: 'Landing',
@@ -52,13 +53,9 @@ const projects = [
   {
     num: '07', name: 'Opticallery — Landings', cat: 'Landing',
     type: 'Landings internas · WordPress · Diseño + desarrollo',
-    tags: ['Landing page', 'WordPress', 'Elementor Pro', 'UX/UI', 'WooCommerce'],
+    tags: ['Landing page', 'WordPress', 'UX/UI', 'WooCommerce'],
     bg: '#0a0a1a', url: 'https://opticallery.cl/product-category/lentes-aviador/',
-    url2: 'https://opticallery.cl/product-category/lentes-deportivos/',
-    url2Label: 'Lentes Deportivos →',
-    urlLabel: 'Lentes Aviador →',
     detail: 'Diseño y desarrollo de landings internas para categorías de productos: lentes aviador y lentes deportivos. Enfoque en experiencia de usuario y conversión.',
-    mockup: { desktop: '/mockups/opticallery-desktop.png', mobile: '/mockups/opticallery-mobile.png' },
   },
   {
     num: '08', name: 'BesPlus — Blog', cat: 'Corporativo',
@@ -190,20 +187,10 @@ export default function Projects() {
                   </div>
                 </div>
               )}
-              {modal.url && !modal.url2 && (
+              {modal.url && (
                 <a href={modal.url} target="_blank" rel="noreferrer" className={styles.modalLink}>
                   Visitar sitio web →
                 </a>
-              )}
-              {modal.url && modal.url2 && (
-                <div className={styles.modalLinks}>
-                  <a href={modal.url} target="_blank" rel="noreferrer" className={styles.modalLink}>
-                    {modal.urlLabel || 'Visitar sitio web →'}
-                  </a>
-                  <a href={modal.url2} target="_blank" rel="noreferrer" className={styles.modalLinkOutline}>
-                    {modal.url2Label || 'Ver más →'}
-                  </a>
-                </div>
               )}
             </div>
             </motion.div>
