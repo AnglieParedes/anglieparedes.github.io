@@ -114,6 +114,7 @@ export default function Projects() {
   const [active, setActive] = useState('Todos')
   const [modal, setModal] = useState(null)
   const [mobileFullscreen, setMobileFullscreen] = useState(false)
+  const [desktopFullscreen, setDesktopFullscreen] = useState(false)
 
   const filtered = active === 'Todos' ? projects : projects.filter(p => p.cat === active)
 
@@ -189,25 +190,41 @@ export default function Projects() {
               {modal.mockup && (
                 <div className={modal.mockup.mobile ? styles.mockupRow : styles.mockupRowSingle}>
                   <div className={styles.mockupDesktop}>
-                    <span className={styles.mockupLabel}>Desktop</span>
-                    <img src={modal.mockup.desktop} alt={modal.name + ' desktop'} className={styles.mockupImgDesktop} />
+                    <span className={styles.mockupLabel}>Desktop <span className={styles.clickHint}>· click para ampliar</span></span>
+                    <div className={styles.macbookFrame} onClick={() => setDesktopFullscreen(true)}>
+                      <div className={styles.macbookScreen}>
+                        <img src={modal.mockup.desktop} alt={modal.name + ' desktop'} className={styles.macbookImg} />
+                      </div>
+                      <div className={styles.macbookBase}>
+                        <div className={styles.macbookNotch} />
+                      </div>
+                    </div>
                   </div>
                   {modal.mockup.mobile && (
                     <div className={styles.mockupMobile}>
                       <span className={styles.mockupLabel}>Mobile <span className={styles.clickHint}>· click para ampliar</span></span>
-                      {modal.mockup.mobileScroll ? (
-                        <div className={styles.iphoneFrame} onClick={() => setMobileFullscreen(true)}>
-                          <div className={styles.iphoneNotch} />
-                          <div className={styles.iphoneScreen}>
-                            <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={styles.mobileScrollImg} />
-                          </div>
-                          <div className={styles.iphoneHome} />
+                      <div className={styles.iphoneFrame} onClick={() => setMobileFullscreen(true)}>
+                        <div className={styles.iphoneNotch} />
+                        <div className={styles.iphoneScreen}>
+                          <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={modal.mockup.mobileScroll ? styles.mobileScrollImg : styles.mobileStaticImg} />
                         </div>
-                      ) : (
-                        <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={styles.mockupImgMobile} />
-                      )}
+                        <div className={styles.iphoneHome} />
+                      </div>
                     </div>
                   )}
+                </div>
+              )}
+              {desktopFullscreen && modal.mockup?.desktop && (
+                <div className={styles.fullscreenOverlay} onClick={() => setDesktopFullscreen(false)}>
+                  <div className={styles.fullscreenMacbook}>
+                    <div className={styles.fullscreenMacbookScreen}>
+                      <img src={modal.mockup.desktop} alt="desktop fullscreen" className={styles.fullscreenMacbookImg} />
+                    </div>
+                    <div className={styles.fullscreenMacbookBase}>
+                      <div className={styles.fullscreenMacbookNotch} />
+                    </div>
+                  </div>
+                  <span className={styles.fullscreenClose}>✕ cerrar</span>
                 </div>
               )}
               {mobileFullscreen && modal.mockup?.mobile && (
