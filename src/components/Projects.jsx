@@ -12,7 +12,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'PHP', 'Cotizaciones', 'Relbase', 'Elementor Pro', 'UX/UI'],
     bg: '#0d1200', url: 'https://techdent.cl',
     detail: 'Proyecto colaborativo en equipo. Mi participación: rediseño y desarrollo del home actual, integración al sistema de facturación Relbase, sistema completo de cotizaciones en PHP (formulario con flujo Clínica vs Mercado Público, almacenamiento interno y panel de gestión de leads), y sistema de etiqueta "Llega hoy" con cálculo de fecha de despacho en tiempo real.',
-    mockup: { desktop: '/mockups/techdent-desktop.png', mobile: '/mockups/techdent-mobile.png' },
+    mockup: { desktop: '/mockups/Techdent-desktop.png', mobile: '/mockups/Techdent-mobile.jpeg' },
   },
   {
     num: '02', name: 'Isabel Aliaga', cat: 'Landing',
@@ -20,7 +20,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'Elementor Pro', 'HTML', 'CSS', 'JavaScript'],
     bg: '#1a0d1a', url: 'https://isabelaliaga.cl',
     detail: 'Diseño y desarrollo completo de sitio web para psicóloga online. Desarrollado en WordPress con Elementor Pro, HTML, CSS, JavaScript y complementos adicionales. Enfocado en transmitir confianza, calidez y facilitar el contacto con potenciales pacientes.',
-    mockup: { desktop: '/mockups/isabel-desktop.png', mobile: '/mockups/isabel-mobile.png' },
+    mockup: { desktop: '/mockups/isabel-desktop.png', mobile: '/mockups/isabel.mobile.jpeg' },
   },
   {
     num: '03', name: 'Dimet', cat: 'E-commerce',
@@ -28,6 +28,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'Corporativo', 'Responsive'],
     bg: '#0d1218', url: 'https://dimet.morestudio.cl',
     detail: 'Desarrollo completo en WordPress para cliente de Morestudio. Pendiente migración a dominio propio.',
+    mockup: { desktop: '/mockups/Dimet-desktop.png', mobile: '/mockups/dimet-mobile.jpeg' },
   },
   {
     num: '04', name: 'Hydrodimet', cat: 'E-commerce',
@@ -35,6 +36,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'Corporativo', 'Diseño web'],
     bg: '#0d1520', url: 'https://hydrodimet.morestudio.cl',
     detail: 'Desarrollo completo en WordPress para cliente de Morestudio. Pendiente migración a dominio propio.',
+    mockup: { desktop: '/mockups/Hydromec-desktop.png', mobile: '/mockups/Hydromec-mobile.jpeg' },
   },
   {
     num: '05', name: 'Bynines', cat: 'E-commerce',
@@ -49,6 +51,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'Diseño web', 'Elementor'],
     bg: '#101a10', url: 'https://west5.morestudio.cl',
     detail: 'Desarrollo completo en WordPress para cliente de Morestudio. Pendiente migración a dominio propio.',
+    mockup: { desktop: '/mockups/West5-desktop.png', mobile: '/mockups/West5-mobile.jpeg' },
   },
   {
     num: '07', name: 'Opticallery — Landings', cat: 'Landing',
@@ -59,7 +62,7 @@ const projects = [
     url2Label: 'Lentes Deportivos →',
     urlLabel: 'Lentes Aviador →',
     detail: 'Diseño y desarrollo de landings internas para categorías de productos: lentes aviador y lentes deportivos. Enfoque en experiencia de usuario y conversión.',
-    mockup: { desktop: '/mockups/opticallery-desktop.png', mobile: '/mockups/opticallery-mobile.png' },
+    mockup: { desktop: '/mockups/opticallery-desktop.png', mobile: '/mockups/opticallery-mobile.jpeg' },
   },
   {
     num: '08', name: 'BesPlus', cat: 'E-commerce',
@@ -68,7 +71,7 @@ const projects = [
     bg: '#1a1200', url: 'https://besplus.cl/membresia/',
     urlLabel: 'Ver página membresía →',
     detail: 'Proyecto en equipo. Mi participación: diseño y desarrollo completo de la página interna de Membresía, popup, cambios generales de diseño y maquetación de blogs.',
-    mockup: { desktop: '/mockups/besplus-desktop.png', mobile: '/mockups/besplus-mobile.png' },
+    mockup: { desktop: '/mockups/besplus-desktop.png', mobile: '/mockups/besplus-mobile.jpeg' },
   },
   {
     num: '09', name: 'Gatis Shop', cat: 'E-commerce', highlight: true,
@@ -84,7 +87,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'Google Ads', 'Email Marketing', 'SEO', 'Integraciones'],
     bg: '#0d1a0f', url: 'https://belladonahome.com',
     detail: 'Migración de hosting, rediseño completo de la tienda y desarrollo de nuevas funcionalidades. Integración de pasarelas de pago, Mailchimp, Wordfence, Yoast SEO y Google Analytics. Todo desarrollado en WordPress con Elementor Pro.',
-    mockup: { desktop: '/mockups/belladona-desktop.png', mobile: '/mockups/belladona-mobile.png' },
+    mockup: { desktop: '/mockups/belladona-desktop.png', mobile: '/mockups/belladona-mobile.jpeg' },
   },
   {
     num: '11', name: 'Shop y Shop', cat: 'E-commerce',
@@ -92,6 +95,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'Mercado Pago', 'Mailchimp'],
     bg: '#111', url: 'https://shopyshop.cl',
     detail: 'E-commerce de accesorios para smartphones con integración de Mercado Pago, WePay y estrategia de email marketing.',
+    mockup: { desktop: '/mockups/Shop y shop-desktop.png', mobile: '/mockups/Shopyshop-mobile1.png' },
   },
   {
     num: '12', name: 'Proservit', cat: 'E-commerce',
@@ -114,7 +118,6 @@ export default function Projects() {
   const [active, setActive] = useState('Todos')
   const [modal, setModal] = useState(null)
   const [mobileFullscreen, setMobileFullscreen] = useState(false)
-  const [desktopFullscreen, setDesktopFullscreen] = useState(false)
 
   const filtered = active === 'Todos' ? projects : projects.filter(p => p.cat === active)
 
@@ -190,41 +193,25 @@ export default function Projects() {
               {modal.mockup && (
                 <div className={modal.mockup.mobile ? styles.mockupRow : styles.mockupRowSingle}>
                   <div className={styles.mockupDesktop}>
-                    <span className={styles.mockupLabel}>Desktop <span className={styles.clickHint}>· click para ampliar</span></span>
-                    <div className={styles.macbookFrame} onClick={() => setDesktopFullscreen(true)}>
-                      <div className={styles.macbookScreen}>
-                        <img src={modal.mockup.desktop} alt={modal.name + ' desktop'} className={styles.macbookImg} />
-                      </div>
-                      <div className={styles.macbookBase}>
-                        <div className={styles.macbookNotch} />
-                      </div>
-                    </div>
+                    <span className={styles.mockupLabel}>Desktop</span>
+                    <img src={modal.mockup.desktop} alt={modal.name + ' desktop'} className={styles.mockupImgDesktop} />
                   </div>
                   {modal.mockup.mobile && (
                     <div className={styles.mockupMobile}>
                       <span className={styles.mockupLabel}>Mobile <span className={styles.clickHint}>· click para ampliar</span></span>
-                      <div className={styles.iphoneFrame} onClick={() => setMobileFullscreen(true)}>
-                        <div className={styles.iphoneNotch} />
-                        <div className={styles.iphoneScreen}>
-                          <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={modal.mockup.mobileScroll ? styles.mobileScrollImg : styles.mobileStaticImg} />
+                      {modal.mockup.mobileScroll ? (
+                        <div className={styles.iphoneFrame} onClick={() => setMobileFullscreen(true)}>
+                          <div className={styles.iphoneNotch} />
+                          <div className={styles.iphoneScreen}>
+                            <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={styles.mobileScrollImg} />
+                          </div>
+                          <div className={styles.iphoneHome} />
                         </div>
-                        <div className={styles.iphoneHome} />
-                      </div>
+                      ) : (
+                        <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={styles.mockupImgMobile} />
+                      )}
                     </div>
                   )}
-                </div>
-              )}
-              {desktopFullscreen && modal.mockup?.desktop && (
-                <div className={styles.fullscreenOverlay} onClick={() => setDesktopFullscreen(false)}>
-                  <div className={styles.fullscreenMacbook}>
-                    <div className={styles.fullscreenMacbookScreen}>
-                      <img src={modal.mockup.desktop} alt="desktop fullscreen" className={styles.fullscreenMacbookImg} />
-                    </div>
-                    <div className={styles.fullscreenMacbookBase}>
-                      <div className={styles.fullscreenMacbookNotch} />
-                    </div>
-                  </div>
-                  <span className={styles.fullscreenClose}>✕ cerrar</span>
                 </div>
               )}
               {mobileFullscreen && modal.mockup?.mobile && (
