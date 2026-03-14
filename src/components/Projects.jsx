@@ -94,7 +94,7 @@ const projects = [
   {
     num: '12', name: 'Proservit', cat: 'E-commerce',
     type: 'Sitio corporativo · WordPress · Diseño + desarrollo',
-    tags: ['WordPress', 'Hosting', 'Elementor Pro', 'UX/UI', 'Responsive', 'CSS'],
+    tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Responsive', 'CSS'],
     bg: '#0d0d1a', url: 'https://proservit.cl',
     detail: 'Desarrollo completo del sitio web para empresa de servicios de construcción, instalación y reparación. Diseño, maquetación y configuración general en WordPress con Elementor Pro y CSS personalizado.',
     mockup: { desktop: '/mockups/proservit-desktop.png' },
