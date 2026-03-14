@@ -165,7 +165,8 @@ export default function Projects() {
         {modal && (
           <>
             <motion.div className={styles.overlay} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} onClick={() => setModal(null)} />
-            <motion.div className={styles.modal} initial={{opacity:0,y:40}} animate={{opacity:1,y:0}} exit={{opacity:0,y:20}} transition={{ease:[0.22,1,0.36,1],duration:0.4}}>
+            <motion.div className={styles.modalWrap} initial={{opacity:0,y:40}} animate={{opacity:1,y:0}} exit={{opacity:0,y:20}} transition={{ease:[0.22,1,0.36,1],duration:0.4}}>
+            <div className={styles.modal}>
               <button className={styles.close} onClick={() => setModal(null)}>✕</button>
               <div className={styles.modalNum}>{modal.num} — {modal.cat}</div>
               <h3 className={styles.modalName}>{modal.name}</h3>
@@ -190,6 +191,7 @@ export default function Projects() {
                   Visitar sitio web →
                 </a>
               )}
+            </div>
             </motion.div>
           </>
         )}

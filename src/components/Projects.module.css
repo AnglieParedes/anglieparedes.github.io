@@ -77,18 +77,16 @@
   position: fixed; inset: 0; background: rgba(0,0,0,0.85);
   z-index: 200; backdrop-filter: blur(6px);
 }
+.modalWrap {
+  position: fixed; inset: 0; z-index: 201;
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: none;
+}
 .modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 201;
+  pointer-events: all;
   background: #111;
-  border: 1px solid #222;
-  padding: 3rem;
-  width: min(600px, 90vw);
-  max-height: 85vh;
-  overflow-y: auto;
+  border: 1px solid #222; padding: 3rem;
+  width: min(600px, 90vw); max-height: 85vh; overflow-y: auto;
 }
 .close {
   position: absolute; top: 1.5rem; right: 1.5rem;
