@@ -9,7 +9,7 @@ const projects = [
   {
     num: '01', name: 'Techdent', cat: 'Sistema / Dev', highlight: true,
     type: 'E-commerce dental · WordPress + WooCommerce + PHP',
-    tags: ['WordPress', 'WooCommerce', 'PHP', 'Cotizaciones', 'Relbase', 'UX/UI'],
+    tags: ['WordPress', 'WooCommerce', 'PHP', 'Cotizaciones', 'Relbase', 'Elementor Pro', 'UX/UI'],
     bg: '#0d1200', url: 'https://techdent.cl',
     detail: 'Proyecto colaborativo en equipo. Mi participación: rediseño y desarrollo del home actual, integración al sistema de facturación Relbase, sistema completo de cotizaciones en PHP (formulario con flujo Clínica vs Mercado Público, almacenamiento interno y panel de gestión de leads), y sistema de etiqueta "Llega hoy" con cálculo de fecha de despacho en tiempo real.',
     mockup: { desktop: '/mockups/techdent-desktop.png', mobile: '/mockups/techdent-mobile.png' },
