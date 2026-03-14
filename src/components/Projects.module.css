@@ -78,11 +78,17 @@
   z-index: 200; backdrop-filter: blur(6px);
 }
 .modal {
-  position: fixed; top: 50%; left: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 201; background: #111;
-  border: 1px solid #222; padding: 3rem;
-  width: min(560px, 90vw); max-height: 90vh; overflow-y: auto;
+  z-index: 201;
+  background: #111;
+  border: 1px solid #222;
+  padding: 3rem;
+  width: min(600px, 90vw);
+  max-height: 85vh;
+  overflow-y: auto;
 }
 .close {
   position: absolute; top: 1.5rem; right: 1.5rem;
