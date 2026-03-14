@@ -117,7 +117,7 @@
 
 .mockupRow {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 100px;
   gap: 1.5rem;
   margin-bottom: 2rem;
   align-items: start;
@@ -138,15 +138,31 @@
   width: 100%;
   border: 1px solid #222;
   display: block;
-  max-height: 320px;
-  object-fit: cover;
+  max-height: 340px;
+  object-fit: contain;
   object-position: top;
+  background: #0a0a0a;
 }
 .mockupImgMobile {
-  width: 90px;
+  width: 100%;
   border: 1px solid #222;
   display: block;
-  max-height: 320px;
-  object-fit: cover;
+  max-height: 340px;
+  object-fit: contain;
   object-position: top;
+  background: #0a0a0a;
 }
+.modalLinks {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.modalLinkOutline {
+  display: inline-block; background: transparent;
+  border: 1px solid var(--orange); color: var(--orange);
+  padding: 0.75rem 1.75rem; font-family: var(--font-display);
+  font-weight: 700; font-size: 0.78rem; letter-spacing: 0.1em;
+  text-transform: uppercase; text-decoration: none;
+  transition: all 0.2s;
+}
+.modalLinkOutline:hover { background: var(--orange); color: var(--black); }

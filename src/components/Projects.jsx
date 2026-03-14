@@ -54,7 +54,11 @@ const projects = [
     type: 'Landings internas · WordPress · Diseño + desarrollo',
     tags: ['Landing page', 'WordPress', 'Elementor Pro', 'UX/UI', 'WooCommerce'],
     bg: '#0a0a1a', url: 'https://opticallery.cl/product-category/lentes-aviador/',
+    url2: 'https://opticallery.cl/product-category/lentes-deportivos/',
+    url2Label: 'Lentes Deportivos →',
+    urlLabel: 'Lentes Aviador →',
     detail: 'Diseño y desarrollo de landings internas para categorías de productos: lentes aviador y lentes deportivos. Enfoque en experiencia de usuario y conversión.',
+    mockup: { desktop: '/mockups/opticallery-desktop.png', mobile: '/mockups/opticallery-mobile.png' },
   },
   {
     num: '08', name: 'BesPlus — Blog', cat: 'Corporativo',
@@ -186,10 +190,20 @@ export default function Projects() {
                   </div>
                 </div>
               )}
-              {modal.url && (
+              {modal.url && !modal.url2 && (
                 <a href={modal.url} target="_blank" rel="noreferrer" className={styles.modalLink}>
                   Visitar sitio web →
                 </a>
+              )}
+              {modal.url && modal.url2 && (
+                <div className={styles.modalLinks}>
+                  <a href={modal.url} target="_blank" rel="noreferrer" className={styles.modalLink}>
+                    {modal.urlLabel || 'Visitar sitio web →'}
+                  </a>
+                  <a href={modal.url2} target="_blank" rel="noreferrer" className={styles.modalLinkOutline}>
+                    {modal.url2Label || 'Ver más →'}
+                  </a>
+                </div>
               )}
             </div>
             </motion.div>
