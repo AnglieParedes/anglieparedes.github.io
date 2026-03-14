@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import FadeUp from './FadeUp'
 import styles from './Projects.module.css'
 
-const categories = ['Todos', 'E-commerce', 'Corporativo', 'Sistema / Dev', 'Landing']
+const categories = ['Todos', 'E-commerce', 'Sistema / Dev', 'Landing', 'Identidad corporativa', 'Contenido de RRSS']
 
 const projects = [
   {
@@ -23,28 +23,28 @@ const projects = [
     mockup: { desktop: '/mockups/isabel-desktop.png', mobile: '/mockups/isabel-mobile.png' },
   },
   {
-    num: '03', name: 'Dimet', cat: 'Corporativo',
+    num: '03', name: 'Dimet', cat: 'E-commerce',
     type: 'Sitio corporativo · WordPress · Morestudio',
     tags: ['WordPress', 'Hosting', 'Corporativo', 'Responsive'],
     bg: '#0d1218', url: 'https://dimet.morestudio.cl',
     detail: 'Desarrollo completo en WordPress para cliente de Morestudio. Pendiente migración a dominio propio.',
   },
   {
-    num: '04', name: 'Hydrodimet', cat: 'Corporativo',
+    num: '04', name: 'Hydrodimet', cat: 'E-commerce',
     type: 'Sitio corporativo · WordPress · Morestudio',
     tags: ['WordPress', 'Hosting', 'Corporativo', 'Diseño web'],
     bg: '#0d1520', url: 'https://hydrodimet.morestudio.cl',
     detail: 'Desarrollo completo en WordPress para cliente de Morestudio. Pendiente migración a dominio propio.',
   },
   {
-    num: '05', name: 'Bynines', cat: 'Corporativo',
+    num: '05', name: 'Bynines', cat: 'E-commerce',
     type: 'Sitio web · WordPress · En desarrollo',
     tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'Responsive', 'UX/UI'],
     bg: '#18100d', url: null, wip: true,
     detail: 'Desarrollo completo a cargo propio: diseño, maquetación, pasarela de pago y configuración general en WordPress con Elementor Pro. El logo fue provisto por la cliente. Actualmente en desarrollo — próximamente en bynines.cl.',
   },
   {
-    num: '06', name: 'West5', cat: 'Corporativo',
+    num: '06', name: 'West5', cat: 'E-commerce',
     type: 'Sitio web · WordPress · Morestudio',
     tags: ['WordPress', 'Hosting', 'Diseño web', 'Elementor'],
     bg: '#101a10', url: 'https://west5.morestudio.cl',
@@ -62,7 +62,7 @@ const projects = [
     mockup: { desktop: '/mockups/opticallery-desktop.png', mobile: '/mockups/opticallery-mobile.png' },
   },
   {
-    num: '08', name: 'BesPlus', cat: 'Corporativo',
+    num: '08', name: 'BesPlus', cat: 'E-commerce',
     type: 'Diseño web · WordPress · Membresía',
     tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'UX/UI'],
     bg: '#1a1200', url: 'https://besplus.cl/membresia/',
@@ -92,7 +92,7 @@ const projects = [
     detail: 'E-commerce de accesorios para smartphones con integración de Mercado Pago, WePay y estrategia de email marketing.',
   },
   {
-    num: '12', name: 'Proservit', cat: 'Corporativo',
+    num: '12', name: 'Proservit', cat: 'E-commerce',
     type: 'Áreas Verdes · WordPress Corporativo',
     tags: ['WordPress', 'Hosting', 'UX/UI', 'Responsive'],
     bg: '#0d0d1a', url: 'https://proservit.cl',
