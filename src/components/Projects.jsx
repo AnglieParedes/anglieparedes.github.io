@@ -135,7 +135,7 @@ const projects = [
     bg: '#0d1a12', url: null,
     detail: 'Refrescamiento integral de imagen para La Nueva Vencedora. Actualización de paleta de colores e identidad visual, diseño de pendones y material gráfico para punto de venta, etiquetas de productos, piezas para redes sociales y branding general. Un proyecto enfocado en modernizar la presencia visual de la marca manteniendo su esencia.',
     gallery: [
-      '/mockups/logo-la-nueva-vencedora.png',
+      '/mockups/logo-la-nueva-vencedora.jpg',
       '/mockups/pendon-nueva-vencedora-01.png',
       '/mockups/pendon-nueva-vencedora-02.png',
     ],
