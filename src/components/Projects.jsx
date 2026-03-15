@@ -74,7 +74,7 @@ const projects = [
     mockup: { desktop: '/mockups/besplus-desktop.png', mobile: '/mockups/besplus-mobile.jpeg' },
   },
   {
-    num: '09', name: 'Gatis Shop', cat: 'E-commerce', highlight: true,
+    num: '09', name: 'Gatis Shop', cat: ['E-commerce', 'Identidad corporativa'], highlight: true,
     type: 'Joyería Artesanal · Proyecto propio · Branding + Web + RRSS',
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'HTML', 'CSS', 'UX/UI', 'Branding', 'Identidad corporativa', 'Google Ads', 'Meta Ads', 'Email Marketing', 'Social Media', 'Integraciones', 'Facto'],
     bg: '#1a0d0d', url: null,
@@ -144,7 +144,9 @@ export default function Projects() {
   const [desktopFullscreen, setDesktopFullscreen] = useState(false)
   const [galleryFullscreen, setGalleryFullscreen] = useState(null)
 
-  const filtered = active === 'Todos' ? projects : projects.filter(p => p.cat === active)
+  const filtered = active === 'Todos' ? projects : projects.filter(p =>
+    Array.isArray(p.cat) ? p.cat.includes(active) : p.cat === active
+  )
 
   return (
     <section className={styles.projects} id="projects">
@@ -190,7 +192,7 @@ export default function Projects() {
                 <div className={styles.info}>
                   <span className={styles.num}>{p.num}</span>
                   <div className={styles.name}>{p.name}</div>
-                  <div className={styles.type}>{p.type}</div>
+                <div className={styles.type}>{p.type}</div>
                   <div className={styles.tags}>
                     {p.tags.map(t => <span key={t} className={styles.tag}>{t}</span>)}
                   </div>
@@ -209,7 +211,7 @@ export default function Projects() {
             <motion.div className={styles.modalWrap} initial={{opacity:0,y:40}} animate={{opacity:1,y:0}} exit={{opacity:0,y:20}} transition={{ease:[0.22,1,0.36,1],duration:0.4}}>
             <div className={styles.modal}>
               <button className={styles.close} onClick={() => setModal(null)}>✕</button>
-              <div className={styles.modalNum}>{modal.num} — {modal.cat}</div>
+              <div className={styles.modalNum}>{modal.num} — {Array.isArray(modal.cat) ? modal.cat.join(' · ') : modal.cat}</div>
               <h3 className={styles.modalName}>{modal.name} {modal.wip && <span className={styles.wipBadgeModal}>Próximamente</span>}</h3>
               <p className={styles.modalDetail}>{modal.detail}</p>
               <div className={styles.modalTags}>
