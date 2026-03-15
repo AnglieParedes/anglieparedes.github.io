@@ -432,3 +432,33 @@
   width: 100%;
   display: block;
 }
+
+/* GALLERY */
+.gallerySection {
+  margin-bottom: 2rem;
+}
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.galleryImg {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #222;
+  transition: transform 0.2s, border-color 0.2s;
+  background: #0a0a0a;
+}
+.galleryImg:hover {
+  transform: scale(1.03);
+  border-color: var(--orange);
+}
+.galleryFullscreenImg {
+  max-width: min(90vw, 800px);
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+}

@@ -80,6 +80,13 @@ const projects = [
     bg: '#1a0d0d', url: null,
     detail: 'Proyecto propio y uno de los más completos de mi trayectoria. Desarrollo web completo en WordPress con Elementor Pro, HTML y CSS personalizado. Migración de hosting, diseño UX/UI, integración de pasarelas de pago, sistema de facturación Facto y SMTP. Identidad corporativa y branding desde cero: logo, packaging y copys. Estrategia digital completa: Google Ads, Meta Ads, campañas de email marketing y creación de contenido para Instagram. +3.258 seguidores orgánicos.',
     mockup: { desktop: '/mockups/gatisshop-desktop.png', mobile: '/mockups/gatisshop-mobile.jpg', mobileScroll: true },
+    gallery: [
+      '/mockups/logo-gatisshop.png',
+      '/mockups/gatisshop-tarjetas.png',
+      '/mockups/packing-gatishop.png',
+      '/mockups/packing-gatishop2.png',
+      '/mockups/packing-gatishop3.png',
+    ],
   },
   {
     num: '10', name: 'Belladona', cat: 'E-commerce',
@@ -135,6 +142,7 @@ export default function Projects() {
   const [modal, setModal] = useState(null)
   const [mobileFullscreen, setMobileFullscreen] = useState(false)
   const [desktopFullscreen, setDesktopFullscreen] = useState(false)
+  const [galleryFullscreen, setGalleryFullscreen] = useState(null)
 
   const filtered = active === 'Todos' ? projects : projects.filter(p => p.cat === active)
 
@@ -244,6 +252,28 @@ export default function Projects() {
                   <div className={styles.fullscreenDesktop}>
                     <img src={modal.mockup.desktop} alt="desktop fullscreen" className={styles.fullscreenDesktopImg} />
                   </div>
+                  <span className={styles.fullscreenClose}>✕ cerrar</span>
+                </div>
+              )}
+              {modal.gallery && modal.gallery.length > 0 && (
+                <div className={styles.gallerySection}>
+                  <span className={styles.mockupLabel}>Branding & Identidad</span>
+                  <div className={styles.galleryGrid}>
+                    {modal.gallery.map((img, i) => (
+                      <img
+                        key={i}
+                        src={img}
+                        alt={`branding ${i + 1}`}
+                        className={styles.galleryImg}
+                        onClick={() => setGalleryFullscreen(img)}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+              {galleryFullscreen && (
+                <div className={styles.fullscreenOverlay} onClick={() => setGalleryFullscreen(null)}>
+                  <img src={galleryFullscreen} alt="fullscreen" className={styles.galleryFullscreenImg} />
                   <span className={styles.fullscreenClose}>✕ cerrar</span>
                 </div>
               )}
