@@ -129,8 +129,10 @@ h1 {
   .scrollHint { margin-top: 2rem; }
 }
 
+.ft5 { top: 8%; right: 6%; transform: rotate(2deg); }
+
 .floatTagAccent {
-  background: #ff4500;
-  color: #fff;
-  border-color: #ff4500;
+  background: #fe4300;
+  color: #080808;
+  border-color: #fe4300;
 }
