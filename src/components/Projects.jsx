@@ -199,17 +199,13 @@ export default function Projects() {
                   {modal.mockup.mobile && (
                     <div className={styles.mockupMobile}>
                       <span className={styles.mockupLabel}>Mobile <span className={styles.clickHint}>· click para ampliar</span></span>
-                      {modal.mockup.mobileScroll ? (
-                        <div className={styles.iphoneFrame} onClick={() => setMobileFullscreen(true)}>
-                          <div className={styles.iphoneNotch} />
-                          <div className={styles.iphoneScreen}>
-                            <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={styles.mobileScrollImg} />
-                          </div>
-                          <div className={styles.iphoneHome} />
+                      <div className={styles.iphoneFrame} onClick={() => setMobileFullscreen(true)}>
+                        <div className={styles.iphoneNotch} />
+                        <div className={styles.iphoneScreen}>
+                          <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={modal.mockup.mobileScroll ? styles.mobileScrollImg : styles.mobileStaticImg} />
                         </div>
-                      ) : (
-                        <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={styles.mockupImgMobile} />
-                      )}
+                        <div className={styles.iphoneHome} />
+                      </div>
                     </div>
                   )}
                 </div>
