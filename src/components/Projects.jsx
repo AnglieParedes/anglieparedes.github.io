@@ -150,7 +150,7 @@ const projects = [
     type: 'Identidad corporativa · Bebida energética · Manual de marca',
     tags: ['Branding', 'Identidad Corporativa', 'Diseño de etiqueta', 'Manual de marca', 'Packaging', 'Logotipo'],
     bg: '#0a1a05',
-    detail: 'Diseño de identidad corporativa completa, una nueva marca de bebidas energéticas con proyección de gran crecimiento. Creación del logotipo, sistema de marca y paleta visual que transmiten energía, modernidad y distinción. Diseño de etiqueta para el producto y elaboración del manual de marca corporativo con lineamientos de uso, tipografías, colores y aplicaciones.',
+    detail: 'Diseño de identidad corporativa completa para una nueva marca de bebidas energéticas con proyección de gran crecimiento. Creación del logotipo, sistema de marca y paleta visual que transmiten energía, modernidad y distinción. Diseño de etiqueta para el producto y elaboración del manual de marca corporativo con lineamientos de uso, tipografías, colores y aplicaciones. Identidad corporativa y marca registrada. Todos los derechos reservados ©',
   },
 ]
 
