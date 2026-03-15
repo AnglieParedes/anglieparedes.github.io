@@ -119,7 +119,7 @@ const projects = [
     tags: ['Branding', 'Identidad corporativa', 'Manual de marca', 'Diseño de etiqueta'],
     bg: '#0d0d1a', url: null,
     detail: 'Desarrollo completo de identidad corporativa para empresa de bebidas energéticas. Creación de manual de marca, branding y diseño de etiqueta de producto. Identidad patentada — todos los derechos reservados. Empresa próximamente en lanzamiento al mercado.',
-    mockup: { desktop: '/mockups/logo-evolv.jpg' },
+    mockup: null,
   },
   {
     num: '16', name: 'AA Shopping', cat: 'E-commerce',
