@@ -46,11 +46,11 @@ const projects = [
     detail: 'Desarrollo completo a cargo propio: diseño, maquetación, pasarela de pago y configuración general en WordPress con Elementor Pro. El logo fue provisto por la cliente. Actualmente en desarrollo — próximamente en bynines.cl.',
   },
   {
-    num: '06', name: 'West5', cat: 'E-commerce',
+    num: '06', name: 'West5', cat: 'E-commerce', wip: true,
     type: 'Sitio web · WordPress · Morestudio',
-    tags: ['WordPress', 'Hosting', 'Diseño web', 'Elementor'],
-    bg: '#101a10', url: 'https://west5.morestudio.cl',
-    detail: 'Desarrollo completo en WordPress para cliente de Morestudio. Pendiente migración a dominio propio.',
+    tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'SMTP', 'Integraciones', 'Pasarela de pago'],
+    bg: '#101a10', url: null,
+    detail: 'Desarrollo completo del sitio web: WordPress con Elementor Pro, SMTP, pasarela de pago e integraciones varias. Próximamente en west5.cl.',
     mockup: { desktop: '/mockups/west5-desktop.png', mobile: '/mockups/west5-mobile.jpeg' },
   },
   {
@@ -118,7 +118,6 @@ export default function Projects() {
   const [active, setActive] = useState('Todos')
   const [modal, setModal] = useState(null)
   const [mobileFullscreen, setMobileFullscreen] = useState(false)
-  const [desktopFullscreen, setDesktopFullscreen] = useState(false)
 
   const filtered = active === 'Todos' ? projects : projects.filter(p => p.cat === active)
 
@@ -194,8 +193,8 @@ export default function Projects() {
               {modal.mockup && (
                 <div className={modal.mockup.mobile ? styles.mockupRow : styles.mockupRowSingle}>
                   <div className={styles.mockupDesktop}>
-                    <span className={styles.mockupLabel}>Desktop <span className={styles.clickHint}>· click para ampliar</span></span>
-                    <img src={modal.mockup.desktop} alt={modal.name + ' desktop'} className={styles.mockupImgDesktop} onClick={() => setDesktopFullscreen(true)} style={{cursor:'pointer'}} />
+                    <span className={styles.mockupLabel}>Desktop</span>
+                    <img src={modal.mockup.desktop} alt={modal.name + ' desktop'} className={styles.mockupImgDesktop} />
                   </div>
                   {modal.mockup.mobile && (
                     <div className={styles.mockupMobile}>
@@ -209,14 +208,6 @@ export default function Projects() {
                       </div>
                     </div>
                   )}
-                </div>
-              )}
-              {desktopFullscreen && modal.mockup?.desktop && (
-                <div className={styles.fullscreenOverlay} onClick={() => setDesktopFullscreen(false)}>
-                  <div className={styles.fullscreenDesktop}>
-                    <img src={modal.mockup.desktop} alt="desktop fullscreen" className={styles.fullscreenDesktopImg} />
-                  </div>
-                  <span className={styles.fullscreenClose}>✕ cerrar</span>
                 </div>
               )}
               {mobileFullscreen && modal.mockup?.mobile && (
