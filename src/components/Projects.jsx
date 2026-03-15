@@ -54,14 +54,14 @@ const projects = [
     mockup: { desktop: '/mockups/west5-desktop.png', mobile: '/mockups/west5-mobile.jpeg' },
   },
   {
-    num: '07', name: 'Opticallery — Landings', cat: 'E-commerce',
+    num: '07', name: 'Opticallery', cat: 'E-commerce', cat2: 'Landing', cat3: 'Sistema / Dev',
     type: 'Óptica · Landings + Checkout condicional · WordPress',
-    tags: ['Landing page', 'WordPress', 'Hosting', 'Elementor Pro', 'PHP', 'WooCommerce', 'UX/UI', 'Checkout personalizado'],
+    tags: ['Landing page', 'WordPress', 'Hosting', 'Elementor Pro', 'PHP', 'WooCommerce', 'Checkout personalizado', 'Diseño web'],
     bg: '#0a0a1a', url: 'https://opticallery.cl/product-category/lentes-aviador/',
     url2: 'https://opticallery.cl/product-category/lentes-deportivos/',
     url2Label: 'Lentes Deportivos →',
     urlLabel: 'Lentes Aviador →',
-    detail: 'Proyecto colaborativo en equipo para óptica online. Mi participación: diseño y desarrollo de landings internas para categorías de productos (lentes aviador y lentes deportivos), enfocadas en experiencia de usuario y conversión. Además, desarrollo de un checkout condicional en PHP que adapta el flujo de pago y los campos del formulario según el tipo de producto seleccionado, optimizando la experiencia de compra.',
+    detail: 'Proyecto en equipo para óptica online. Mi participación: diseño y desarrollo de landings internas para categorías de productos (lentes aviador y lentes deportivos), enfocadas en experiencia de usuario y conversión. Además, desarrollo de un checkout condicional en PHP que adapta el flujo de pago y los campos del formulario según el tipo de producto seleccionado, optimizando la experiencia de compra, diseño y cambios varios.',
     mockup: { desktop: '/mockups/opticallery-desktop.png', mobile: '/mockups/opticallery-mobile.jpeg' },
   },
   {
@@ -70,7 +70,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'UX/UI', 'Membership'],
     bg: '#1a1200', url: 'https://besplus.cl/membresia/',
     urlLabel: 'Ver página membresía →',
-    detail: 'Proyecto colaborativo en equipo para plataforma de salud y bienestar. Mi participación: diseño y desarrollo completo de la página interna de Membresía con arquitectura clara de planes y beneficios, popup de captación, cambios generales de diseño en el sitio y maquetación de artículos del blog con foco en legibilidad y conversión.',
+    detail: 'Proyecto en equipo para plataforma de salud y bienestar. Mi participación: diseño y desarrollo completo de la página interna de Membresía con arquitectura clara de planes y beneficios, popup de captación, cambios en el servidor, cambios generales de diseño en el sitio y maquetación de artículos del blog con foco en legibilidad y conversión.',
     mockup: { desktop: '/mockups/besplus-desktop.png', mobile: '/mockups/besplus-mobile.jpeg' },
   },
   {
@@ -93,7 +93,7 @@ const projects = [
   {
     num: '11', name: 'Shop y Shop', cat: 'E-commerce',
     type: 'Accesorios móviles · WordPress + WooCommerce · Diseño completo',
-    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'Mercado Pago', 'Mailchimp', 'Email Marketing', 'UX/UI'],
+    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'Mercado Pago', 'Mailchimp', 'Email Marketing'],
     bg: '#111', url: 'https://shopyshop.cl',
     detail: 'Diseño y desarrollo completo de tienda online de accesorios para smartphones. Maquetación en WordPress con Elementor Pro, configuración de WooCommerce, integración de pasarelas de pago Mercado Pago y WePay, y estrategia de email marketing con Mailchimp para fidelización de clientes.',
     mockup: { desktop: '/mockups/shop-y-shop-desktop.png', mobile: '/mockups/shopyshop-mobile1.png' },
@@ -114,35 +114,35 @@ const projects = [
     detail: 'Tienda multirubro en Shopify. Mi participación: integración de pasarelas de pago Flow y Pago Fácil al sitio existente.',
   },
   {
-    num: '14', name: 'Remedycell', cat: 'E-commerce',
+    num: '14', name: 'Remedycell', cat: 'E-commerce', cat2: 'Landing', cat3: 'Sistema / Dev',
     type: 'Suplementos · WordPress + WooCommerce · Morestudio',
-    tags: ['WordPress', 'Hosting Kinsta', 'WooCommerce', 'Elementor Pro', 'PHP', 'SMTP', 'Email Marketing', 'Microsoft Clarity', 'Diseño web', 'UX/UI'],
+    tags: ['WordPress', 'Hosting Kinsta', 'WooCommerce', 'Elementor Pro', 'PHP', 'SMTP', 'Email Marketing', 'Microsoft Clarity', 'Diseño web'],
     bg: '#0d1a15', url: 'https://remedycell.cl',
-    detail: 'Proyecto colaborativo en equipo para marca de suplementos y bienestar celular. Mi participación: soporte y gestión del hosting en Kinsta, diseño y desarrollo de páginas de productos con foco en conversión, landings internas varias, configuración de checkout personalizado con PHP, integración de SMTP y campañas de email marketing, implementación de Microsoft Clarity para análisis de comportamiento de usuarios, y cambios generales de diseño y mejoras de rendimiento.',
+    detail: 'Proyecto colaborativo en equipo para marca de suplementos y bienestar celular. Mi participación: soporte y gestión del hosting en Kinsta, diseño y desarrollo de páginas de productos con foco en conversión, landings internas varias, configuración de checkout personalizado con PHP, integración de SMTP, campañas de email marketing, implementación de Microsoft Clarity para análisis de comportamiento de usuarios, cambios generales de diseño y mejoras de rendimiento.',
     mockup: { desktop: '/mockups/remedycell-desktop.png', mobile: '/mockups/remedycell-mobile.jpeg' },
   },
   {
-    num: '15', name: 'Motel Curco', cat: 'Identidad & Branding',
+    num: '15', name: 'Motel Curco', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS',
     type: 'Rebranding · Identidad Corporativa · Contenido RRSS',
     tags: ['Branding', 'Diseño Gráfico', 'Logotipo', 'Nombre publicitario', 'Social Media', 'Contenido RRSS'],
     bg: '#1a1005',
-    detail: 'Un proyecto que ha ido evolucionando y creciendo con el tiempo. Rediseño completo del logotipo de marca con una propuesta visual más moderna y coherente con la identidad del negocio. Desarrollo de nombre publicitario y sistema de branding aplicado a distintos formatos. Creación y gestión de contenido para redes sociales, construyendo una presencia digital consistente y atractiva. Un proyecto del que me siento muy orgullosa por cómo ha madurado en cada etapa.',
+    detail: 'Un proyecto que ha ido evolucionando y creciendo con el tiempo. Rediseño completo del logotipo de marca con una propuesta visual más moderna y coherente con la identidad del negocio. Desarrollo de nombre publicitario y sistema de branding aplicado a distintos formatos. Creación y gestión de contenido para redes sociales, construyendo una presencia digital consistente y atractiva.',
     gallery: ['/mockups/renovacion-logo-curco-01.jpg', '/mockups/renovacion-logo-curco-02.jpg', '/mockups/renovacion-logo-curco-04.jpg'],
   },
   {
-    num: '16', name: 'La Nueva Vencedora', cat: 'Identidad & Branding',
+    num: '16', name: 'La Nueva Vencedora', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS',
     type: 'Refrescamiento de marca · Identidad · Contenido RRSS',
     tags: ['Branding', 'Diseño Gráfico', 'Etiquetas', 'Pendones', 'Social Media', 'Contenido RRSS', 'Identidad Visual'],
     bg: '#1a0510',
-    detail: 'Un proyecto vivo que sigue creciendo con cada entrega. Refrescamiento completo de branding e identidad visual: nuevo sistema de marca más fresco y contemporáneo, diseño de etiquetas para productos, pendones publicitarios y piezas gráficas variadas. Creación de contenido para redes sociales con una línea visual coherente y reconocible. Un proyecto del que me siento muy orgullosa por la evolución que ha tenido y el impacto visual que ha logrado.',
+    detail: 'Refrescamiento completo de branding e identidad visual: nuevo sistema de marca más fresco, diseño de etiquetas para productos, pendones publicitarios y piezas gráficas variadas. Creación de contenido para redes sociales con una línea visual coherente y reconocible.',
     gallery: ['/mockups/logo-la-nueva-vencedora.png', '/mockups/pendon-nueva-vencedora-01.png', '/mockups/pendon-nueva-vencedora-02.png'],
   },
   {
-    num: '17', name: 'Evolv Energy Drink', cat: 'Identidad & Branding',
+    num: '17', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS', wip: true,
     type: 'Identidad corporativa · Bebida energética · Manual de marca',
     tags: ['Branding', 'Identidad Corporativa', 'Diseño de etiqueta', 'Manual de marca', 'Packaging', 'Logotipo'],
     bg: '#0a1a05',
-    detail: 'Diseño de identidad corporativa completa para Evolv, una nueva marca de bebidas energéticas con proyección de gran crecimiento. Creación del logotipo, sistema de marca y paleta visual que transmiten energía, modernidad y distinción. Diseño de etiqueta para el producto y elaboración del manual de marca corporativo con lineamientos de uso, tipografías, colores y aplicaciones. Un proyecto desafiante y emocionante: construir desde cero la identidad de una marca que tiene todo para ser grande.',
+    detail: 'Diseño de identidad corporativa completa, una nueva marca de bebidas energéticas con proyección de gran crecimiento. Creación del logotipo, sistema de marca y paleta visual que transmiten energía, modernidad y distinción. Diseño de etiqueta para el producto y elaboración del manual de marca corporativo con lineamientos de uso, tipografías, colores y aplicaciones.',
   },
 ]
 
@@ -153,7 +153,7 @@ export default function Projects() {
   const [desktopFullscreen, setDesktopFullscreen] = useState(false)
   const [galleryFullscreen, setGalleryFullscreen] = useState(null)
 
-  const filtered = active === 'Todos' ? projects : projects.filter(p => p.cat === active || p.cat2 === active)
+  const filtered = active === 'Todos' ? projects : projects.filter(p => p.cat === active || p.cat2 === active || p.cat3 === active)
 
   const closeModal = () => {
     setModal(null)
@@ -297,7 +297,7 @@ export default function Projects() {
                 </a>
               )}
               {modal.url2 && (
-                <a href={modal.url2} target="_blank" rel="noreferrer" className={styles.modalLink} style={{marginTop:'0.5rem'}}>
+                <a href={modal.url2} target="_blank" rel="noreferrer" className={styles.modalLink} style={{marginTop:'0.75rem'}}>
                   {modal.url2Label}
                 </a>
               )}
