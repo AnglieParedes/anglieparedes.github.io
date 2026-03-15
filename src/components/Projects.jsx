@@ -106,7 +106,15 @@ const projects = [
     mockup: { desktop: '/mockups/proservit-desktop.png' },
   },
   {
-    num: '13', name: 'AA Shopping', cat: 'E-commerce',
+    num: '13', name: 'Remedycell', cat: 'E-commerce',
+    type: 'Suplementos · WordPress + WooCommerce · Morestudio',
+    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'Yoast SEO', 'SMTP', 'Email Marketing', 'Google Analytics', 'Clarity', 'UX/UI'],
+    bg: '#0d1a18', url: 'https://remedycell.cl',
+    detail: 'Proyecto colaborativo en equipo Morestudio para empresa de suplementos alimenticios (colágeno, vitaminas y más). Mi participación: diseño y desarrollo de páginas de productos, landings, apoyo general y configuraciones de envíos. Plataforma completa con WordPress, WooCommerce, Elementor Pro, Yoast SEO, SMTP, email marketing, Google Analytics, Clarity y Hosting Kinsta.',
+    mockup: { desktop: '/mockups/remedycell-desktop.png', mobile: '/mockups/remedycell-mobile.jpeg' },
+  },
+  {
+    num: '14', name: 'AA Shopping', cat: 'E-commerce',
     type: 'Multitienda · Shopify + Pasarelas de pago',
     tags: ['Shopify', 'Integraciones', 'Flow', 'Pago Fácil', 'Mercado Pago'],
     bg: '#1a1200', url: 'https://aashopping.cl',
