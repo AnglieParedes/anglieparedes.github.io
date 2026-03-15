@@ -129,7 +129,19 @@ const projects = [
     mockup: null,
   },
   {
-    num: '17', name: 'Motel Curco', cat: ['Identidad corporativa', 'Contenido de RRSS'],
+    num: '17', name: 'La Nueva Vencedora', cat: ['Identidad corporativa', 'Contenido de RRSS'],
+    type: 'Branding · Diseño gráfico · Contenido digital',
+    tags: ['Branding', 'Identidad corporativa', 'Redes sociales', 'Diseño de etiqueta', 'Pendones', 'Contenido digital', 'Paleta de colores'],
+    bg: '#0d1a12', url: null,
+    detail: 'Refrescamiento integral de imagen para La Nueva Vencedora. Actualización de paleta de colores e identidad visual, diseño de pendones y material gráfico para punto de venta, etiquetas de productos, piezas para redes sociales y branding general. Un proyecto enfocado en modernizar la presencia visual de la marca manteniendo su esencia.',
+    gallery: [
+      '/mockups/logo-la-nueva-vencedora.png',
+      '/mockups/pendon-nueva-vencedora-01.png',
+      '/mockups/pendon-nueva-vencedora-02.png',
+    ],
+  },
+  {
+    num: '18', name: 'Motel Curco', cat: ['Identidad corporativa', 'Contenido de RRSS'],
     type: 'Rebranding · Identidad visual · Contenido digital',
     tags: ['Branding', 'Rebranding', 'Identidad corporativa', 'Redes sociales', 'Diseño gráfico', 'Contenido digital'],
     bg: '#1a1508', url: null,
@@ -141,7 +153,7 @@ const projects = [
     ],
   },
   {
-    num: '18', name: 'AA Shopping', cat: 'E-commerce',
+    num: '19', name: 'AA Shopping', cat: 'E-commerce',
     type: 'Multitienda · Shopify + Pasarelas de pago',
     tags: ['Shopify', 'Integraciones', 'Flow', 'Pago Fácil', 'Mercado Pago'],
     bg: '#1a1200', url: 'https://aashopping.cl',
