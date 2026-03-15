@@ -116,7 +116,7 @@ const projects = [
   {
     num: '15', name: 'Evolv Energy Drink', cat: 'Identidad corporativa', wip: true,
     type: 'Identidad Corporativa · Branding · Manual de Marca',
-    tags: ['Branding', 'Identidad corporativa', 'Manual de marca', 'Diseño de etiqueta', 'UX/UI'],
+    tags: ['Branding', 'Identidad corporativa', 'Manual de marca', 'Diseño de etiqueta'],
     bg: '#0d0d1a', url: null,
     detail: 'Desarrollo completo de identidad corporativa para empresa de bebidas energéticas. Creación de manual de marca, branding y diseño de etiqueta de producto. Identidad patentada — todos los derechos reservados. Empresa próximamente en lanzamiento al mercado.',
     mockup: { desktop: '/mockups/logo-evolv.jpg' },
