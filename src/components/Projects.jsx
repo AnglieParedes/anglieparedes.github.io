@@ -12,7 +12,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'PHP', 'Cotizaciones', 'Relbase', 'Elementor Pro', 'UX/UI'],
     bg: '#0d1200', url: 'https://techdent.cl',
     detail: 'Proyecto colaborativo en equipo. Mi participación: rediseño y desarrollo del home actual, integración al sistema de facturación Relbase, sistema completo de cotizaciones en PHP (formulario con flujo Clínica vs Mercado Público, almacenamiento interno y panel de gestión de leads), y sistema de etiqueta "Llega hoy" con cálculo de fecha de despacho en tiempo real.',
-    mockup: { desktop: '/mockups/Techdent-desktop.png', mobile: '/mockups/Techdent-mobile.jpeg' },
+    mockup: { desktop: '/mockups/techdent-desktop.png', mobile: '/mockups/techdent-mobile.jpeg' },
   },
   {
     num: '02', name: 'Isabel Aliaga', cat: 'Landing',
@@ -28,7 +28,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'Corporativo', 'Responsive'],
     bg: '#0d1218', url: 'https://dimet.morestudio.cl',
     detail: 'Desarrollo completo en WordPress para cliente de Morestudio. Pendiente migración a dominio propio.',
-    mockup: { desktop: '/mockups/Dimet-desktop.png', mobile: '/mockups/dimet-mobile.jpeg' },
+    mockup: { desktop: '/mockups/dimet-desktop.png', mobile: '/mockups/dimet-mobile.jpeg' },
   },
   {
     num: '04', name: 'Hydrodimet', cat: 'E-commerce',
@@ -36,7 +36,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'Corporativo', 'Diseño web'],
     bg: '#0d1520', url: 'https://hydrodimet.morestudio.cl',
     detail: 'Desarrollo completo en WordPress para cliente de Morestudio. Pendiente migración a dominio propio.',
-    mockup: { desktop: '/mockups/Hydromec-desktop.png', mobile: '/mockups/Hydromec-mobile.jpeg' },
+    mockup: { desktop: '/mockups/hydromec-desktop.png', mobile: '/mockups/hydromec-mobile.jpeg' },
   },
   {
     num: '05', name: 'Bynines', cat: 'E-commerce',
@@ -51,7 +51,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'Diseño web', 'Elementor'],
     bg: '#101a10', url: 'https://west5.morestudio.cl',
     detail: 'Desarrollo completo en WordPress para cliente de Morestudio. Pendiente migración a dominio propio.',
-    mockup: { desktop: '/mockups/West5-desktop.png', mobile: '/mockups/West5-mobile.jpeg' },
+    mockup: { desktop: '/mockups/west5-desktop.png', mobile: '/mockups/west5-mobile.jpeg' },
   },
   {
     num: '07', name: 'Opticallery — Landings', cat: 'Landing',
@@ -95,7 +95,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'Mercado Pago', 'Mailchimp'],
     bg: '#111', url: 'https://shopyshop.cl',
     detail: 'E-commerce de accesorios para smartphones con integración de Mercado Pago, WePay y estrategia de email marketing.',
-    mockup: { desktop: '/mockups/Shop y shop-desktop.png', mobile: '/mockups/Shopyshop-mobile1.png' },
+    mockup: { desktop: '/mockups/shop-y-shop-desktop.png', mobile: '/mockups/shopyshop-mobile1.png' },
   },
   {
     num: '12', name: 'Proservit', cat: 'E-commerce',
