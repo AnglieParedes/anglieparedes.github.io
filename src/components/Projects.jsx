@@ -129,7 +129,19 @@ const projects = [
     mockup: null,
   },
   {
-    num: '16', name: 'AA Shopping', cat: 'E-commerce',
+    num: '17', name: 'Motel Curco', cat: ['Identidad corporativa', 'Contenido de RRSS'],
+    type: 'Rebranding · Identidad visual · Contenido digital',
+    tags: ['Branding', 'Rebranding', 'Identidad corporativa', 'Redes sociales', 'Diseño gráfico', 'Contenido digital'],
+    bg: '#1a1508', url: null,
+    detail: 'Proyecto de rebranding completo para Motel Curco. Refrescamiento integral de imagen corporativa: rediseño de logotipo en múltiples versiones, creación de piezas gráficas para redes sociales y diseño de material para punto de venta (mostrador). Propuesta visual moderna y coherente que fortalece la identidad de la marca en todos sus canales.',
+    gallery: [
+      '/mockups/renovacion-logo-curco-01.jpg',
+      '/mockups/renovacion-logo-curco-02.jpg',
+      '/mockups/renovacion-logo-curco-04.jpg',
+    ],
+  },
+  {
+    num: '18', name: 'AA Shopping', cat: 'E-commerce',
     type: 'Multitienda · Shopify + Pasarelas de pago',
     tags: ['Shopify', 'Integraciones', 'Flow', 'Pago Fácil', 'Mercado Pago'],
     bg: '#1a1200', url: 'https://aashopping.cl',
