@@ -23,11 +23,11 @@ const projects = [
     mockup: { desktop: '/mockups/isabel-desktop.png', mobile: '/mockups/isabel.mobile.jpeg' },
   },
   {
-    num: '03', name: 'Dimet', cat: 'E-commerce',
-    type: 'Sitio corporativo · WordPress · Morestudio',
-    tags: ['WordPress', 'Hosting', 'Corporativo', 'Responsive'],
-    bg: '#0d1218', url: 'https://dimet.morestudio.cl',
-    detail: 'Desarrollo completo en WordPress para cliente de Morestudio. Pendiente migración a dominio propio.',
+    num: '03', name: 'Dimet', cat: 'E-commerce', wip: true,
+    type: 'E-commerce corporativo · WordPress · WooCommerce',
+    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'SMTP', 'Diseño web', 'Responsive', 'Cotizaciones'],
+    bg: '#0d1218', url: null,
+    detail: 'Desarrollo completo para empresa industrial de alto rendimiento. Plataforma e-commerce con catálogo de productos, sistema de cotizaciones y diseño corporativo profesional. Desarrollado íntegramente con WordPress, Elementor Pro, WooCommerce y SMTP. Próximamente en dimet.cl.',
     mockup: { desktop: '/mockups/dimet-desktop.png', mobile: '/mockups/dimet-mobile.jpeg' },
   },
   {
