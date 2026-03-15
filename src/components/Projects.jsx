@@ -7,7 +7,7 @@ const categories = ['Todos', 'E-commerce', 'Sistema / Dev', 'Landing', 'Identida
 
 const projects = [
   {
-    num: '01', name: 'Techdent', cat: 'Sistema / Dev', highlight: true,
+    num: '01', name: 'Techdent', cat: 'E-commerce', cat2: 'Sistema / Dev', highlight: true,
     type: 'E-commerce dental · WordPress + WooCommerce + PHP',
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'PHP', 'Cotizaciones', 'Relbase', 'Elementor Pro', 'UX/UI'],
     bg: '#0d1200', url: 'https://techdent.cl',
@@ -47,30 +47,30 @@ const projects = [
   },
   {
     num: '06', name: 'West5', cat: 'E-commerce', wip: true,
-    type: 'Sitio web · WordPress · Morestudio',
-    tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'SMTP', 'Integraciones', 'Pasarela de pago'],
+    type: 'Suplementos y vitaminas · WordPress + WooCommerce · Morestudio',
+    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'SMTP', 'Pasarela de pago', 'Integraciones', 'Diseño web', 'UX/UI'],
     bg: '#101a10', url: null,
-    detail: 'Desarrollo completo del sitio web: WordPress con Elementor Pro, SMTP, pasarela de pago e integraciones varias. Próximamente en west5.cl.',
+    detail: 'Desarrollo completo de tienda online para marca de suplementos y vitaminas. Diseño UX/UI, maquetación en WordPress con Elementor Pro, configuración de WooCommerce, SMTP, pasarela de pago e integraciones varias. Próximamente en west5.cl.',
     mockup: { desktop: '/mockups/west5-desktop.png', mobile: '/mockups/west5-mobile.jpeg' },
   },
   {
-    num: '07', name: 'Opticallery — Landings', cat: 'Landing',
-    type: 'Landings internas · WordPress · Diseño + desarrollo',
-    tags: ['Landing page', 'WordPress', 'Hosting', 'Elementor Pro', 'UX/UI', 'WooCommerce'],
+    num: '07', name: 'Opticallery — Landings', cat: 'E-commerce',
+    type: 'Óptica · Landings + Checkout condicional · WordPress',
+    tags: ['Landing page', 'WordPress', 'Hosting', 'Elementor Pro', 'PHP', 'WooCommerce', 'UX/UI', 'Checkout personalizado'],
     bg: '#0a0a1a', url: 'https://opticallery.cl/product-category/lentes-aviador/',
     url2: 'https://opticallery.cl/product-category/lentes-deportivos/',
     url2Label: 'Lentes Deportivos →',
     urlLabel: 'Lentes Aviador →',
-    detail: 'Diseño y desarrollo de landings internas para categorías de productos: lentes aviador y lentes deportivos. Enfoque en experiencia de usuario y conversión.',
+    detail: 'Proyecto colaborativo en equipo para óptica online. Mi participación: diseño y desarrollo de landings internas para categorías de productos (lentes aviador y lentes deportivos), enfocadas en experiencia de usuario y conversión. Además, desarrollo de un checkout condicional en PHP que adapta el flujo de pago y los campos del formulario según el tipo de producto seleccionado, optimizando la experiencia de compra.',
     mockup: { desktop: '/mockups/opticallery-desktop.png', mobile: '/mockups/opticallery-mobile.jpeg' },
   },
   {
     num: '08', name: 'BesPlus', cat: 'E-commerce',
-    type: 'Diseño web · WordPress · Membresía',
-    tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'UX/UI'],
+    type: 'Salud y bienestar · WordPress · Membresía + Diseño web',
+    tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'UX/UI', 'Membership'],
     bg: '#1a1200', url: 'https://besplus.cl/membresia/',
     urlLabel: 'Ver página membresía →',
-    detail: 'Proyecto en equipo. Mi participación: diseño y desarrollo completo de la página interna de Membresía, popup, cambios generales de diseño y maquetación de blogs.',
+    detail: 'Proyecto colaborativo en equipo para plataforma de salud y bienestar. Mi participación: diseño y desarrollo completo de la página interna de Membresía con arquitectura clara de planes y beneficios, popup de captación, cambios generales de diseño en el sitio y maquetación de artículos del blog con foco en legibilidad y conversión.',
     mockup: { desktop: '/mockups/besplus-desktop.png', mobile: '/mockups/besplus-mobile.jpeg' },
   },
   {
@@ -92,10 +92,10 @@ const projects = [
   },
   {
     num: '11', name: 'Shop y Shop', cat: 'E-commerce',
-    type: 'Accesorios Móviles · WooCommerce + Email Marketing',
-    tags: ['WordPress', 'Hosting', 'Mercado Pago', 'Mailchimp'],
+    type: 'Accesorios móviles · WordPress + WooCommerce · Diseño completo',
+    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'Mercado Pago', 'Mailchimp', 'Email Marketing', 'UX/UI'],
     bg: '#111', url: 'https://shopyshop.cl',
-    detail: 'E-commerce de accesorios para smartphones con integración de Mercado Pago, WePay y estrategia de email marketing.',
+    detail: 'Diseño y desarrollo completo de tienda online de accesorios para smartphones. Maquetación en WordPress con Elementor Pro, configuración de WooCommerce, integración de pasarelas de pago Mercado Pago y WePay, y estrategia de email marketing con Mailchimp para fidelización de clientes.',
     mockup: { desktop: '/mockups/shop-y-shop-desktop.png', mobile: '/mockups/shopyshop-mobile1.png' },
   },
   {
@@ -115,35 +115,34 @@ const projects = [
   },
   {
     num: '14', name: 'Remedycell', cat: 'E-commerce',
-    type: 'Suplementos · WordPress + WooCommerce',
-    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'Diseño web'],
+    type: 'Suplementos · WordPress + WooCommerce · Morestudio',
+    tags: ['WordPress', 'Hosting Kinsta', 'WooCommerce', 'Elementor Pro', 'PHP', 'SMTP', 'Email Marketing', 'Microsoft Clarity', 'Diseño web', 'UX/UI'],
     bg: '#0d1a15', url: 'https://remedycell.cl',
-    detail: 'Desarrollo completo de tienda online para marca de suplementos y bienestar.',
+    detail: 'Proyecto colaborativo en equipo para marca de suplementos y bienestar celular. Mi participación: soporte y gestión del hosting en Kinsta, diseño y desarrollo de páginas de productos con foco en conversión, landings internas varias, configuración de checkout personalizado con PHP, integración de SMTP y campañas de email marketing, implementación de Microsoft Clarity para análisis de comportamiento de usuarios, y cambios generales de diseño y mejoras de rendimiento.',
     mockup: { desktop: '/mockups/remedycell-desktop.png', mobile: '/mockups/remedycell-mobile.jpeg' },
   },
   {
     num: '15', name: 'Motel Curco', cat: 'Identidad & Branding',
-    type: 'Rebranding · Identidad Corporativa',
-    tags: ['Branding', 'Diseño Gráfico', 'Identidad Visual', 'Logotipo'],
+    type: 'Rebranding · Identidad Corporativa · Contenido RRSS',
+    tags: ['Branding', 'Diseño Gráfico', 'Logotipo', 'Nombre publicitario', 'Social Media', 'Contenido RRSS'],
     bg: '#1a1005',
-    detail: 'Renovación completa de identidad visual para Motel Curco. Rediseño de logotipo y sistema de marca.',
+    detail: 'Un proyecto que ha ido evolucionando y creciendo con el tiempo. Rediseño completo del logotipo de marca con una propuesta visual más moderna y coherente con la identidad del negocio. Desarrollo de nombre publicitario y sistema de branding aplicado a distintos formatos. Creación y gestión de contenido para redes sociales, construyendo una presencia digital consistente y atractiva. Un proyecto del que me siento muy orgullosa por cómo ha madurado en cada etapa.',
     gallery: ['/mockups/renovacion-logo-curco-01.jpg', '/mockups/renovacion-logo-curco-02.jpg', '/mockups/renovacion-logo-curco-04.jpg'],
   },
   {
     num: '16', name: 'La Nueva Vencedora', cat: 'Identidad & Branding',
-    type: 'Identidad Corporativa · Diseño Gráfico',
-    tags: ['Branding', 'Diseño Gráfico', 'Pendones', 'Logotipo'],
+    type: 'Refrescamiento de marca · Identidad · Contenido RRSS',
+    tags: ['Branding', 'Diseño Gráfico', 'Etiquetas', 'Pendones', 'Social Media', 'Contenido RRSS', 'Identidad Visual'],
     bg: '#1a0510',
-    detail: 'Diseño de identidad corporativa, logotipo y material gráfico para La Nueva Vencedora.',
+    detail: 'Un proyecto vivo que sigue creciendo con cada entrega. Refrescamiento completo de branding e identidad visual: nuevo sistema de marca más fresco y contemporáneo, diseño de etiquetas para productos, pendones publicitarios y piezas gráficas variadas. Creación de contenido para redes sociales con una línea visual coherente y reconocible. Un proyecto del que me siento muy orgullosa por la evolución que ha tenido y el impacto visual que ha logrado.',
     gallery: ['/mockups/logo-la-nueva-vencedora.png', '/mockups/pendon-nueva-vencedora-01.png', '/mockups/pendon-nueva-vencedora-02.png'],
   },
   {
     num: '17', name: 'Evolv Energy Drink', cat: 'Identidad & Branding',
-    type: 'Identidad de Marca · Diseño Gráfico',
-    tags: ['Branding', 'Diseño Gráfico', 'Packaging', 'Logotipo'],
+    type: 'Identidad corporativa · Bebida energética · Manual de marca',
+    tags: ['Branding', 'Identidad Corporativa', 'Diseño de etiqueta', 'Manual de marca', 'Packaging', 'Logotipo'],
     bg: '#0a1a05',
-    detail: 'Diseño de identidad visual para marca de bebida energética Evolv.',
-    gallery: ['/mockups/logo-evolv.jpg'],
+    detail: 'Diseño de identidad corporativa completa para Evolv, una nueva marca de bebidas energéticas con proyección de gran crecimiento. Creación del logotipo, sistema de marca y paleta visual que transmiten energía, modernidad y distinción. Diseño de etiqueta para el producto y elaboración del manual de marca corporativo con lineamientos de uso, tipografías, colores y aplicaciones. Un proyecto desafiante y emocionante: construir desde cero la identidad de una marca que tiene todo para ser grande.',
   },
 ]
 
@@ -154,7 +153,7 @@ export default function Projects() {
   const [desktopFullscreen, setDesktopFullscreen] = useState(false)
   const [galleryFullscreen, setGalleryFullscreen] = useState(null)
 
-  const filtered = active === 'Todos' ? projects : projects.filter(p => p.cat === active)
+  const filtered = active === 'Todos' ? projects : projects.filter(p => p.cat === active || p.cat2 === active)
 
   const closeModal = () => {
     setModal(null)
