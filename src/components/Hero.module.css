@@ -116,7 +116,7 @@ h1 {
   text-transform: uppercase; padding: 0.5rem 1rem;
   white-space: nowrap;
 }
-.ft0 { top: 18%; left: 5%; background: var(--orange); color: var(--black); transform: rotate(-4deg); }
+.ft0 { top: 30%; left: 5%; background: var(--orange); color: var(--black); transform: rotate(-4deg); }
 .ft1 { top: 36%; right: 4%; background: var(--blue); color: #fff; transform: rotate(3deg); }
 .ft2 { bottom: 32%; left: 6%; background: #111; border: 1px solid #73230e; color: #fe4300; transform: rotate(-2deg); }
 .ft3 { bottom: 20%; right: 8%; border: 1px solid #666666; color: #aaaaaa; background: transparent; transform: rotate(2deg); }
@@ -129,7 +129,7 @@ h1 {
   .scrollHint { margin-top: 2rem; }
 }
 
-.ft5 { top: 8%; right: 6%; transform: rotate(2deg); }
+.ft5 { top: 22%; right: 6%; transform: rotate(2deg); }
 
 .floatTagAccent {
   background: #fe4300;
