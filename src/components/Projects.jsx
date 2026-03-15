@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import FadeUp from './FadeUp'
 import styles from './Projects.module.css'
 
-const categories = ['Todos', 'E-commerce', 'Corporativo', 'Sistema / Dev', 'Landing', 'Branding']
+const categories = ['Todos', 'E-commerce', 'Corporativo', 'Sistema / Dev', 'Landing', 'Identidad & Branding']
 
 const projects = [
   {
@@ -72,7 +72,7 @@ const projects = [
   {
     num: '09', name: 'Gatis Shop', cat: 'E-commerce',
     type: 'Joyería Artesanal · Branding + Web + RRSS',
-    tags: ['Branding', 'WordPress', 'E-commerce', 'Social Media'],
+    tags: ['Identidad & Branding', 'WordPress', 'E-commerce', 'Social Media'],
     bg: '#1a0d0d', url: 'https://gatisshop.com',
     detail: 'Proyecto propio. Branding completo, packaging, web WordPress + WooCommerce y gestión de RRSS. +3.258 seguidores en Instagram.',
     mockup: { desktop: '/mockups/gatisshop-desktop.png', mobile: '/mockups/gatisshop-mobile.jpg' },
@@ -118,25 +118,25 @@ const projects = [
     mockup: { desktop: '/mockups/remedycell-desktop.png', mobile: '/mockups/remedycell-mobile.jpeg' },
   },
   {
-    num: '15', name: 'Motel Curco', cat: 'Branding',
+    num: '15', name: 'Motel Curco', cat: 'Identidad & Branding',
     type: 'Rebranding · Identidad Corporativa',
-    tags: ['Branding', 'Diseño Gráfico', 'Identidad Visual'],
+    tags: ['Identidad & Branding', 'Diseño Gráfico', 'Identidad Visual'],
     bg: '#1a1005',
     detail: 'Renovación completa de identidad visual para Motel Curco. Rediseño de logotipo y sistema de marca.',
     gallery: ['/mockups/renovacion-logo-curco-01.jpg', '/mockups/renovacion-logo-curco-02.jpg', '/mockups/renovacion-logo-curco-04.jpg'],
   },
   {
-    num: '16', name: 'La Nueva Vencedora', cat: 'Branding',
+    num: '16', name: 'La Nueva Vencedora', cat: 'Identidad & Branding',
     type: 'Identidad Corporativa · Diseño Gráfico',
-    tags: ['Branding', 'Diseño Gráfico', 'Pendones'],
+    tags: ['Identidad & Branding', 'Diseño Gráfico', 'Pendones'],
     bg: '#1a0510',
     detail: 'Diseño de identidad corporativa, logotipo y material gráfico para La Nueva Vencedora.',
     gallery: ['/mockups/logo-la-nueva-vencedora.png', '/mockups/pendon-nueva-vencedora-01.png', '/mockups/pendon-nueva-vencedora-02.png'],
   },
   {
-    num: '17', name: 'Evolv Energy Drink', cat: 'Branding',
+    num: '17', name: 'Evolv Energy Drink', cat: 'Identidad & Branding',
     type: 'Identidad de Marca · Diseño Gráfico',
-    tags: ['Branding', 'Diseño Gráfico', 'Packaging'],
+    tags: ['Identidad & Branding', 'Diseño Gráfico', 'Packaging'],
     bg: '#0a1a05',
     detail: 'Diseño de identidad visual para marca de bebida energética Evolv.',
     gallery: ['/mockups/logo-evolv.jpg'],
