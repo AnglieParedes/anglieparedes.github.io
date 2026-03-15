@@ -114,7 +114,15 @@ const projects = [
     mockup: { desktop: '/mockups/remedycell-desktop.png', mobile: '/mockups/remedycell-mobile.jpeg' },
   },
   {
-    num: '14', name: 'AA Shopping', cat: 'E-commerce',
+    num: '15', name: 'Evolv Energy Drink', cat: 'Identidad corporativa', wip: true,
+    type: 'Identidad Corporativa · Branding · Manual de Marca',
+    tags: ['Branding', 'Identidad corporativa', 'Manual de marca', 'Diseño de etiqueta', 'UX/UI'],
+    bg: '#0d0d1a', url: null,
+    detail: 'Desarrollo completo de identidad corporativa para empresa de bebidas energéticas. Creación de manual de marca, branding y diseño de etiqueta de producto. Identidad patentada — todos los derechos reservados. Empresa próximamente en lanzamiento al mercado.',
+    mockup: { desktop: '/mockups/logo-evolv.jpg' },
+  },
+  {
+    num: '16', name: 'AA Shopping', cat: 'E-commerce',
     type: 'Multitienda · Shopify + Pasarelas de pago',
     tags: ['Shopify', 'Integraciones', 'Flow', 'Pago Fácil', 'Mercado Pago'],
     bg: '#1a1200', url: 'https://aashopping.cl',
