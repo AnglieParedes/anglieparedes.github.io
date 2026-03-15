@@ -1,176 +1,110 @@
-import { useState } from 'react'
+≈≈≈≈≈import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import FadeUp from './FadeUp'
 import styles from './Projects.module.css'
 
-const categories = ['Todos', 'E-commerce', 'Sistema / Dev', 'Landing', 'Identidad corporativa', 'Contenido de RRSS']
+const categories = ['Todos', 'E-commerce', 'Corporativo', 'Sistema / Dev', 'Landing']
 
 const projects = [
   {
     num: '01', name: 'Techdent', cat: 'Sistema / Dev', highlight: true,
     type: 'E-commerce dental · WordPress + WooCommerce + PHP',
-    tags: ['WordPress', 'Hosting', 'WooCommerce', 'PHP', 'Cotizaciones', 'Relbase', 'Elementor Pro', 'UX/UI'],
+    tags: ['WordPress', 'WooCommerce', 'PHP', 'Cotizaciones'],
     bg: '#0d1200', url: 'https://techdent.cl',
-    detail: 'Proyecto colaborativo en equipo. Mi participación: rediseño y desarrollo del home actual, integración al sistema de facturación Relbase, sistema completo de cotizaciones en PHP (formulario con flujo Clínica vs Mercado Público, almacenamiento interno y panel de gestión de leads), y sistema de etiqueta "Llega hoy" con cálculo de fecha de despacho en tiempo real.',
-    mockup: { desktop: '/mockups/techdent-desktop.png', mobile: '/mockups/techdent-mobile.jpeg' },
+    detail: 'Desarrollo completo del e-commerce. Arquitectura de sistema de cotizaciones a medida en PHP: formulario con flujo de dos ramas (Clínica vs Mercado Público), almacenamiento interno en WordPress y panel personalizado para gestionar y responder cada lead.',
   },
   {
     num: '02', name: 'Isabel Aliaga', cat: 'Landing',
     type: 'Terapias psicológicas online · WordPress · Morestudio',
-    tags: ['WordPress', 'Hosting', 'Elementor Pro', 'HTML', 'CSS', 'JavaScript'],
+    tags: ['WordPress', 'Elementor Pro', 'HTML', 'CSS', 'JavaScript'],
     bg: '#1a0d1a', url: 'https://isabelaliaga.cl',
     detail: 'Diseño y desarrollo completo de sitio web para psicóloga online. Desarrollado en WordPress con Elementor Pro, HTML, CSS, JavaScript y complementos adicionales. Enfocado en transmitir confianza, calidez y facilitar el contacto con potenciales pacientes.',
-    mockup: { desktop: '/mockups/isabel-desktop.png', mobile: '/mockups/isabel.mobile.jpeg' },
+    mockup: { desktop: '/mockups/isabel-desktop.png', mobile: '/mockups/isabel-mobile.png' },
   },
   {
-    num: '03', name: 'Dimet', cat: 'E-commerce', wip: true,
-    type: 'E-commerce corporativo · WordPress · WooCommerce',
-    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'SMTP', 'Diseño web', 'Responsive', 'Cotizaciones'],
-    bg: '#0d1218', url: null,
-    detail: 'Desarrollo completo para empresa industrial de alto rendimiento. Plataforma e-commerce con catálogo de productos, sistema de cotizaciones y diseño corporativo profesional. Desarrollado íntegramente con WordPress, Elementor Pro, WooCommerce y SMTP. Próximamente en dimet.cl.',
-    mockup: { desktop: '/mockups/dimet-desktop.png', mobile: '/mockups/dimet-mobile.jpeg' },
+    num: '03', name: 'Dimet', cat: 'Corporativo',
+    type: 'Sitio corporativo · WordPress · Morestudio',
+    tags: ['WordPress', 'Corporativo', 'Responsive'],
+    bg: '#0d1218', url: 'https://dimet.morestudio.cl',
+    detail: 'Desarrollo completo en WordPress para cliente de Morestudio. Pendiente migración a dominio propio.',
   },
   {
-    num: '04', name: 'Hydrodimet', cat: 'E-commerce', wip: true,
-    type: 'E-commerce corporativo · WordPress · WooCommerce',
-    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'SMTP', 'Email Marketing', 'Cotizaciones', 'Diseño web'],
-    bg: '#0d1520', url: null,
-    detail: 'Desarrollo completo para empresa industrial de gran envergadura. Plataforma e-commerce con sistema de cotizaciones, integración de WooCommerce, SMTP y campañas de correo marketing. Diseño corporativo profesional desarrollado íntegramente con WordPress y Elementor Pro. Próximamente en dominio propio.',
-    mockup: { desktop: '/mockups/hydromec-desktop.png', mobile: '/mockups/hydromec-mobile.jpeg' },
+    num: '04', name: 'Hydrodimet', cat: 'Corporativo',
+    type: 'Sitio corporativo · WordPress · Morestudio',
+    tags: ['WordPress', 'Corporativo', 'Diseño web'],
+    bg: '#0d1520', url: 'https://hydrodimet.morestudio.cl',
+    detail: 'Desarrollo completo en WordPress para cliente de Morestudio. Pendiente migración a dominio propio.',
   },
   {
-    num: '05', name: 'Bynines', cat: 'E-commerce',
-    type: 'Sitio web · WordPress · En desarrollo',
-    tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'Responsive', 'UX/UI'],
-    bg: '#18100d', url: null, wip: true,
-    detail: 'Desarrollo completo a cargo propio: diseño, maquetación, pasarela de pago y configuración general en WordPress con Elementor Pro. El logo fue provisto por la cliente. Actualmente en desarrollo — próximamente en bynines.cl.',
+    num: '05', name: 'Bynines', cat: 'Corporativo',
+    type: 'Sitio web · WordPress',
+    tags: ['WordPress', 'Diseño web', 'Responsive'],
+    bg: '#18100d', url: 'https://bynines.cl',
+    detail: 'Desarrollo y diseño web completo en WordPress.',
   },
   {
-    num: '06', name: 'West5', cat: 'E-commerce', wip: true,
+    num: '06', name: 'West5', cat: 'Corporativo',
     type: 'Sitio web · WordPress · Morestudio',
-    tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'SMTP', 'Integraciones', 'Pasarela de pago'],
-    bg: '#101a10', url: null,
-    detail: 'Desarrollo completo del sitio web: WordPress con Elementor Pro, SMTP, pasarela de pago e integraciones varias. Próximamente en west5.cl.',
-    mockup: { desktop: '/mockups/west5-desktop.png', mobile: '/mockups/west5-mobile.jpeg' },
+    tags: ['WordPress', 'Diseño web', 'Elementor'],
+    bg: '#101a10', url: 'https://west5.morestudio.cl',
+    detail: 'Desarrollo completo en WordPress para cliente de Morestudio. Pendiente migración a dominio propio.',
   },
   {
     num: '07', name: 'Opticallery — Landings', cat: 'Landing',
     type: 'Landings internas · WordPress · Diseño + desarrollo',
-    tags: ['Landing page', 'WordPress', 'Hosting', 'Elementor Pro', 'UX/UI', 'WooCommerce'],
+    tags: ['Landing page', 'WordPress', 'Elementor Pro', 'UX/UI', 'WooCommerce'],
     bg: '#0a0a1a', url: 'https://opticallery.cl/product-category/lentes-aviador/',
-    url2: 'https://opticallery.cl/product-category/lentes-deportivos/',
-    url2Label: 'Lentes Deportivos →',
-    urlLabel: 'Lentes Aviador →',
     detail: 'Diseño y desarrollo de landings internas para categorías de productos: lentes aviador y lentes deportivos. Enfoque en experiencia de usuario y conversión.',
-    mockup: { desktop: '/mockups/opticallery-desktop.png', mobile: '/mockups/opticallery-mobile.jpeg' },
   },
   {
-    num: '08', name: 'BesPlus', cat: 'E-commerce',
-    type: 'Diseño web · WordPress · Membresía',
-    tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'UX/UI'],
-    bg: '#1a1200', url: 'https://besplus.cl/membresia/',
-    urlLabel: 'Ver página membresía →',
-    detail: 'Proyecto en equipo. Mi participación: diseño y desarrollo completo de la página interna de Membresía, popup, cambios generales de diseño y maquetación de blogs.',
-    mockup: { desktop: '/mockups/besplus-desktop.png', mobile: '/mockups/besplus-mobile.jpeg' },
+    num: '08', name: 'BesPlus — Blog', cat: 'Corporativo',
+    type: 'Estrategia de contenidos · WordPress',
+    tags: ['WordPress', 'Blog', 'Copy con IA', 'SEO'],
+    bg: '#1a1200', url: 'https://besplus.cl',
+    detail: 'Creación y gestión de blogs con estrategia de contenidos y copy asistido con IA para posicionamiento SEO orgánico.',
   },
   {
-    num: '09', name: 'Gatis Shop', cat: ['E-commerce', 'Identidad corporativa'], highlight: true,
-    type: 'Joyería Artesanal · Proyecto propio · Branding + Web + RRSS',
-    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'HTML', 'CSS', 'UX/UI', 'Branding', 'Identidad corporativa', 'Google Ads', 'Meta Ads', 'Email Marketing', 'Social Media', 'Integraciones', 'Facto'],
-    bg: '#1a0d0d', url: null,
-    detail: 'Proyecto propio y uno de los más completos de mi trayectoria. Desarrollo web completo en WordPress con Elementor Pro, HTML y CSS personalizado. Migración de hosting, diseño UX/UI, integración de pasarelas de pago, sistema de facturación Facto y SMTP. Identidad corporativa y branding desde cero: logo, packaging y copys. Estrategia digital completa: Google Ads, Meta Ads, campañas de email marketing y creación de contenido para Instagram. +3.258 seguidores orgánicos.',
-    mockup: { desktop: '/mockups/gatisshop-desktop.png', mobile: '/mockups/gatisshop-mobile.jpg', mobileScroll: true },
-    gallery: [
-      '/mockups/logo-gatisshop.png',
-      '/mockups/gatisshop-tarjetas.png',
-      '/mockups/packing-gatishop.png',
-      '/mockups/packing-gatishop2.png',
-      '/mockups/packing-gatishop3.png',
-    ],
+    num: '09', name: 'Gatis Shop', cat: 'E-commerce',
+    type: 'Joyería Artesanal · Branding + Web + RRSS',
+    tags: ['Branding', 'WordPress', 'E-commerce', 'Social Media'],
+    bg: '#1a0d0d', url: 'https://gatisshop.com',
+    detail: 'Proyecto propio. Branding completo, packaging, web WordPress + WooCommerce y gestión de RRSS. +3.258 seguidores en Instagram.',
   },
   {
     num: '10', name: 'Belladona', cat: 'E-commerce',
-    type: 'Plantas · WordPress + WooCommerce · Rediseño completo',
-    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'Google Ads', 'Email Marketing', 'SEO', 'Integraciones'],
+    type: 'Plantas 3D · WooCommerce + Google Ads + Mailchimp',
+    tags: ['WordPress', 'WooCommerce', 'Google Ads', 'Email Marketing'],
     bg: '#0d1a0f', url: 'https://belladonahome.com',
-    detail: 'Migración de hosting, rediseño completo de la tienda y desarrollo de nuevas funcionalidades. Integración de pasarelas de pago, Mailchimp, Wordfence, Yoast SEO y Google Analytics. Todo desarrollado en WordPress con Elementor Pro.',
-    mockup: { desktop: '/mockups/belladona-desktop.png', mobile: '/mockups/belladona-mobile.jpeg' },
+    detail: 'Tienda online para empresa de impresión 3D de plantas decorativas con Elementor Pro, Google Ads y Mailchimp.',
   },
   {
     num: '11', name: 'Shop y Shop', cat: 'E-commerce',
     type: 'Accesorios Móviles · WooCommerce + Email Marketing',
-    tags: ['WordPress', 'Hosting', 'Mercado Pago', 'Mailchimp'],
+    tags: ['WordPress', 'Mercado Pago', 'Mailchimp'],
     bg: '#111', url: 'https://shopyshop.cl',
     detail: 'E-commerce de accesorios para smartphones con integración de Mercado Pago, WePay y estrategia de email marketing.',
-    mockup: { desktop: '/mockups/shop-y-shop-desktop.png', mobile: '/mockups/shopyshop-mobile1.png' },
   },
   {
-    num: '12', name: 'Proservit', cat: 'E-commerce',
-    type: 'Sitio corporativo · WordPress · Diseño + desarrollo',
-    tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Responsive', 'CSS'],
+    num: '12', name: 'Proservit', cat: 'Corporativo',
+    type: 'Áreas Verdes · WordPress Corporativo',
+    tags: ['WordPress', 'UX/UI', 'Responsive'],
     bg: '#0d0d1a', url: 'https://proservit.cl',
-    detail: 'Desarrollo completo del sitio web para empresa de servicios de construcción, instalación y reparación. Diseño, maquetación y configuración general en WordPress con Elementor Pro y CSS personalizado.',
-    mockup: { desktop: '/mockups/proservit-desktop.png' },
+    detail: 'Sitio corporativo con portafolio de proyectos, servicios y formulario de contacto.',
   },
   {
-    num: '13', name: 'Remedycell', cat: 'E-commerce',
-    type: 'Suplementos · WordPress + WooCommerce · Morestudio',
-    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'Yoast SEO', 'SMTP', 'Email Marketing', 'Google Analytics', 'Clarity', 'UX/UI'],
-    bg: '#0d1a18', url: 'https://remedycell.cl',
-    detail: 'Proyecto colaborativo en equipo Morestudio para empresa de suplementos alimenticios (colágeno, vitaminas y más). Mi participación: diseño y desarrollo de páginas de productos, landings, apoyo general y configuraciones de envíos. Plataforma completa con WordPress, WooCommerce, Elementor Pro, Yoast SEO, SMTP, email marketing, Google Analytics, Clarity y Hosting Kinsta.',
-    mockup: { desktop: '/mockups/remedycell-desktop.png', mobile: '/mockups/remedycell-mobile.jpeg' },
-  },
-  {
-    num: '15', name: 'Evolv Energy Drink', cat: 'Identidad corporativa', wip: true,
-    type: 'Identidad Corporativa · Branding · Manual de Marca',
-    tags: ['Branding', 'Identidad corporativa', 'Manual de marca', 'Diseño de etiqueta'],
-    bg: '#0d0d1a', url: null,
-    detail: 'Desarrollo completo de identidad corporativa para empresa de bebidas energéticas. Creación de manual de marca, branding y diseño de etiqueta de producto. Identidad patentada — todos los derechos reservados. Empresa próximamente en lanzamiento al mercado.',
-    mockup: null,
-  },
-  {
-    num: '17', name: 'La Nueva Vencedora', cat: ['Identidad corporativa', 'Contenido de RRSS'],
-    type: 'Branding · Diseño gráfico · Contenido digital',
-    tags: ['Branding', 'Identidad corporativa', 'Redes sociales', 'Diseño de etiqueta', 'Pendones', 'Contenido digital', 'Paleta de colores'],
-    bg: '#0d1a12', url: null,
-    detail: 'Refrescamiento integral de imagen para La Nueva Vencedora. Actualización de paleta de colores e identidad visual, diseño de pendones y material gráfico para punto de venta, etiquetas de productos, piezas para redes sociales y branding general. Un proyecto enfocado en modernizar la presencia visual de la marca manteniendo su esencia.',
-    gallery: [
-      '/mockups/logo-la-nueva-vencedora.jpg',
-      '/mockups/pendon-nueva-vencedora-01.png',
-      '/mockups/pendon-nueva-vencedora-02.png',
-    ],
-  },
-  {
-    num: '18', name: 'Motel Curco', cat: ['Identidad corporativa', 'Contenido de RRSS'],
-    type: 'Rebranding · Identidad visual · Contenido digital',
-    tags: ['Branding', 'Rebranding', 'Identidad corporativa', 'Redes sociales', 'Diseño gráfico', 'Contenido digital'],
-    bg: '#1a1508', url: null,
-    detail: 'Proyecto de rebranding completo para Motel Curco. Refrescamiento integral de imagen corporativa: rediseño de logotipo en múltiples versiones, creación de piezas gráficas para redes sociales y diseño de material para punto de venta (mostrador). Propuesta visual moderna y coherente que fortalece la identidad de la marca en todos sus canales.',
-    gallery: [
-      '/mockups/renovacion-logo-curco-01.jpg',
-      '/mockups/renovacion-logo-curco-02.jpg',
-      '/mockups/renovacion-logo-curco-04.jpg',
-    ],
-  },
-  {
-    num: '19', name: 'AA Shopping', cat: 'E-commerce',
+    num: '13', name: 'AA Shopping', cat: 'E-commerce',
     type: 'Multitienda · Shopify + Pasarelas de pago',
-    tags: ['Shopify', 'Integraciones', 'Flow', 'Pago Fácil', 'Mercado Pago'],
+    tags: ['Shopify', 'Flow', 'Pago Fácil'],
     bg: '#1a1200', url: 'https://aashopping.cl',
-    detail: 'Tienda multirubro en Shopify. Mi participación: integración de pasarelas de pago Flow y Pago Fácil al sitio existente.',
+    detail: 'Tienda multirubro en Shopify con integración de Mercado Pago, Flow y Pago Fácil.',
   },
 ]
 
 export default function Projects() {
   const [active, setActive] = useState('Todos')
   const [modal, setModal] = useState(null)
-  const [mobileFullscreen, setMobileFullscreen] = useState(false)
-  const [desktopFullscreen, setDesktopFullscreen] = useState(false)
-  const [galleryFullscreen, setGalleryFullscreen] = useState(null)
 
-  const filtered = active === 'Todos' ? projects : projects.filter(p =>
-    Array.isArray(p.cat) ? p.cat.includes(active) : p.cat === active
-  )
+  const filtered = active === 'Todos' ? projects : projects.filter(p => p.cat === active)
 
   return (
     <section className={styles.projects} id="projects">
@@ -212,11 +146,10 @@ export default function Projects() {
                 <div className={styles.bgLabel}>{p.name.toUpperCase()}</div>
                 <div className={styles.hoverLayer} />
                 {p.highlight && <span className={styles.featBadge}>Destacado ◆</span>}
-                {p.wip && <span className={styles.wipBadge}>Próximamente</span>}
                 <div className={styles.info}>
                   <span className={styles.num}>{p.num}</span>
                   <div className={styles.name}>{p.name}</div>
-                <div className={styles.type}>{p.type}</div>
+                  <div className={styles.type}>{p.type}</div>
                   <div className={styles.tags}>
                     {p.tags.map(t => <span key={t} className={styles.tag}>{t}</span>)}
                   </div>
@@ -235,72 +168,22 @@ export default function Projects() {
             <motion.div className={styles.modalWrap} initial={{opacity:0,y:40}} animate={{opacity:1,y:0}} exit={{opacity:0,y:20}} transition={{ease:[0.22,1,0.36,1],duration:0.4}}>
             <div className={styles.modal}>
               <button className={styles.close} onClick={() => setModal(null)}>✕</button>
-              <div className={styles.modalNum}>{modal.num} — {Array.isArray(modal.cat) ? modal.cat.join(' · ') : modal.cat}</div>
-              <h3 className={styles.modalName}>{modal.name} {modal.wip && <span className={styles.wipBadgeModal}>Próximamente</span>}</h3>
+              <div className={styles.modalNum}>{modal.num} — {modal.cat}</div>
+              <h3 className={styles.modalName}>{modal.name}</h3>
               <p className={styles.modalDetail}>{modal.detail}</p>
               <div className={styles.modalTags}>
                 {modal.tags.map(t => <span key={t} className={styles.tag}>{t}</span>)}
               </div>
               {modal.mockup && (
-                <div className={modal.mockup.mobile ? styles.mockupRow : styles.mockupRowSingle}>
+                <div className={styles.mockupRow}>
                   <div className={styles.mockupDesktop}>
-                    <span className={styles.mockupLabel}>Desktop <span className={styles.clickHint}>· click para ampliar</span></span>
-                    <img src={modal.mockup.desktop} alt={modal.name + ' desktop'} className={styles.mockupImgDesktop} onClick={() => setDesktopFullscreen(true)} style={{cursor:'pointer'}} />
+                    <span className={styles.mockupLabel}>Desktop</span>
+                    <img src={modal.mockup.desktop} alt={modal.name + ' desktop'} className={styles.mockupImgDesktop} />
                   </div>
-                  {modal.mockup.mobile && (
-                    <div className={styles.mockupMobile}>
-                      <span className={styles.mockupLabel}>Mobile <span className={styles.clickHint}>· click para ampliar</span></span>
-                      <div className={styles.iphoneFrame} onClick={() => setMobileFullscreen(true)}>
-                        <div className={styles.iphoneNotch} />
-                        <div className={styles.iphoneScreen}>
-                          <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={modal.mockup.mobileScroll ? styles.mobileScrollImg : styles.mobileStaticImg} />
-                        </div>
-                        <div className={styles.iphoneHome} />
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
-              {mobileFullscreen && modal.mockup?.mobile && (
-                <div className={styles.fullscreenOverlay} onClick={() => setMobileFullscreen(false)}>
-                  <div className={styles.fullscreenIphone}>
-                    <div className={styles.iphoneNotchLg} />
-                    <div className={styles.fullscreenScreen}>
-                      <img src={modal.mockup.mobile} alt="mobile fullscreen" className={styles.fullscreenImg} />
-                    </div>
-                    <div className={styles.iphoneHomeLg} />
+                  <div className={styles.mockupMobile}>
+                    <span className={styles.mockupLabel}>Mobile</span>
+                    <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={styles.mockupImgMobile} />
                   </div>
-                  <span className={styles.fullscreenClose}>✕ cerrar</span>
-                </div>
-              )}
-              {desktopFullscreen && modal.mockup?.desktop && (
-                <div className={styles.fullscreenOverlay} onClick={() => setDesktopFullscreen(false)}>
-                  <div className={styles.fullscreenDesktop}>
-                    <img src={modal.mockup.desktop} alt="desktop fullscreen" className={styles.fullscreenDesktopImg} />
-                  </div>
-                  <span className={styles.fullscreenClose}>✕ cerrar</span>
-                </div>
-              )}
-              {modal.gallery && modal.gallery.length > 0 && (
-                <div className={styles.gallerySection}>
-                  <span className={styles.mockupLabel}>Branding & Identidad</span>
-                  <div className={styles.galleryGrid}>
-                    {modal.gallery.map((img, i) => (
-                      <img
-                        key={i}
-                        src={img}
-                        alt={`branding ${i + 1}`}
-                        className={styles.galleryImg}
-                        onClick={() => setGalleryFullscreen(img)}
-                      />
-                    ))}
-                  </div>
-                </div>
-              )}
-              {galleryFullscreen && (
-                <div className={styles.fullscreenOverlay} onClick={() => setGalleryFullscreen(null)}>
-                  <img src={galleryFullscreen} alt="fullscreen" className={styles.galleryFullscreenImg} />
-                  <span className={styles.fullscreenClose}>✕ cerrar</span>
                 </div>
               )}
               {modal.url && (
