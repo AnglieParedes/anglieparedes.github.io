@@ -118,6 +118,7 @@ export default function Projects() {
   const [active, setActive] = useState('Todos')
   const [modal, setModal] = useState(null)
   const [mobileFullscreen, setMobileFullscreen] = useState(false)
+  const [desktopFullscreen, setDesktopFullscreen] = useState(false)
 
   const filtered = active === 'Todos' ? projects : projects.filter(p => p.cat === active)
 
@@ -193,8 +194,8 @@ export default function Projects() {
               {modal.mockup && (
                 <div className={modal.mockup.mobile ? styles.mockupRow : styles.mockupRowSingle}>
                   <div className={styles.mockupDesktop}>
-                    <span className={styles.mockupLabel}>Desktop</span>
-                    <img src={modal.mockup.desktop} alt={modal.name + ' desktop'} className={styles.mockupImgDesktop} />
+                    <span className={styles.mockupLabel}>Desktop <span className={styles.clickHint}>· click para ampliar</span></span>
+                    <img src={modal.mockup.desktop} alt={modal.name + ' desktop'} className={styles.mockupImgDesktop} onClick={() => setDesktopFullscreen(true)} style={{cursor:'pointer'}} />
                   </div>
                   {modal.mockup.mobile && (
                     <div className={styles.mockupMobile}>
@@ -208,6 +209,14 @@ export default function Projects() {
                       </div>
                     </div>
                   )}
+                </div>
+              )}
+              {desktopFullscreen && modal.mockup?.desktop && (
+                <div className={styles.fullscreenOverlay} onClick={() => setDesktopFullscreen(false)}>
+                  <div className={styles.fullscreenDesktop}>
+                    <img src={modal.mockup.desktop} alt="desktop fullscreen" className={styles.fullscreenDesktopImg} />
+                  </div>
+                  <span className={styles.fullscreenClose}>✕ cerrar</span>
                 </div>
               )}
               {mobileFullscreen && modal.mockup?.mobile && (

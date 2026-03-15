@@ -144,8 +144,7 @@
   width: 100%;
   display: block;
   border: 1px solid #222;
-  max-height: 300px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: top;
   background: #0a0a0a;
 }
@@ -417,4 +416,19 @@
   color: #666; font-family: var(--font-mono);
   font-size: 0.65rem; letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+/* DESKTOP FULLSCREEN */
+.fullscreenDesktop {
+  width: min(90vw, 1200px);
+  max-height: 85vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  border: 1px solid #333;
+  background: #0a0a0a;
+}
+.fullscreenDesktop::-webkit-scrollbar { display: none; }
+.fullscreenDesktopImg {
+  width: 100%;
+  display: block;
 }
