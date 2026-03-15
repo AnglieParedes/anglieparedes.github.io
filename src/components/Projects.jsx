@@ -74,7 +74,7 @@ const projects = [
     mockup: { desktop: '/mockups/besplus-desktop.png', mobile: '/mockups/besplus-mobile.jpeg' },
   },
   {
-    num: '09', name: 'Gatis Shop', cat: 'E-commerce', highlight: true,
+    num: '09', name: 'Gatis Shop', cat: 'E-commerce', cat2: 'Identidad & Branding', cat3: 'Contenido de RRSS', highlight: true,
     type: 'Joyería Artesanal · Proyecto propio · Branding + Web + RRSS',
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'HTML', 'CSS', 'UX/UI', 'Branding', 'Identidad corporativa', 'Google Ads', 'Meta Ads', 'Email Marketing', 'Social Media', 'Integraciones', 'Facto'],
     bg: '#1a0d0d', url: null,
@@ -252,7 +252,7 @@ export default function Projects() {
                 </div>
               )}
               {modal.gallery && (
-                <div className={styles.gallery}>
+                <div className={styles.gallery} style={{display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:'0.75rem', marginTop:'1.5rem'}}>
                   {modal.gallery.map((img, i) => (
                     <img
                       key={i}
@@ -260,7 +260,7 @@ export default function Projects() {
                       alt={modal.name + ' ' + (i + 1)}
                       className={styles.galleryImg}
                       onClick={() => setGalleryFullscreen(img)}
-                      style={{cursor:'pointer'}}
+                      style={{cursor:'pointer', width:'100%', height:'160px', objectFit:'cover', borderRadius:'6px'}}
                     />
                   ))}
                 </div>
@@ -287,7 +287,7 @@ export default function Projects() {
               )}
               {galleryFullscreen && (
                 <div className={styles.fullscreenOverlay} onClick={() => setGalleryFullscreen(null)}>
-                  <img src={galleryFullscreen} alt="fullscreen" className={styles.fullscreenDesktopImg} />
+                  <img src={galleryFullscreen} alt="fullscreen" style={{maxWidth:'70%', maxHeight:'75vh', objectFit:'contain', borderRadius:'8px'}} />
                   <span className={styles.fullscreenClose}>✕ cerrar</span>
                 </div>
               )}
