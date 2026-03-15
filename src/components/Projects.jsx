@@ -138,7 +138,15 @@ const projects = [
     gallery: ['/mockups/logo-la-nueva-vencedora.png', '/mockups/pendon-nueva-vencedora-01.png', '/mockups/pendon-nueva-vencedora-02.png'],
   },
   {
-    num: '17', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS', wip: true,
+    num: '18', name: 'Semot', cat: 'Identidad & Branding',
+    type: 'Minería · Rebranding · Identidad Corporativa',
+    tags: ['Branding', 'Rebranding', 'Identidad Corporativa', 'Logotipo', 'Paleta de colores', 'Diseño Gráfico'],
+    bg: '#1a1200',
+    detail: 'Refrescamiento de identidad corporativa y rebranding completo para Semot, empresa minera con más de 30 años de trayectoria en el sector. Un proyecto que requería equilibrar el peso y la historia de una marca consolidada con una propuesta visual moderna, sólida y profesional. Rediseño integral del logotipo con todas sus variantes de uso, definición de nueva paleta de colores corporativa y sistema de identidad aplicable a distintos formatos y soportes. Identidad corporativa y marca registrada. Todos los derechos reservados ©',
+    gallery: ['/mockups/semot-logo-03.jpg', '/mockups/semot-logo-05.jpg', '/mockups/semot-logo-07.jpg'],
+  },
+  {
+    num: '19', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS', wip: true,
     type: 'Identidad corporativa · Bebida energética · Manual de marca',
     tags: ['Branding', 'Identidad Corporativa', 'Diseño de etiqueta', 'Manual de marca', 'Packaging', 'Logotipo'],
     bg: '#0a1a05',
