@@ -2,7 +2,14 @@ import { motion } from 'framer-motion'
 import logoBlack from '../assets/logo-black.png'
 import styles from './Hero.module.css'
 
-const tags = ['Branding', 'UX / UI', 'WordPress', 'Social Media', 'Web Design']
+const tags = [
+  { label: 'Branding' },
+  { label: 'UX / UI', highlight: true },
+  { label: 'WordPress' },
+  { label: 'Social Media' },
+  { label: 'Web Design', highlight: true },
+  { label: 'Identidad Corporativa', accent: true },
+]
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 30 },
@@ -53,13 +60,13 @@ export default function Hero() {
 
         {tags.map((tag, i) => (
           <motion.span
-            key={tag}
-            className={`${styles.floatTag} ${styles[`ft${i}`]}`}
+            key={tag.label}
+            className={`${styles.floatTag} ${styles[`ft${i}`]} ${tag.accent ? styles.floatTagAccent : ''}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 + i * 0.1, duration: 0.5 }}
           >
-            {tag}
+            {tag.label}
           </motion.span>
         ))}
       </div>
