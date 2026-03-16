@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}
+      className={`${styles.nav} ${scrolled ? styles.scrolled : ''} ${open ? styles.menuOpen : ''}`}
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
