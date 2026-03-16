@@ -146,7 +146,15 @@ const projects = [
     gallery: ['/mockups/semot-logo-03.jpg', '/mockups/semot-logo-05.jpg', '/mockups/semot-logo-07.jpg'],
   },
   {
-    num: '19', name: 'OBainc Academy', cat: 'Identidad & Branding',
+    num: '20', name: 'Clínica Dental Vitacura', cat: 'Identidad & Branding',
+    type: 'Salud dental · Identidad Corporativa · Logotipo',
+    tags: ['Branding', 'Identidad Corporativa', 'Logotipo', 'Paleta de colores', 'Diseño Gráfico'],
+    bg: '#0a1520',
+    detail: 'Diseño de identidad corporativa, desarrollo del logotipo en todas sus versiones y adaptaciones para distintos soportes, y definición de paleta de colores corporativa.',
+    gallery: ['/mockups/logo-clinicadentalvitacura-16.png', '/mockups/logo-clinicadentalvitacura-17.png'],
+  },
+  {
+    num: '21', name: 'OBainc Academy', cat: 'Identidad & Branding',
     type: 'Formación digital · Identidad Corporativa · Logotipo',
     tags: ['Branding', 'Identidad Corporativa', 'Logotipo', 'Diseño Gráfico'],
     bg: '#0a0d1a',
@@ -154,7 +162,7 @@ const projects = [
     gallery: ['/mockups/logo-academy-obainc1.png', '/mockups/logo-academy-obainc2.png'],
   },
   {
-    num: '20', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS', wip: true,
+    num: '22', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS', wip: true,
     type: 'Identidad corporativa · Bebida energética · Manual de marca',
     tags: ['Branding', 'Identidad Corporativa', 'Diseño de etiqueta', 'Manual de marca', 'Packaging', 'Logotipo'],
     bg: '#0a1a05',
