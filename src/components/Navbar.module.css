@@ -5,13 +5,14 @@
   padding: 1.2rem 3rem;
   transition: background 0.3s, border-color 0.3s;
   border-bottom: 1px solid transparent;
+  overflow-x: hidden;
 }
 .nav.scrolled {
   background: rgba(8,8,8,0.92);
   backdrop-filter: blur(16px);
   border-bottom-color: #1a1a1a;
 }
-.logo img { height: 38px; width: auto; }
+.logo img { height: 48px; width: auto; }
 
 .links {
   display: flex; gap: 2.5rem; list-style: none;
