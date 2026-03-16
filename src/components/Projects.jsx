@@ -170,7 +170,15 @@ const projects = [
     gallery: ['/mockups/obainc-contenido.jpg', '/mockups/obainc-contenido2.jpg', '/mockups/obainc-contenido3.png'],
   },
   {
-    num: '23', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS', wip: true,
+    num: '23', name: 'Oleluz', cat: 'Contenido de RRSS',
+    type: 'Eficiencia energética · Contenido RRSS · Oct 2024 — Feb 2025',
+    tags: ['Social Media', 'Contenido RRSS', 'Diseño Gráfico', 'Instagram', 'Plantillas'],
+    bg: '#0d1a10',
+    detail: 'Creación y diseño de contenido para redes sociales durante el período Oct 2024 — Feb 2025: piezas gráficas, stories, posts y material visual alineado con la identidad de marca. Rediseño completo de las plantillas de contenido para Instagram, logrando una línea visual más moderna, coherente y reconocible. Diseño de gráficos y recursos visuales para sitio web. Estrategia visual coherente para mantener una presencia digital consistente y atractiva.',
+    gallery: ['/mockups/oleluz-contenido1.png', '/mockups/oleluz-contenido2.png', '/mockups/oleluz-contenido3.png'],
+  },
+  {
+    num: '24', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS', wip: true,
     type: 'Identidad corporativa · Bebida energética · Manual de marca',
     tags: ['Branding', 'Identidad Corporativa', 'Diseño de etiqueta', 'Manual de marca', 'Packaging', 'Logotipo'],
     bg: '#0a1a05',
