@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className={`${styles.nav} ${scrolled ? styles.scrolled : ''} ${open ? styles.menuOpen : ''}`}
+      className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -30,7 +30,7 @@ export default function Navbar() {
         <img src={logoBlack} alt="Anglie Paredes" />
       </a>
 
-      <ul className={`${styles.links} ${open ? styles.open : ''}`}>
+      <ul className={`${styles.links} ${open ? styles.open : ''}`} style={{ backgroundColor: '#080808' }}>
         {links.map((l) => (
           <li key={l.href}>
             <a href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
