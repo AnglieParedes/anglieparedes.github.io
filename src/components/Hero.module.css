@@ -127,7 +127,7 @@ h1 {
   .left { padding: 3rem 1.5rem 2rem; }
   .right { display: none; }
   .scrollHint { margin-top: 2rem; }
-  h1 { font-size: clamp(2.2rem, 10vw, 3.5rem); }
+  h1 { font-size: 3.2rem !important; line-height: 1 !important; }
 }
 
 .ft5 { top: 22%; right: 6%; transform: rotate(2deg); }
