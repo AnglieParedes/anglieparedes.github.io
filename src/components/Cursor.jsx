@@ -8,6 +8,8 @@ export default function Cursor() {
   const raf = useRef(null)
 
   useEffect(() => {
+    if (window.matchMedia('(max-width: 768px)').matches) return
+
     const onMove = (e) => {
       pos.current = { x: e.clientX, y: e.clientY }
       if (dotRef.current) {
@@ -31,6 +33,8 @@ export default function Cursor() {
       cancelAnimationFrame(raf.current)
     }
   }, [])
+
+  if (typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches) return null
 
   return (
     <>

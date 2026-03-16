@@ -110,6 +110,8 @@
 
 @media (max-width: 768px) {
   .projects { padding: 5rem 1.5rem; }
+  .headerRow { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .heading { font-size: clamp(1.8rem, 8vw, 3rem); }
   .grid { grid-template-columns: 1fr; gap: 1rem; }
   .wide { grid-column: span 1; }
   .wideCard { aspect-ratio: 4/3; }
