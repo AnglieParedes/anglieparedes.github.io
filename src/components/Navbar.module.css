@@ -58,15 +58,19 @@
   .links {
     position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
     z-index: 99;
-    background: #080808;
+    background: #080808 !important;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: transform 0.4s ease;
+    transition: transform 0.4s ease;
     flex-direction: column; gap: 0;
     padding-top: 1rem;
-    transform: translateY(-100%);
-    transition: transform 0.4s ease;
     pointer-events: none;
     visibility: hidden;
+    isolation: isolate;
   }
   .links.open {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     pointer-events: all;
     visibility: visible;
