@@ -154,7 +154,7 @@ const projects = [
     gallery: ['/mockups/logo-clinicadentalvitacura-16.png', '/mockups/logo-clinicadentalvitacura-17.png'],
   },
   {
-    num: '21', name: 'OBainc Academy', cat: 'Identidad & Branding',
+    num: '21', name: 'Obainc Academy', cat: 'Identidad & Branding',
     type: 'Formación digital · Identidad Corporativa · Logotipo',
     tags: ['Branding', 'Identidad Corporativa', 'Logotipo', 'Diseño Gráfico'],
     bg: '#0a0d1a',
@@ -162,7 +162,15 @@ const projects = [
     gallery: ['/mockups/logo-academy-obainc1.png', '/mockups/logo-academy-obainc2.png'],
   },
   {
-    num: '22', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS', wip: true,
+    num: '22', name: 'Obainc', cat: 'Contenido de RRSS', cat2: 'Identidad & Branding',
+    type: 'Contenido RRSS · Gráficos web · Oct 2024 — Feb 2025',
+    tags: ['Social Media', 'Contenido RRSS', 'Diseño Gráfico', 'Diseño web'],
+    bg: '#0d0a1a',
+    detail: 'Creación y diseño de contenido para redes sociales durante el período Oct 2024 — Feb 2025: piezas gráficas, stories, posts y material visual alineado con la identidad de marca. Diseño de gráficos y recursos visuales para sitio web. Estrategia visual coherente para mantener una presencia digital consistente y atractiva.',
+    gallery: ['/mockups/obainc-contenido.jpg', '/mockups/obainc-contenido2.jpg', '/mockups/obainc-contenido3.png'],
+  },
+  {
+    num: '23', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS', wip: true,
     type: 'Identidad corporativa · Bebida energética · Manual de marca',
     tags: ['Branding', 'Identidad Corporativa', 'Diseño de etiqueta', 'Manual de marca', 'Packaging', 'Logotipo'],
     bg: '#0a1a05',
