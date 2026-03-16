@@ -146,7 +146,15 @@ const projects = [
     gallery: ['/mockups/semot-logo-03.jpg', '/mockups/semot-logo-05.jpg', '/mockups/semot-logo-07.jpg'],
   },
   {
-    num: '19', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS', wip: true,
+    num: '19', name: 'OBainc Academy', cat: 'Identidad & Branding',
+    type: 'Formación digital · Identidad Corporativa · Logotipo',
+    tags: ['Branding', 'Identidad Corporativa', 'Logotipo', 'Diseño Gráfico'],
+    bg: '#0a0d1a',
+    detail: 'Diseño de identidad corporativa completa para OBainc Academy, plataforma de formación especializada en transformación digital, prácticas ágiles y gestión de productos. Desarrollo del logotipo con sus versiones en positivo y negativo, adaptado a la paleta de colores existente de la marca. Identidad corporativa y marca registrada. Todos los derechos reservados ©',
+    gallery: ['/mockups/logo-academy-obainc1.png', '/mockups/logo-academy-obainc2.png'],
+  },
+  {
+    num: '20', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS', wip: true,
     type: 'Identidad corporativa · Bebida energética · Manual de marca',
     tags: ['Branding', 'Identidad Corporativa', 'Diseño de etiqueta', 'Manual de marca', 'Packaging', 'Logotipo'],
     bg: '#0a1a05',
