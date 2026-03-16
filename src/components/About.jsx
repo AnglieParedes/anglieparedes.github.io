@@ -2,9 +2,9 @@ import FadeUp from './FadeUp'
 import styles from './About.module.css'
 
 const stats = [
-  { n: '5+', l: 'Años exp.' },
-  { n: '5', l: 'Proyectos' },
-  { n: '20+', l: 'Herramientas' },
+  { n: '+5', l: 'Años exp.' },
+  { n: '+24', l: 'Proyectos' },
+  { n: '+20', l: 'Herramientas' },
   { n: 'A2', l: 'Inglés' },
 ]
 
