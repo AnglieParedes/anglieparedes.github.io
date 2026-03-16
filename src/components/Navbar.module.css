@@ -47,7 +47,12 @@
 .x2 { transform: rotate(-45deg) translate(4px, -4px) !important; }
 
 @media (max-width: 768px) {
-  .nav { padding: 1rem 1.5rem; z-index: 100; }
+  .nav {
+    padding: 1rem 1.5rem;
+    z-index: 100;
+    background: rgba(8,8,8,0.95);
+    backdrop-filter: blur(16px);
+  }
   .burger { display: flex; }
   .cta { display: none; }
   .links {
