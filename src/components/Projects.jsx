@@ -178,7 +178,7 @@ const projects = [
     gallery: ['/mockups/oleluz-contenido1.png', '/mockups/oleluz-contenido2.png', '/mockups/oleluz-contenido3.png'],
   },
   {
-    num: '24', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS', wip: true,
+    num: '24', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', wip: true,
     type: 'Identidad corporativa · Bebida energética · Manual de marca',
     tags: ['Branding', 'Identidad Corporativa', 'Diseño de etiqueta', 'Manual de marca', 'Packaging', 'Logotipo'],
     bg: '#0a1a05',
