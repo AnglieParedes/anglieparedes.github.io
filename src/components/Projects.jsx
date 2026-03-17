@@ -196,6 +196,14 @@ const projects = [
     gallery: ['/mockups/oleluz-contenido1.png', '/mockups/oleluz-contenido2.png', '/mockups/oleluz-contenido3.png'],
   },
   {
+    num: '26', name: 'La Maisonnette', cat: 'Contenido de RRSS',
+    type: 'Colegio femenino · Contenido RRSS · Mar 2025 — May 2025',
+    tags: ['Social Media', 'Contenido RRSS', 'Diseño Gráfico', 'Instagram'],
+    bg: '#0d1a0d',
+    detail: 'Creación y diseño de contenido para Instagram durante el período Mar 2025 — May 2025: piezas gráficas, stories, posts y material visual alineado con la identidad de La Maisonnette, colegio femenino con más de 90 años de trayectoria, enfocado en formar protagonistas para el siglo XXI.',
+    gallery: ['/mockups/lamaisonnette-contenido1.png', '/mockups/lamaisonnette-contenido2.png', '/mockups/lamaisonnette-contenido3.png'],
+  },
+  {
     num: '25', name: 'OOH Publicidad', cat: 'Contenido de RRSS',
     type: 'Publicidad exterior · Contenido RRSS · Mar 2025 — May 2025',
     tags: ['Social Media', 'Contenido RRSS', 'Diseño Gráfico', 'Instagram', 'TikTok'],
