@@ -196,6 +196,14 @@ const projects = [
     gallery: ['/mockups/oleluz-contenido1.png', '/mockups/oleluz-contenido2.png', '/mockups/oleluz-contenido3.png'],
   },
   {
+    num: '27', name: 'Bigmon', cat: 'Contenido de RRSS',
+    type: 'Seguros online · Contenido RRSS · Mar 2025 — May 2025',
+    tags: ['Social Media', 'Contenido RRSS', 'Diseño Gráfico', 'Instagram', 'Campañas'],
+    bg: '#0d1018',
+    detail: 'Creación y diseño de contenido gráfico para redes sociales durante el período Mar 2025 — May 2025: piezas gráficas, stories, posts, campañas y material visual para Instagram, alineado con la identidad de Bigmon, plataforma chilena que permite vender seguros de auto de forma online y ganar dinero extra.',
+    gallery: ['/mockups/Bigmon-contenido1.mp4', '/mockups/Bigmon-contenido2.jpg', '/mockups/Bigmon-contenido3.jpg'],
+  },
+  {
     num: '26', name: 'La Maisonnette', cat: 'Contenido de RRSS',
     type: 'Colegio femenino · Contenido RRSS · Mar 2025 — May 2025',
     tags: ['Social Media', 'Contenido RRSS', 'Diseño Gráfico', 'Instagram'],
