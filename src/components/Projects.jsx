@@ -209,7 +209,7 @@ const projects = [
     tags: ['Social Media', 'Contenido RRSS', 'Diseño Gráfico', 'Instagram', 'TikTok'],
     bg: '#0d1a1a',
     detail: 'Creación y diseño de contenido para redes sociales durante el período Mar 2025 — May 2025: piezas gráficas, stories, posts y material visual para Instagram y TikTok, alineado con la identidad de marca de OOH Publicidad, empresa especializada en publicidad exterior con presencia en más de 15.000 soportes en todo Chile.',
-    gallery: ['/mockups/ooh-contenido1.jpg', '/mockups/ooh-contenido2.jpg', '/mockups/ooh-contenido3.mp4'],
+    gallery: ['/mockups/ooh-contenido1.jpg', '/mockups/ooh-contenido2.jpeg', '/mockups/ooh-contenido3.mp4'],
   },
   {
     num: '24', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', wip: true,
