@@ -118,7 +118,6 @@
   .wideCard { aspect-ratio: 4/3; }
   .card { aspect-ratio: 4/3; }
   .info { padding: 1.2rem 1.5rem; }
-  .featBadge { top: auto; bottom: 1.2rem; right: 1rem; font-size: 0.55rem; padding: 0.25rem 0.55rem; }
 }
 
 .mockupRow {
