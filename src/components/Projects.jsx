@@ -201,7 +201,7 @@ const projects = [
     tags: ['Social Media', 'Contenido RRSS', 'Diseño Gráfico', 'Instagram'],
     bg: '#0d1a0d',
     detail: 'Creación y diseño de contenido para Instagram durante el período Mar 2025 — May 2025: piezas gráficas, stories, posts y material visual alineado con la identidad de La Maisonnette, colegio femenino con más de 90 años de trayectoria, enfocado en formar protagonistas para el siglo XXI.',
-    gallery: ['/mockups/lamaisonnette-contenido1.png', '/mockups/lamaisonnette-contenido2.png', '/mockups/lamaisonnette-contenido3.png'],
+    gallery: ['/mockups/lamaisonnette-contenido1.png', '/mockups/lamaisonnette-contenido2.png', '/mockups/lamaisonnette-contenido3.png', '/mockups/lamaisonnette-reel1.mp4', '/mockups/lamaisonnette-reel2.mp4'],
   },
   {
     num: '25', name: 'OOH Publicidad', cat: 'Contenido de RRSS',
@@ -327,16 +327,30 @@ export default function Projects() {
               )}
               {modal.gallery && (
                 <div className={styles.gallery} style={{display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:'0.75rem', marginTop:'1.5rem'}}>
-                  {modal.gallery.map((img, i) => (
-                    <img
-                      key={i}
-                      src={img}
-                      alt={modal.name + ' ' + (i + 1)}
-                      className={styles.galleryImg}
-                      onClick={() => setGalleryFullscreen(img)}
-                      style={{cursor:'pointer', width:'100%', height:'160px', objectFit:'cover', borderRadius:'6px'}}
-                    />
-                  ))}
+                  {modal.gallery.map((item, i) =>
+                    item.endsWith('.mp4') ? (
+                      <video
+                        key={i}
+                        src={item}
+                        onClick={() => setGalleryFullscreen(item)}
+                        style={{cursor:'pointer', width:'100%', height:'160px', objectFit:'cover', borderRadius:'6px'}}
+                        muted
+                        loop
+                        playsInline
+                        onMouseEnter={e => e.target.play()}
+                        onMouseLeave={e => { e.target.pause(); e.target.currentTime = 0 }}
+                      />
+                    ) : (
+                      <img
+                        key={i}
+                        src={item}
+                        alt={modal.name + ' ' + (i + 1)}
+                        className={styles.galleryImg}
+                        onClick={() => setGalleryFullscreen(item)}
+                        style={{cursor:'pointer', width:'100%', height:'160px', objectFit:'cover', borderRadius:'6px'}}
+                      />
+                    )
+                  )}
                 </div>
               )}
               {mobileFullscreen && modal.mockup?.mobile && (
@@ -361,7 +375,11 @@ export default function Projects() {
               )}
               {galleryFullscreen && (
                 <div className={styles.fullscreenOverlay} onClick={() => setGalleryFullscreen(null)}>
-                  <img src={galleryFullscreen} alt="fullscreen" style={{maxWidth:'70%', maxHeight:'75vh', objectFit:'contain', borderRadius:'8px'}} />
+                  {galleryFullscreen.endsWith('.mp4') ? (
+                    <video src={galleryFullscreen} style={{maxWidth:'70%', maxHeight:'75vh', borderRadius:'8px'}} controls autoPlay loop playsInline onClick={e => e.stopPropagation()} />
+                  ) : (
+                    <img src={galleryFullscreen} alt="fullscreen" style={{maxWidth:'70%', maxHeight:'75vh', objectFit:'contain', borderRadius:'8px'}} />
+                  )}
                   <span className={styles.fullscreenClose}>✕ cerrar</span>
                 </div>
               )}
