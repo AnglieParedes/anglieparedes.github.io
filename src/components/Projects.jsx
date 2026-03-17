@@ -185,7 +185,7 @@ const projects = [
     tags: ['Social Media', 'Contenido RRSS', 'Diseño Gráfico', 'Diseño web'],
     bg: '#0d0a1a',
     detail: 'Creación y diseño de contenido para redes sociales durante el período Oct 2024 — Feb 2025: piezas gráficas, stories, posts y material visual alineado con la identidad de marca. Diseño de gráficos y recursos visuales para sitio web. Estrategia visual coherente para mantener una presencia digital consistente y atractiva.',
-    gallery: ['/mockups/obainc-contenido.jpg', '/mockups/obainc-contenido2.jpg', '/mockups/obainc-contenido3.png'],
+    gallery: ['/mockups/obainc-contenido.jpg', '/mockups/obainc-contenido2.jpg', '/mockups/obainc-contenido3.png', '/mockups/obainc-contenido4.png', '/mockups/obainc-insignia.png'],
   },
   {
     num: '23', name: 'Oleluz', cat: 'Contenido de RRSS',
