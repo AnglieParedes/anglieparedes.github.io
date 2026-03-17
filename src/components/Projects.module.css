@@ -87,7 +87,7 @@
   background: #111;
   border: 1px solid #222; padding: 3rem;
   width: min(600px, 90vw); max-height: 85vh; overflow-y: auto;
-}
+
 .close {
   position: absolute; top: 1.5rem; right: 1.5rem;
   background: #1a1a1a; border: 1px solid #2a2a2a;
@@ -117,6 +117,7 @@
   .wideCard { aspect-ratio: 4/3; }
   .card { aspect-ratio: 4/3; }
   .info { padding: 1.2rem 1.5rem; }
+  .featBadge { top: auto; bottom: 1.2rem; right: 1rem; font-size: 0.55rem; padding: 0.25rem 0.55rem; }
 }
 
 .mockupRow {
