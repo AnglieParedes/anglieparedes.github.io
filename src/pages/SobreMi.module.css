@@ -1,0 +1,121 @@
+.pageHero {
+  padding: 10rem 4rem 4rem;
+  background: var(--black);
+  border-bottom: 1px solid var(--border);
+}
+
+.secLabel {
+  font-size: 0.7rem;
+  color: var(--orange);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.secLabel::before {
+  content: '';
+  width: 2rem;
+  height: 1px;
+  background: var(--orange);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.accent { color: var(--orange); }
+
+/* BIO */
+.bio {
+  padding: 5rem 4rem;
+  background: var(--black);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.statsRow {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.statN {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--orange);
+}
+
+.statL {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--font-mono);
+}
+
+p {
+  color: #aaa;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.quote {
+  border-left: 2px solid var(--orange);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.skillGroup {
+  margin-bottom: 1.5rem;
+}
+
+.skillCat {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  background: var(--mid);
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.75rem;
+  font-size: 0.72rem;
+  color: var(--white);
+  font-family: var(--font-body);
+}
+
+@media (max-width: 768px) {
+  .pageHero { padding: 8rem 1.5rem 3rem; }
+  .bio { padding: 3rem 1.5rem; }
+  .grid { grid-template-columns: 1fr; gap: 2rem; }
+}

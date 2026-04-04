@@ -228,7 +228,7 @@ const projects = [
   },
 ]
 
-export default function Projects() {
+export default function Projects({ hideHeader = false }) {
   const [active, setActive] = useState('Todos')
   const [modal, setModal] = useState(null)
   const [mobileFullscreen, setMobileFullscreen] = useState(false)
@@ -246,23 +246,33 @@ export default function Projects() {
 
   return (
     <section className={styles.projects} id="projects">
-      <FadeUp>
-        <div className={styles.secLabel}>03 — Proyectos</div>
-        <div className={styles.headerRow}>
-          <h2 className={styles.heading}>Trabajo<br />seleccionado.</h2>
-          <span className={styles.count}>{filtered.length} proyectos</span>
-        </div>
-        <div className={styles.divider} />
-        <div className={styles.filters}>
-          {categories.map(cat => (
-            <button
-              key={cat}
-              className={`${styles.filter} ${active === cat ? styles.filterActive : ''}`}
-              onClick={() => setActive(cat)}
-            >{cat}</button>
-          ))}
-        </div>
-      </FadeUp>
+      {!hideHeader && (
+  <FadeUp>
+    <div className={styles.secLabel}>03 — Proyectos</div>
+    <div className={styles.headerRow}>
+      <h2 className={styles.heading}>Trabajo<br />seleccionado.</h2>
+      <span className={styles.count}>{projects.length} proyectos</span>
+    </div>
+    <div className={styles.divider} />
+  </FadeUp>
+)}
+
+<FadeUp delay={0.1}>
+  <div className={styles.filters}>
+    {categories.map(cat => (
+      <button
+        key={cat}
+        className={`${styles.filter} ${active === cat ? styles.filterActive : ''}`}
+        onClick={() => setActive(cat)}
+      >
+        {cat}
+      </button>
+    ))}
+    <span className={styles.count} style={{marginLeft: 'auto', alignSelf: 'center'}}>
+      {filtered.length} proyectos
+    </span>
+  </div>
+</FadeUp>
 
       <motion.div className={styles.grid} layout>
         <AnimatePresence mode="popLayout">

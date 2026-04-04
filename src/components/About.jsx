@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import FadeUp from './FadeUp'
 import styles from './About.module.css'
 
@@ -51,6 +52,9 @@ export default function About() {
           <blockquote className={styles.quote}>
             "Hagamos un mundo más sencillo por medio del diseño. Simple, lógico y con estilo."
           </blockquote>
+          <Link to="/experiencia" className={styles.btnMore}>
+            Ver mi trayectoria completa →
+          </Link>
         </FadeUp>
 
         <FadeUp delay={0.2}>

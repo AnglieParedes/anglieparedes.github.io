@@ -10,6 +10,15 @@ const contactItems = [
   { icon: '📍', label: 'Ubicación', value: 'Santiago, Chile', href: null },
 ]
 
+const serviceOptions = [
+  'Landing Page',
+  'E-commerce',
+  'Sitio Corporativo',
+  'Identidad & Branding',
+  'Consultoría',
+  'Otro',
+]
+
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', service: '', message: '' })
   const [sent, setSent] = useState(false)
@@ -21,12 +30,7 @@ export default function Contact() {
     e.preventDefault()
     setSending(true)
     try {
-      await emailjs.send(
-        'service_haeudti',
-        'template_mo6igye',
-        form,
-        'V1tGeCs7e_jyBeg3q'
-      )
+      await emailjs.send('service_haeudti', 'template_mo6igye', form, 'V1tGeCs7e_jyBeg3q')
       setSent(true)
       setForm({ name: '', email: '', service: '', message: '' })
       setTimeout(() => setSent(false), 4000)
@@ -41,7 +45,7 @@ export default function Contact() {
   return (
     <section className={styles.contact} id="contact">
       <FadeUp>
-        <div className={styles.secLabel}>06 — Contacto</div>
+        <div className={styles.secLabel}>05 — Contacto</div>
         <h2 className={styles.heading}>Trabajemos<br />juntos.</h2>
         <div className={styles.divider} />
       </FadeUp>
@@ -83,7 +87,12 @@ export default function Contact() {
             </div>
             <div className={styles.group}>
               <label className={styles.label}>Servicio de interés</label>
-              <input name="service" value={form.service} onChange={handleChange} className={styles.input} placeholder="Branding, RRSS, Web, UX/UI..." />
+              <select name="service" value={form.service} onChange={handleChange} className={styles.select} required>
+                <option value="" disabled>Selecciona un servicio...</option>
+                {serviceOptions.map((opt) => (
+                  <option key={opt} value={opt}>{opt}</option>
+                ))}
+              </select>
             </div>
             <div className={styles.group}>
               <label className={styles.label}>Mensaje</label>
