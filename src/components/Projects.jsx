@@ -149,11 +149,12 @@ const projects = [
     mockup: { desktop: '/mockups/viraly-desktop.webp', mobile: '/mockups/viraly-mobile.webp' },
   },
   {
-    num: '19', name: 'Acelera', cat: 'Landing', wip: true,
+    num: '19', name: 'Acelera', cat: 'Landing',
     type: 'Consultoría estratégica · WordPress · Elementor Pro + PHP',
     tags: ['WordPress', 'Hosting', 'Elementor Pro', 'PHP', 'HTML', 'CSS', 'Landing page', 'Diseño web', 'Responsive', 'UX/UI'],
-    bg: '#0a0d2a', url: null,
-    detail: 'Desarrollo completo de sitio web para empresa de consultoría y dirección estratégica. Diseño, maquetación y desarrollo íntegramente en WordPress con Elementor Pro, PHP, HTML y CSS. Enfocado en transmitir solidez, profesionalismo y facilitar el contacto con potenciales clientes. Próximamente en acelera.cl.',
+    bg: '#0a0d2a', url: 'https://aceleratunegocio.cl',
+    detail: 'Desarrollo completo de sitio web para empresa de consultoría y dirección estratégica. Diseño, maquetación y desarrollo íntegramente en WordPress con Elementor Pro, PHP, HTML y CSS. Enfocado en transmitir solidez, profesionalismo y facilitar el contacto con potenciales clientes.',
+    mockup: { desktop: '/mockups/aceleratunegocio-desktop.webp', mobile: '/mockups/aceleratunegocio-mobile.webp' },
   },
   {
     num: '18', name: 'Semot', cat: 'Identidad & Branding',
