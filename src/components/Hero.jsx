@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import logoBlack from '../assets/logo-black.png'
+import logoBlack from '../assets/logo-black.webp'
 import styles from './Hero.module.css'
 
 const tags = [
