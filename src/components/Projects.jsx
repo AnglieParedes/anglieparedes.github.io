@@ -12,7 +12,7 @@ const projects = [
     tags: ['WordPress', 'WooCommerce', 'PHP', 'JavaScript', 'Elementor Pro', 'CheckoutWC', 'Relbase', 'UX/UI'],
     bg: '#0d1200', url: 'https://techdent.cl',
     detail: 'Proyecto colaborativo en equipo. Mi participación: rediseño y desarrollo del home, integración al sistema de facturación Relbase, sistema de cotizaciones en PHP (flujo Clínica vs Mercado Público, panel de gestión de leads), y sistema de badge dinámico "Llega hoy" — lógica de despacho en tiempo real por día/hora, contador regresivo, bloqueo condicional de métodos de envío y alertas dinámicas integradas en carrito lateral, checkout y loop de productos.',
-    mockup: { desktop: '/mockups/techdent-desktop.png', mobile: '/mockups/techdent-mobile.jpeg' },
+    mockup: { desktop: '/mockups/techdent-desktop.webp', mobile: '/mockups/techdent-mobile.webp' },
   },
   {
     num: '02', name: 'Isabel Aliaga', cat: 'Landing',
@@ -20,7 +20,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'Elementor Pro', 'HTML', 'CSS', 'JavaScript'],
     bg: '#1a0d1a', url: 'https://isabelaliaga.cl',
     detail: 'Diseño y desarrollo completo de sitio web para psicóloga online. Desarrollado en WordPress con Elementor Pro, HTML, CSS, JavaScript y complementos adicionales. Enfocado en transmitir confianza, calidez y facilitar el contacto con potenciales pacientes.',
-    mockup: { desktop: '/mockups/isabel-desktop.png', mobile: '/mockups/isabel.mobile.jpeg' },
+    mockup: { desktop: '/mockups/isabel-desktop.webp', mobile: '/mockups/isabel.mobile.webp' },
   },
   {
     num: '03', name: 'Dimet', cat: 'E-commerce', wip: true,
@@ -28,7 +28,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'SMTP', 'Diseño web', 'Responsive', 'Cotizaciones'],
     bg: '#0d1218', url: null,
     detail: 'Desarrollo completo para empresa industrial de alto rendimiento. Plataforma e-commerce con catálogo de productos, sistema de cotizaciones y diseño corporativo profesional. Desarrollado íntegramente con WordPress, Elementor Pro, WooCommerce y SMTP. Próximamente en dimet.cl.',
-    mockup: { desktop: '/mockups/dimet-desktop.png', mobile: '/mockups/dimet-mobile.jpeg' },
+    mockup: { desktop: '/mockups/dimet-desktop.webp', mobile: '/mockups/dimet-mobile.webp' },
   },
   {
     num: '04', name: 'Hydrodimet', cat: 'E-commerce', wip: true,
@@ -36,7 +36,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'SMTP', 'Email Marketing', 'Cotizaciones', 'Diseño web'],
     bg: '#0d1520', url: null,
     detail: 'Desarrollo completo para empresa industrial de gran envergadura. Plataforma e-commerce con sistema de cotizaciones, integración de WooCommerce, SMTP y campañas de correo marketing. Diseño corporativo profesional desarrollado íntegramente con WordPress y Elementor Pro. Próximamente en dominio propio.',
-    mockup: { desktop: '/mockups/hydromec-desktop.png', mobile: '/mockups/hydromec-mobile.jpeg' },
+    mockup: { desktop: '/mockups/hydromec-desktop.webp', mobile: '/mockups/hydromec-mobile.webp' },
   },
   {
     num: '05', name: 'Bynines', cat: 'E-commerce', wip: true,
@@ -51,7 +51,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'SMTP', 'Pasarela de pago', 'Integraciones', 'Diseño web', 'UX/UI'],
     bg: '#101a10', url: null,
     detail: 'Desarrollo completo de tienda online para marca de suplementos y vitaminas. Diseño UX/UI, maquetación en WordPress con Elementor Pro, configuración de WooCommerce, SMTP, pasarela de pago e integraciones varias. Próximamente en west5.cl.',
-    mockup: { desktop: '/mockups/west5-desktop.png', mobile: '/mockups/west5-mobile.jpeg' },
+    mockup: { desktop: '/mockups/west5-desktop.webp', mobile: '/mockups/west5-mobile.webp' },
   },
   {
     num: '07', name: 'Opticallery', cat: 'E-commerce', cat2: 'Landing', cat3: 'Sistema / Dev',
@@ -62,7 +62,7 @@ const projects = [
     url2Label: 'Lentes Deportivos →',
     urlLabel: 'Lentes Aviador →',
     detail: 'Proyecto en equipo para óptica online. Mi participación: diseño y desarrollo de landings internas para categorías de productos (lentes aviador y lentes deportivos), enfocadas en experiencia de usuario y conversión. Además, desarrollo de un checkout condicional en PHP que adapta el flujo de pago y los campos del formulario según el tipo de producto seleccionado, optimizando la experiencia de compra, diseño y cambios varios.',
-    mockup: { desktop: '/mockups/opticallery-desktop.png', mobile: '/mockups/opticallery-mobile.jpeg' },
+    mockup: { desktop: '/mockups/opticallery-desktop.webp', mobile: '/mockups/opticallery-mobile.webp' },
   },
   {
     num: '08', name: 'BesPlus', cat: 'E-commerce',
@@ -71,7 +71,7 @@ const projects = [
     bg: '#1a1200', url: 'https://besplus.cl/membresia/',
     urlLabel: 'Ver página membresía →',
     detail: 'Proyecto en equipo para plataforma de salud y bienestar. Mi participación: diseño y desarrollo completo de la página interna de Membresía con arquitectura clara de planes y beneficios, popup de captación, cambios en el servidor, cambios generales de diseño en el sitio y maquetación de artículos del blog con foco en legibilidad y conversión.',
-    mockup: { desktop: '/mockups/besplus-desktop.png', mobile: '/mockups/besplus-mobile.jpeg' },
+    mockup: { desktop: '/mockups/besplus-desktop.webp', mobile: '/mockups/besplus-mobile.webp' },
   },
   {
     num: '09', name: 'Gatis Shop', cat: 'E-commerce', cat2: 'Identidad & Branding', cat3: 'Contenido de RRSS', highlight: true,
@@ -79,8 +79,8 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'HTML', 'CSS', 'UX/UI', 'Branding', 'Identidad corporativa', 'Google Ads', 'Meta Ads', 'Email Marketing', 'Social Media', 'Integraciones', 'Facto'],
     bg: '#1a0d0d', url: null,
     detail: 'Proyecto propio y uno de los más completos de mi trayectoria. Desarrollo web completo en WordPress con Elementor Pro, HTML y CSS personalizado. Migración de hosting, diseño UX/UI, integración de pasarelas de pago, sistema de facturación Facto y SMTP. Identidad corporativa y branding desde cero: logo, packaging y copys. Estrategia digital completa: Google Ads, Meta Ads, campañas de email marketing y creación de contenido para Instagram. Identidad corporativa y marca registrada. Todos los derechos reservados ©',
-    mockup: { desktop: '/mockups/gatisshop-desktop.png', mobile: '/mockups/gatisshop-mobile.jpg', mobileScroll: true },
-    gallery: ['/mockups/logo-gatisshop.png', '/mockups/gatisshop-tarjetas.png', '/mockups/packing-gatishop.png', '/mockups/packing-gatishop2.png', '/mockups/packing-gatishop3.png'],
+    mockup: { desktop: '/mockups/gatisshop-desktop.webp', mobile: '/mockups/gatisshop-mobile.webp', mobileScroll: true },
+    gallery: ['/mockups/logo-gatisshop.webp', '/mockups/gatisshop-tarjetas.webp', '/mockups/packing-gatishop.webp', '/mockups/packing-gatishop2.webp', '/mockups/packing-gatishop3.webp'],
   },
   {
     num: '10', name: 'Belladona', cat: 'E-commerce',
@@ -96,7 +96,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'Mercado Pago', 'Mailchimp', 'Email Marketing'],
     bg: '#111', url: 'https://shopyshop.cl',
     detail: 'Diseño y desarrollo completo de tienda online de accesorios para smartphones. Maquetación en WordPress con Elementor Pro, configuración de WooCommerce, integración de pasarelas de pago Mercado Pago y WePay, y estrategia de email marketing con Mailchimp para fidelización de clientes.',
-    mockup: { desktop: '/mockups/shop-y-shop-desktop.png', mobile: '/mockups/shopyshop-mobile1.png' },
+    mockup: { desktop: '/mockups/shop-y-shop-desktop.webp', mobile: '/mockups/shopyshop-mobile1.webp' },
   },
   {
     num: '12', name: 'Proservit', cat: 'E-commerce',
@@ -104,7 +104,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Responsive', 'CSS'],
     bg: '#0d0d1a', url: 'https://proservit.cl',
     detail: 'Desarrollo completo del sitio web para empresa de servicios de construcción, instalación y reparación. Diseño, maquetación y configuración general en WordPress con Elementor Pro y CSS personalizado.',
-    mockup: { desktop: '/mockups/proservit-desktop.png' },
+    mockup: { desktop: '/mockups/proservit-desktop.webp' },
   },
   {
     num: '13', name: 'AA Shopping', cat: 'E-commerce',
@@ -119,7 +119,7 @@ const projects = [
     tags: ['WordPress', 'Hosting Kinsta', 'WooCommerce', 'Elementor Pro', 'PHP', 'SMTP', 'Email Marketing', 'Microsoft Clarity', 'Diseño web'],
     bg: '#0d1a15', url: 'https://remedycell.cl',
     detail: 'Proyecto colaborativo en equipo para marca de suplementos y bienestar celular. Mi participación: soporte y gestión del hosting en Kinsta, diseño y desarrollo de páginas de productos con foco en conversión, landings internas varias, configuración de checkout personalizado con PHP, integración de SMTP, campañas de email marketing, implementación de Microsoft Clarity para análisis de comportamiento de usuarios, cambios generales de diseño y mejoras de rendimiento.',
-    mockup: { desktop: '/mockups/remedycell-desktop.png', mobile: '/mockups/remedycell-mobile.jpeg' },
+    mockup: { desktop: '/mockups/remedycell-desktop.webp', mobile: '/mockups/remedycell-mobile.webp' },
   },
   {
     num: '15', name: 'Motel Curco', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS',
@@ -127,7 +127,7 @@ const projects = [
     tags: ['Branding', 'Diseño Gráfico', 'Logotipo', 'Nombre publicitario', 'Social Media', 'Contenido RRSS'],
     bg: '#1a1005',
     detail: 'Un proyecto que ha ido evolucionando y creciendo con el tiempo. Rediseño completo del logotipo de marca con una propuesta visual más moderna y coherente con la identidad del negocio. Desarrollo de nombre publicitario y sistema de branding aplicado a distintos formatos. Creación y gestión de contenido para redes sociales, construyendo una presencia digital consistente y atractiva.',
-    gallery: ['/mockups/renovacion-logo-curco-01.jpg', '/mockups/renovacion-logo-curco-02.jpg', '/mockups/renovacion-logo-curco-04.jpg'],
+    gallery: ['/mockups/renovacion-logo-curco-01.webp', '/mockups/renovacion-logo-curco-02.webp', '/mockups/renovacion-logo-curco-04.webp'],
   },
   {
     num: '16', name: 'La Nueva Vencedora', cat: 'Identidad & Branding', cat2: 'Contenido de RRSS',
@@ -135,7 +135,7 @@ const projects = [
     tags: ['Branding', 'Diseño Gráfico', 'Etiquetas', 'Pendones', 'Social Media', 'Contenido RRSS', 'Identidad Visual'],
     bg: '#1a0510',
     detail: 'Refrescamiento completo de branding e identidad visual: nuevo sistema de marca más fresco, diseño de etiquetas para productos, pendones publicitarios y piezas gráficas variadas. Creación de contenido para redes sociales con una línea visual coherente y reconocible.',
-    gallery: ['/mockups/logo-la-nueva-vencedora.png', '/mockups/pendon-nueva-vencedora-01.png', '/mockups/pendon-nueva-vencedora-02.png'],
+    gallery: ['/mockups/logo-la-nueva-vencedora.webp', '/mockups/pendon-nueva-vencedora-01.webp', '/mockups/pendon-nueva-vencedora-02.webp'],
   },
   {
     num: '17', name: 'Viraly', cat: 'Landing',
@@ -146,7 +146,7 @@ const projects = [
     url2Label: 'Landing agendar llamada →',
     urlLabel: 'Landing formulario →',
     detail: 'Proyecto colaborativo en equipo. Mi participación: diseño y desarrollo de dos landings de conversión en WordPress con Elementor Pro, HTML y CSS — una con formulario de contacto y otra orientada a agendar llamada —, diseños varios en distintas secciones del sitio, configuración de hosting, integración de SMTP y cambios generales.',
-    mockup: { desktop: '/mockups/viraly-desktop.png', mobile: '/mockups/viraly-mobile.jpeg' },
+    mockup: { desktop: '/mockups/viraly-desktop.webp', mobile: '/mockups/viraly-mobile.webp' },
   },
   {
     num: '19', name: 'Acelera', cat: 'Landing', wip: true,
@@ -161,7 +161,7 @@ const projects = [
     tags: ['Branding', 'Rebranding', 'Identidad Corporativa', 'Logotipo', 'Paleta de colores', 'Diseño Gráfico'],
     bg: '#1a1200',
     detail: 'Refrescamiento de identidad corporativa y rebranding completo para Semot, empresa minera con más de 30 años de trayectoria en el sector. Un proyecto que requería equilibrar el peso y la historia de una marca consolidada con una propuesta visual moderna, sólida y profesional. Rediseño integral del logotipo con todas sus variantes de uso, definición de nueva paleta de colores corporativa y sistema de identidad aplicable a distintos formatos y soportes. Identidad corporativa y marca registrada. Todos los derechos reservados ©',
-    gallery: ['/mockups/semot-logo-03.jpg', '/mockups/semot-logo-05.jpg', '/mockups/semot-logo-07.jpg'],
+    gallery: ['/mockups/semot-logo-03.webp', '/mockups/semot-logo-05.webp', '/mockups/semot-logo-07.webp'],
   },
   {
     num: '20', name: 'Clínica Dental Vitacura', cat: 'Identidad & Branding',
@@ -169,7 +169,7 @@ const projects = [
     tags: ['Branding', 'Identidad Corporativa', 'Logotipo', 'Paleta de colores', 'Diseño Gráfico'],
     bg: '#0a1520',
     detail: 'Diseño de identidad corporativa, desarrollo del logotipo en todas sus versiones y adaptaciones para distintos soportes, y definición de paleta de colores corporativa.',
-    gallery: ['/mockups/logo-clinicadentalvitacura-16.png', '/mockups/logo-clinicadentalvitacura-17.png'],
+    gallery: ['/mockups/logo-clinicadentalvitacura-16.webp', '/mockups/logo-clinicadentalvitacura-17.webp'],
   },
   {
     num: '21', name: 'Obainc Academy', cat: 'Identidad & Branding',
@@ -177,7 +177,7 @@ const projects = [
     tags: ['Branding', 'Identidad Corporativa', 'Logotipo', 'Diseño Gráfico'],
     bg: '#0a0d1a',
     detail: 'Diseño de identidad corporativa completa para OBainc Academy, plataforma de formación especializada en transformación digital, prácticas ágiles y gestión de productos. Desarrollo del logotipo con sus versiones en positivo y negativo, adaptado a la paleta de colores existente de la marca. Identidad corporativa y marca registrada. Todos los derechos reservados ©',
-    gallery: ['/mockups/logo-academy-obainc1.png', '/mockups/logo-academy-obainc2.png'],
+    gallery: ['/mockups/logo-academy-obainc1.webp', '/mockups/logo-academy-obainc2.webp'],
   },
   {
     num: '22', name: 'Obainc', cat: 'Contenido de RRSS', cat2: 'Identidad & Branding',
@@ -185,7 +185,7 @@ const projects = [
     tags: ['Social Media', 'Contenido RRSS', 'Diseño Gráfico', 'Diseño web'],
     bg: '#0d0a1a',
     detail: 'Creación y diseño de contenido para redes sociales durante el período Oct 2024 — Feb 2025: piezas gráficas, stories, posts y material visual alineado con la identidad de marca. Diseño de gráficos y recursos visuales para sitio web. Estrategia visual coherente para mantener una presencia digital consistente y atractiva.',
-    gallery: ['/mockups/obainc-contenido.jpg', '/mockups/obainc-contenido2.jpg', '/mockups/obainc-contenido3.png', '/mockups/obainc-contenido4.png', '/mockups/obainc-insignia.png'],
+    gallery: ['/mockups/obainc-contenido.webp', '/mockups/obainc-contenido2.webp', '/mockups/obainc-contenido3.webp', '/mockups/obainc-contenido4.webp', '/mockups/obainc-insignia.webp'],
   },
   {
     num: '23', name: 'Oleluz', cat: 'Contenido de RRSS',
@@ -193,7 +193,7 @@ const projects = [
     tags: ['Social Media', 'Contenido RRSS', 'Diseño Gráfico', 'Instagram', 'Plantillas'],
     bg: '#0d1a10',
     detail: 'Creación y diseño de contenido para redes sociales durante el período Oct 2024 — Feb 2025: piezas gráficas, stories, posts y material visual alineado con la identidad de marca. Rediseño completo de las plantillas de contenido para Instagram, logrando una línea visual más moderna, coherente y reconocible. Diseño de gráficos y recursos visuales para sitio web. Estrategia visual coherente para mantener una presencia digital consistente y atractiva.',
-    gallery: ['/mockups/oleluz-contenido1.png', '/mockups/oleluz-contenido2.png', '/mockups/oleluz-contenido3.png'],
+    gallery: ['/mockups/oleluz-contenido1.webp', '/mockups/oleluz-contenido2.webp', '/mockups/oleluz-contenido3.webp'],
   },
   {
     num: '27', name: 'Bigmon', cat: 'Contenido de RRSS',
@@ -201,7 +201,7 @@ const projects = [
     tags: ['Social Media', 'Contenido RRSS', 'Diseño Gráfico', 'Instagram', 'Campañas'],
     bg: '#0d1018',
     detail: 'Creación y diseño de contenido gráfico para redes sociales durante el período Mar 2025 — May 2025: piezas gráficas, stories, posts, campañas y material visual para Instagram, alineado con la identidad de Bigmon, plataforma chilena que permite vender seguros de auto de forma online y ganar dinero extra.',
-    gallery: ['/mockups/Bigmon-contenido1.mp4', '/mockups/Bigmon-contenido2.jpg', '/mockups/Bigmon-contenido3.jpg'],
+    gallery: ['/mockups/Bigmon-contenido1.mp4', '/mockups/Bigmon-contenido2.webp', '/mockups/Bigmon-contenido3.webp'],
   },
   {
     num: '26', name: 'La Maisonnette', cat: 'Contenido de RRSS',
@@ -209,7 +209,7 @@ const projects = [
     tags: ['Social Media', 'Contenido RRSS', 'Diseño Gráfico', 'Instagram'],
     bg: '#0d1a0d',
     detail: 'Creación y diseño de contenido para Instagram durante el período Mar 2025 — May 2025: piezas gráficas, stories, posts y material visual alineado con la identidad de La Maisonnette, colegio femenino con más de 90 años de trayectoria, enfocado en formar protagonistas para el siglo XXI.',
-    gallery: ['/mockups/lamaisonnette-contenido2.jpg', '/mockups/lamaisonnette-contenido3.jpg', '/mockups/lamaisonnette-reel1.mp4', '/mockups/lamaisonnette-reel2.mp4'],
+    gallery: ['/mockups/lamaisonnette-contenido2.webp', '/mockups/lamaisonnette-contenido3.webp', '/mockups/lamaisonnette-reel1.mp4', '/mockups/lamaisonnette-reel2.mp4'],
   },
   {
     num: '25', name: 'OOH Publicidad', cat: 'Contenido de RRSS',
@@ -217,7 +217,7 @@ const projects = [
     tags: ['Social Media', 'Contenido RRSS', 'Diseño Gráfico', 'Instagram', 'TikTok'],
     bg: '#0d1a1a',
     detail: 'Creación y diseño de contenido para redes sociales durante el período Mar 2025 — May 2025: piezas gráficas, stories, posts y material visual para Instagram y TikTok, alineado con la identidad de marca de OOH Publicidad, empresa especializada en publicidad exterior con presencia en más de 15.000 soportes en todo Chile.',
-    gallery: ['/mockups/ooh-contenido1.jpg', '/mockups/ooh-contenido2.jpeg', '/mockups/ooh-contenido3.mp4'],
+    gallery: ['/mockups/ooh-contenido1.webp', '/mockups/ooh-contenido2.webp', '/mockups/ooh-contenido3.mp4'],
   },
   {
     num: '24', name: 'Evolv Energy Drink', cat: 'Identidad & Branding', wip: true,
