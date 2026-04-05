@@ -28,10 +28,16 @@
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   })(window, document, "clarity", "script", "vxht66qapf");
 </script>
-    <script type="module" crossorigin src="/assets/index-CQRwBSAw.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-kSJCfMNZ.css">
+
+<script>
+  var path = window.location.pathname;
+  sessionStorage.setItem('redirect', path);
+  window.location.replace('/');
+</script>
+
   </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
