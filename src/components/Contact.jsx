@@ -30,7 +30,10 @@ export default function Contact() {
     e.preventDefault()
     setSending(true)
     try {
-      await emailjs.send('service_haeudti', 'template_mo6igye', form, 'V1tGeCs7e_jyBeg3q')
+      await emailjs.send('service_haeudti', 'template_mo6igye', {
+        ...form,
+        origin: 'Contacto — Formulario general',
+      }, 'V1tGeCs7e_jyBeg3q')
       setSent(true)
       setForm({ name: '', email: '', service: '', message: '' })
       setTimeout(() => setSent(false), 4000)

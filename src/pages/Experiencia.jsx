@@ -25,7 +25,10 @@ export default function Experiencia() {
     e.preventDefault()
     setSending(true)
     try {
-      await emailjs.send('service_haeudti', 'template_mo6igye', form, 'V1tGeCs7e_jyBeg3q')
+      await emailjs.send('service_haeudti', 'template_mo6igye', {
+        ...form,
+        origin: 'Experiencia — Oportunidad laboral',
+      }, 'V1tGeCs7e_jyBeg3q')
       setSent(true)
       setForm({ name: '', company: '', email: '', contract: '', message: '' })
       setTimeout(() => setSent(false), 4000)
@@ -147,13 +150,13 @@ export default function Experiencia() {
             </form>
 
             <a href="https://wa.me/56967531358" target="_blank" rel="noopener noreferrer" className={styles.linkedinCard} style={{marginTop: '1rem', borderColor: '#25D366'}}>
-  <span style={{fontSize: '1.5rem'}}>💬</span>
-  <div>
-    <div className={styles.linkedinTitle}>¿Prefieres WhatsApp?</div>
-    <div className={styles.linkedinSub}>Escríbeme directamente y te respondo en minutos.</div>
-  </div>
-  <span className={styles.linkedinArrow}>→</span>
-</a>
+              <span style={{fontSize: '1.5rem'}}>💬</span>
+              <div>
+                <div className={styles.linkedinTitle}>¿Prefieres WhatsApp?</div>
+                <div className={styles.linkedinSub}>Escríbeme directamente y te respondo en minutos.</div>
+              </div>
+              <span className={styles.linkedinArrow}>→</span>
+            </a>
 
             {/* LINKEDIN CARD */}
             <a href="https://linkedin.com/in/anglieparedes" target="_blank" rel="noopener noreferrer" className={styles.linkedinCard}>
