@@ -55,7 +55,7 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className={styles.glow} />
-          <img src={logoBlack} alt="AP" className={styles.logoImg} />
+          <img src={logoBlack} alt="AP" className={styles.logoImg} width="300" height="300" />
         </motion.div>
 
         {tags.map((tag, i) => (
