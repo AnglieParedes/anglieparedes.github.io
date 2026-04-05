@@ -88,7 +88,7 @@ const projects = [
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'Google Ads', 'Email Marketing', 'SEO', 'Integraciones'],
     bg: '#0d1a0f', url: 'https://belladonahome.com',
     detail: 'Migración de hosting, rediseño completo de la tienda y desarrollo de nuevas funcionalidades. Integración de pasarelas de pago, Mailchimp, Wordfence, Yoast SEO y Google Analytics. Todo desarrollado en WordPress con Elementor Pro.',
-    mockup: { desktop: '/mockups/belladona-desktop.png', mobile: '/mockups/belladona-mobile.jpeg' },
+    mockup: { desktop: '/mockups/belladona-desktop.webp', mobile: '/mockups/belladona-mobile.webp' },
   },
   {
     num: '11', name: 'Shop y Shop', cat: 'E-commerce',
