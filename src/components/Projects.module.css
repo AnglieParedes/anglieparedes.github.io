@@ -25,7 +25,7 @@
 
 .card {
   position: relative; overflow: hidden;
-  aspect-ratio: 4/3; cursor: pointer;
+  aspect-ratio: 16/10; cursor: pointer;
   transition: transform 0.4s ease;
 }
 .wideCard { aspect-ratio: 16/6; }

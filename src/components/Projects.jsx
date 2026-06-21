@@ -11,7 +11,7 @@ const projects = [
     type: 'E-commerce dental · WordPress + WooCommerce + PHP',
     tags: ['WordPress', 'WooCommerce', 'PHP', 'JavaScript', 'Elementor Pro', 'CheckoutWC', 'Relbase', 'UX/UI'],
     bg: '#0d1200', url: 'https://techdent.cl',
-    detail: 'Proyecto colaborativo en equipo. Mi participación: rediseño y desarrollo del home, integración al sistema de facturación Relbase, sistema de cotizaciones en PHP (flujo Clínica vs Mercado Público, panel de gestión de leads), y sistema de badge dinámico "Llega hoy" — lógica de despacho en tiempo real por día/hora, contador regresivo, bloqueo condicional de métodos de envío y alertas dinámicas integradas en carrito lateral, checkout y loop de productos.',
+    detail: 'Proyecto colaborativo en equipo. Mi participación: rediseño y desarrollo del home, integración al sistema de facturación Relbase, sistema de cotizaciones en PHP (flujo Clínica vs Mercado Público, panel de gestión de leads), y sistema de badge dinámico "Llega hoy" — lógica de despacho en tiempo real por día/hora, contador regresivo, bloqueo condicional de métodos de envío y alertas dinámicas integradas en carrito lateral, checkout y loop de productos. Además, maquetación de la plantilla general para las entradas del blog y desarrollo en PHP de secciones personalizadas en el editor de WordPress para rellenar dicha plantilla.',
     mockup: { desktop: '/mockups/techdent-desktop.webp', mobile: '/mockups/techdent-mobile.webp' },
   },
   {
@@ -62,7 +62,7 @@ const projects = [
     url2: 'https://opticallery.cl/product-category/lentes-deportivos/',
     url2Label: 'Lentes Deportivos →',
     urlLabel: 'Lentes Aviador →',
-    detail: 'Proyecto en equipo para óptica online. Mi participación: diseño y desarrollo de landings internas para categorías de productos (lentes aviador y lentes deportivos), enfocadas en experiencia de usuario y conversión. Además, desarrollo de un checkout condicional en PHP que adapta el flujo de pago y los campos del formulario según el tipo de producto seleccionado, optimizando la experiencia de compra, diseño y cambios varios.',
+    detail: 'Proyecto en equipo para óptica. Mi participación: diseño y desarrollo de landings internas para categorías de productos (lentes aviador y lentes deportivos), enfocadas en experiencia de usuario y conversión. Además, desarrollo de un checkout condicional en PHP que adapta el flujo de pago y los campos del formulario según el tipo de producto seleccionado, optimizando la experiencia de compra, diseño y cambios varios. También rediseño y mejoras en el carrito, el buscador y la página de catálogo general de productos.',
     mockup: { desktop: '/mockups/opticallery-desktop.webp', mobile: '/mockups/opticallery-mobile.webp' },
   },
   {
