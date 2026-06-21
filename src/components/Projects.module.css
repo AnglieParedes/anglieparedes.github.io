@@ -425,20 +425,16 @@
 
 /* DESKTOP FULLSCREEN */
 .fullscreenDesktop {
-  max-width: 95vw;
+  width: min(90vw, 1200px);
   max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: none;
   border: 1px solid #333;
   background: #0a0a0a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
+.fullscreenDesktop::-webkit-scrollbar { display: none; }
 .fullscreenDesktopImg {
-  max-width: 95vw;
-  max-height: 90vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  width: 100%;
   display: block;
 }
 
