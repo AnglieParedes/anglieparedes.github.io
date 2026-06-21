@@ -25,10 +25,10 @@
 
 .card {
   position: relative; overflow: hidden;
-  aspect-ratio: 16/10; cursor: pointer;
+  aspect-ratio: 16/8.5; cursor: pointer;
   transition: transform 0.4s ease;
 }
-.wideCard { aspect-ratio: 16/4.5; }
+.wideCard { aspect-ratio: 16/3.8; }
 .card:hover { transform: scale(0.99); }
 .card:hover .hoverLayer { opacity: 1; }
 .card:hover .viewHint { opacity: 1; transform: translateY(0); }
