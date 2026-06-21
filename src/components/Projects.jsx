@@ -233,7 +233,7 @@ const projects = [
     type: 'Centro médico e imagenológico · WordPress + código a medida',
     tags: ['WordPress', 'Elementor Pro', 'Código a medida', 'Buscador interno', 'Integraciones', 'Diseño web', 'UX/UI', 'Responsive'],
     bg: '#150a18', url: 'https://imedica.cl',
-    detail: 'Diseño y desarrollo completo del sitio web para iMedica, centro médico e imagenológico (proyecto de la empresa, supervisado por mi jefe). Desarrollo en WordPress con Elementor Pro y código a medida: buscador interno de servicios médicos, integración con sistema externo de agendamiento de horas y con sistema externo de resultados de examen, además del diseño UX/UI completo del sitio.',
+    detail: 'Diseño y desarrollo completo del sitio web para iMedica, centro médico e imagenológico — proyecto desarrollado dentro de la empresa, con revisión y aprobación interna. Desarrollo en WordPress con Elementor Pro y código a medida: buscador interno de servicios médicos, integración con sistema externo de agendamiento de horas y con sistema externo de resultados de examen, además del diseño UX/UI completo del sitio.',
     mockup: { desktop: '/mockups/imedica-desktop.webp', mobile: '/mockups/imedica-mobile.webp' },
   },
 ]
