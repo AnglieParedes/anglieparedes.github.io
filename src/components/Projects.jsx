@@ -47,11 +47,11 @@ const projects = [
     mockup: { desktop: '/mockups/bynines-desktop.webp', mobile: '/mockups/bynines-mobile.webp' },
   },
   {
-    num: '06', name: 'West5', cat: 'E-commerce', wip: true,
+    num: '06', name: 'West5', cat: 'E-commerce',
     type: 'Suplementos y vitaminas · WordPress + WooCommerce · Morestudio',
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'SMTP', 'Pasarela de pago', 'Integraciones', 'Diseño web', 'UX/UI'],
-    bg: '#101a10', url: null,
-    detail: 'Desarrollo completo de tienda online para marca de suplementos y vitaminas. Diseño UX/UI, maquetación en WordPress con Elementor Pro, configuración de WooCommerce, SMTP, pasarela de pago e integraciones varias. Próximamente en west5.cl.',
+    bg: '#101a10', url: 'https://west5.cl',
+    detail: 'Desarrollo completo de tienda online para marca de suplementos y vitaminas. Diseño UX/UI, maquetación en WordPress con Elementor Pro, configuración de WooCommerce, SMTP, pasarela de pago e integraciones varias.',
     mockup: { desktop: '/mockups/west5-desktop.webp', mobile: '/mockups/west5-mobile.webp' },
   },
   {
