@@ -39,11 +39,12 @@ const projects = [
     mockup: { desktop: '/mockups/hydromec-desktop.webp', mobile: '/mockups/hydromec-mobile.webp' },
   },
   {
-    num: '05', name: 'Bynines', cat: 'E-commerce', wip: true,
-    type: 'Sitio web · WordPress · En desarrollo',
+    num: '05', name: 'Bynines', cat: 'E-commerce',
+    type: 'Sitio web · WordPress · Diseño + desarrollo',
     tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'Responsive', 'UX/UI'],
-    bg: '#18100d', url: null,
-    detail: 'Desarrollo completo a cargo propio: diseño, maquetación, pasarela de pago y configuración general en WordPress con Elementor Pro. El logo fue provisto por la cliente. Actualmente en desarrollo — próximamente en bynines.cl.',
+    bg: '#18100d', url: 'https://bynines.cl',
+    detail: 'Desarrollo completo a cargo propio: diseño, maquetación, pasarela de pago y configuración general en WordPress con Elementor Pro. El logo fue provisto por la cliente.',
+    mockup: { desktop: '/mockups/bynines-desktop.webp', mobile: '/mockups/bynines-mobile.webp' },
   },
   {
     num: '06', name: 'West5', cat: 'E-commerce', wip: true,
