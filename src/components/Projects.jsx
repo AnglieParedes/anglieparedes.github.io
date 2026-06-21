@@ -252,7 +252,9 @@ export default function Projects({ hideHeader = false }) {
   const [desktopFullscreen, setDesktopFullscreen] = useState(false)
   const [galleryFullscreen, setGalleryFullscreen] = useState(null)
 
-  const filtered = active === 'Todos' ? projects : projects.filter(p => p.cat === active || p.cat2 === active || p.cat3 === active)
+  const filtered = (active === 'Todos' ? projects : projects.filter(p => p.cat === active || p.cat2 === active || p.cat3 === active))
+    .slice()
+    .sort((a, b) => (a.wip ? 1 : 0) - (b.wip ? 1 : 0))
 
   const closeModal = () => {
     setModal(null)
