@@ -236,6 +236,13 @@ const projects = [
     detail: 'Diseño y desarrollo completo del sitio web para iMedica, centro médico e imagenológico — proyecto desarrollado dentro de la empresa, con revisión y aprobación interna. Desarrollo en WordPress con Elementor Pro y código a medida: buscador interno de servicios médicos, integración con sistema externo de agendamiento de horas y con sistema externo de resultados de examen, además del diseño UX/UI completo del sitio.',
     mockup: { desktop: '/mockups/imedica-desktop.webp', mobile: '/mockups/imedica-mobile.webp' },
   },
+  {
+    num: '29', name: 'Atrys', cat: 'Landing', cat2: 'Sistema / Dev', wip: true,
+    type: 'Salud digital · WordPress + código a medida',
+    tags: ['WordPress', 'Elementor Pro', 'Código a medida', 'Diseño web', 'UX/UI', 'Responsive'],
+    bg: '#0a141a', url: null,
+    detail: 'Diseño y desarrollo completo del sitio web para Atrys, empresa de salud digital de origen español con operación en Chile. Desarrollo en WordPress con Elementor Pro y código a medida, mismo nivel de desarrollo que iMedica. Próximamente en atrys.cl.',
+  },
 ]
 
 export default function Projects({ hideHeader = false }) {
