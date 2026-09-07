@@ -31,11 +31,11 @@ const projects = [
     mockup: { desktop: '/mockups/dimet-desktop.webp', mobile: '/mockups/dimet-mobile.webp' },
   },
   {
-    num: '04', name: 'Hydrodimet', cat: 'E-commerce', wip: true,
+    num: '04', name: 'Hydrodimet', cat: 'E-commerce',
     type: 'E-commerce corporativo · WordPress · WooCommerce',
     tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'SMTP', 'Email Marketing', 'Cotizaciones', 'Diseño web'],
     bg: '#0d1520', url: null,
-    detail: 'Desarrollo completo para empresa industrial de gran envergadura. Plataforma e-commerce con sistema de cotizaciones, integración de WooCommerce, SMTP y campañas de correo marketing. Diseño corporativo profesional desarrollado íntegramente con WordPress y Elementor Pro. Próximamente en dominio propio.',
+    detail: 'Desarrollo completo para empresa industrial de gran envergadura. Plataforma e-commerce con sistema de cotizaciones, integración de WooCommerce, SMTP y campañas de correo marketing. Diseño corporativo profesional desarrollado íntegramente con WordPress y Elementor Pro.',
     mockup: { desktop: '/mockups/hydromec-desktop.webp', mobile: '/mockups/hydromec-mobile.webp' },
   },
   {
