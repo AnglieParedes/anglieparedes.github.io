@@ -66,12 +66,12 @@ const projects = [
     mockup: { desktop: '/mockups/opticallery-desktop.webp', mobile: '/mockups/opticallery-mobile.webp' },
   },
   {
-    num: '08', name: 'BesPlus', cat: 'E-commerce',
-    type: 'Salud y bienestar · WordPress · Membresía + Diseño web',
-    tags: ['WordPress', 'Hosting', 'Elementor Pro', 'Diseño web', 'UX/UI', 'Membership'],
+    num: '08', name: 'BesPlus', cat: 'E-commerce', cat2: 'Sistema / Dev',
+    type: 'Salud y bienestar · WordPress · Membresía + Plugin a medida',
+    tags: ['WordPress', 'Elementor Pro', 'PHP', 'JavaScript', 'Plugin a medida', 'Membresía', 'Rediseño de blog', 'Migración de contenido', 'Cookies Ley chilena', 'UX/UI mobile'],
     bg: '#1a1200', url: 'https://besplus.cl/membresia/',
     urlLabel: 'Ver página membresía →',
-    detail: 'Proyecto en equipo para plataforma de salud y bienestar. Mi participación: diseño y desarrollo completo de la página interna de Membresía con arquitectura clara de planes y beneficios, popup de captación, cambios en el servidor, cambios generales de diseño en el sitio y maquetación de artículos del blog con foco en legibilidad y conversión.',
+    detail: 'Proyecto en equipo para una plataforma de salud y bienestar. Mi participación: diseño y desarrollo de la página de Membresía, con planes y beneficios fáciles de comparar y una ventana para captar nuevos clientes, además de mejoras de diseño en todo el sitio. También renové el blog programando un plugin propio: creé un diseño único para que todos los artículos se vean ordenados y fáciles de leer, con índice para saltar a cada sección, artículos recomendados y buena lectura en el celular. Pasé los 75 artículos existentes al nuevo diseño sin perder contenido ni posicionamiento en Google. Además implementé un aviso de cookies y una política de privacidad según la ley chilena, para que el sitio solo mida las visitas cuando el usuario lo autoriza. Todo pensado para que informarse y suscribirse sea más simple y confiable.',
     mockup: { desktop: '/mockups/besplus-desktop.webp', mobile: '/mockups/besplus-mobile.webp' },
   },
   {
