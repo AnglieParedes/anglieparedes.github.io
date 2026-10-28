@@ -9,7 +9,7 @@ const projects = [
   {
     num: '01', name: 'Techdent', cat: 'E-commerce', cat2: 'Sistema / Dev', highlight: true,
     type: 'E-commerce dental · WordPress + WooCommerce · Plugin a medida',
-    tags: ['WordPress', 'WooCommerce', 'PHP', 'JavaScript', 'Elementor Pro', 'CheckoutWC', 'Relbase', 'Plugin a medida', 'Google Consent Mode', 'UX/UI'],
+    tags: ['WordPress', 'WooCommerce', 'PHP', 'JavaScript', 'Plugin a medida', 'Integración Relbase', 'Cotizador B2B', 'Validación RUT', 'Cookies Ley chilena', 'UX/UI mobile'],
     bg: '#0d1200', url: 'https://techdent.cl',
     detail: 'Proyecto colaborativo en equipo para una tienda online de insumos dentales. Mi participación: rediseño y desarrollo del home, integración con el sistema de facturación Relbase y un sistema de cotizaciones para clínicas y Mercado Público, con panel de gestión de solicitudes y reporte semanal por correo. Creé el aviso dinámico \"Llega hoy\", que según el día y la hora informa si el pedido alcanza despacho el mismo día, con cuenta regresiva y alertas en carrito, checkout y catálogo. Además desarrollé un plugin propio que reúne las funciones a medida del sitio: nueva plantilla para las entradas del blog (con índice, categorías y productos relacionados), buscador de productos por nombre, SKU, marca o categoría, cotizador para productos sin stock, formularios protegidos contra spam con validación de RUT, aviso de cookies y política de privacidad según la ley chilena, y mejoras en la ficha de producto como barra de compra fija en el celular. Todo pensado para que comprar y cotizar sea más simple, rápido y seguro.',
     mockup: { desktop: '/mockups/techdent-desktop.webp', mobile: '/mockups/techdent-mobile.webp' },
