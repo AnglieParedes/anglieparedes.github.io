@@ -26,6 +26,10 @@ const skills = [
     cat: 'Marketing & Analytics',
     tags: ['Google Analytics','Google Ads','Mailchimp','Metricool','Jira'],
   },
+  {
+    cat: 'IA Aplicada',
+    tags: ['Claude','ChatGPT','Claude Code','Prompt engineering','Automatización de flujos','Desarrollo asistido por IA'],
+  },
 ]
 
 export default function About() {
@@ -49,6 +53,7 @@ export default function About() {
           </div>
           <p>Diseñadora gráfica especializada en Branding, UX/UI y desarrollo web, creando experiencias digitales que comunican, conectan y convierten — sin importar dónde estés.</p>
           <p>Actualmente trabajo como <strong>Desarrolladora Web en MoreStudio</strong>, creando soluciones digitales para clientes en Chile y Latinoamérica.</p>
+          <p>Integro IA (Claude, ChatGPT) en mi flujo de trabajo para desarrollar, automatizar y entregar más rápido.</p>
           <blockquote className={styles.quote}>
             "Hagamos un mundo más sencillo por medio del diseño. Simple, lógico y con estilo."
           </blockquote>
