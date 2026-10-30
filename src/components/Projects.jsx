@@ -27,18 +27,18 @@ const projects = [
   },
   {
     num: '03', name: 'Dimet', cat: 'E-commerce', wip: true,
-    type: 'E-commerce corporativo · WordPress · WooCommerce',
-    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'SMTP', 'Diseño web', 'Responsive', 'Cotizaciones'],
+    type: 'Insumos industriales · WordPress + WooCommerce · Morestudio',
+    tags: ['WordPress', 'WooCommerce', 'Elementor Pro', 'Diseño web', 'UX/UI', 'Responsive', 'Catálogo de productos', 'Cotizaciones', 'Sucursales', 'SMTP', 'Hosting'],
     bg: '#0d1218', url: null,
-    detail: 'Desarrollo completo para empresa industrial de alto rendimiento. Plataforma e-commerce con catálogo de productos, sistema de cotizaciones y diseño corporativo profesional. Desarrollado íntegramente con WordPress, Elementor Pro, WooCommerce y SMTP. Próximamente en dimet.cl.',
+    detail: 'Rediseño completo del sitio web de Dimet, distribuidora de insumos industriales con más de 30 años en Chile, realizado dentro de Morestudio. Diseñé un sitio corporativo con catálogo: un inicio con soluciones para cada necesidad industrial, como motores eléctricos, variadores de frecuencia y generadores; marcas y partners destacados; la historia y los objetivos de la empresa; y un formulario para pedir cotizaciones o asesoría. También organicé la información de las sucursales a lo largo de Chile y la descarga del catálogo de productos. Desarrollado en WordPress con Elementor Pro, WooCommerce y SMTP. Próximamente en dimet.cl.',
     mockup: { desktop: '/mockups/dimet-desktop.webp', mobile: '/mockups/dimet-mobile.webp' },
   },
   {
-    num: '04', name: 'Hydrodimet', cat: 'E-commerce',
-    type: 'E-commerce corporativo · WordPress · WooCommerce',
-    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'SMTP', 'Email Marketing', 'Cotizaciones', 'Diseño web'],
+    num: '04', name: 'Hydromec', cat: 'E-commerce', wip: true,
+    type: 'Motores y reductores higiénicos · WordPress + WooCommerce · Morestudio',
+    tags: ['WordPress', 'WooCommerce', 'Elementor Pro', 'Diseño web', 'UX/UI', 'Catálogo de productos', 'Catálogos técnicos PDF', 'Buscador de productos', 'Cotizaciones', 'SMTP', 'Email Marketing', 'Hosting'],
     bg: '#0d1520', url: null,
-    detail: 'Desarrollo completo para empresa industrial de gran envergadura. Plataforma e-commerce con sistema de cotizaciones, integración de WooCommerce, SMTP y campañas de correo marketing. Diseño corporativo profesional desarrollado íntegramente con WordPress y Elementor Pro.',
+    detail: 'Desarrollo completo del sitio web de Hydromec, empresa industrial que distribuye motores y reductores de diseño higiénico para la industria alimentaria, realizado dentro de Morestudio. Diseñé un sitio corporativo con tienda: un inicio con las categorías de productos y las ventajas de la marca, un catálogo en línea organizado por series, una página de certificaciones internacionales y una biblioteca de catálogos técnicos descargables separados por norma métrica e imperial. En WordPress con Elementor Pro y WooCommerce configuré el catálogo, el buscador de productos, el sistema de cotizaciones, el envío de correos con SMTP y las campañas de email marketing. Próximamente.',
     mockup: { desktop: '/mockups/hydromec-desktop.webp', mobile: '/mockups/hydromec-mobile.webp' },
   },
   {
@@ -52,9 +52,9 @@ const projects = [
   {
     num: '06', name: 'West5', cat: 'E-commerce',
     type: 'Suplementos y vitaminas · WordPress + WooCommerce · Morestudio',
-    tags: ['WordPress', 'Hosting', 'WooCommerce', 'Elementor Pro', 'SMTP', 'Pasarela de pago', 'Integraciones', 'Diseño web', 'UX/UI'],
+    tags: ['WordPress', 'WooCommerce', 'Elementor Pro', 'Diseño web', 'UX/UI', 'Mega menú', 'Buscador de productos', 'Checkout optimizado', 'Webpay', 'Flow', 'Formulario mayoristas', 'SMTP', 'Hosting'],
     bg: '#101a10', url: 'https://west5.cl',
-    detail: 'Desarrollo completo de tienda online para marca de suplementos y vitaminas. Diseño UX/UI, maquetación en WordPress con Elementor Pro, configuración de WooCommerce, SMTP, pasarela de pago e integraciones varias.',
+    detail: 'Desarrollo completo de la tienda online de West5 Nutrition, marca chilena de suplementos y vitaminas con respaldo médico, realizado dentro de Morestudio. Diseñé la experiencia de compra de principio a fin: un inicio con carrusel de lanzamientos, productos recomendados por médicos y una sección para comprar según necesidades, como sueño y estrés, energía o salud del corazón; fichas de producto claras con dosis y días de suministro; y un mega menú con colecciones y categorías. En WordPress con Elementor Pro y WooCommerce configuré un buscador de productos con resultados instantáneos, un checkout optimizado para comprar en pocos pasos, pagos con Webpay y Flow, y el envío de correos con SMTP. También creé la página de mayoristas con formulario para nuevos distribuidores y las páginas de envíos, reembolsos y preguntas frecuentes. Todo pensado para que elegir el suplemento correcto y comprarlo sea simple y confiable.',
     mockup: { desktop: '/mockups/west5-desktop.webp', mobile: '/mockups/west5-mobile.webp' },
   },
   {
