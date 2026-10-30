@@ -68,7 +68,7 @@ export default function Servicios() {
     e.preventDefault()
     setSending(true)
     try {
-      await emailjs.send('service_haeudti', 'template_mo6igye', {
+      await emailjs.send('service_v7gwsn9', 'template_mo6igye', {
         ...form,
         origin: 'Servicios — Formulario de proyecto',
       }, 'V1tGeCs7e_jyBeg3q')

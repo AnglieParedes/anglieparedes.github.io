@@ -30,7 +30,7 @@ export default function Contact() {
     e.preventDefault()
     setSending(true)
     try {
-      await emailjs.send('service_haeudti', 'template_mo6igye', {
+      await emailjs.send('service_v7gwsn9', 'template_mo6igye', {
         ...form,
         origin: 'Contacto — Formulario general',
       }, 'V1tGeCs7e_jyBeg3q')
