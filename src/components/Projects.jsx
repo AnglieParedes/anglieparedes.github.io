@@ -248,7 +248,7 @@ const projects = [
     mockup: { desktop: '/mockups/atrys-desktop.webp', mobile: '/mockups/atrys-mobile.webp' },
   },
   {
-    num: '30', name: 'Total Mecánica', cat: 'E-commerce', cat2: 'Sistema / Dev',
+    num: '30', name: 'Total Mecánica', cat: 'E-commerce', cat2: 'Sistema / Dev', highlight: true,
     type: 'Taller mecánico especializado · WordPress + WooCommerce · Plugin a medida',
     tags: ['WordPress', 'WooCommerce', 'Elementor Pro', 'PHP', 'JavaScript', 'Plugin a medida', 'Cotizador en línea', 'Sistema de reservas', 'Seguimiento de pedidos', 'Checkout personalizado', 'Cookies Ley chilena', 'UX/UI mobile'],
     bg: '#0a1020', url: 'https://totalmecanica.cl',
@@ -263,6 +263,47 @@ const projects = [
     detail: 'Proyecto colaborativo en equipo para Sandiman, empresa chilena de ingeniería aplicada con más de 20 años en robótica industrial, levante hidráulico, intervención de tuberías y nanoburbujas, realizado dentro de Morestudio. Mi participación: diseño y desarrollo de todo el sitio, salvo el cotizador de productos, que hizo otro compañero. Creé un plugin propio con widgets de Elementor: header con mega menú para cuatro líneas de negocio y buscador con accesos rápidos; un inicio con carrusel de soluciones y cifras de la empresa; y una plantilla de página de servicio que se repite en más de 15 servicios, con qué resolvemos, aplicaciones, tecnología, ventajas, experiencia, proceso de trabajo y contacto, más migas de pan para orientarse. También diseñé la página de quiénes somos con trayectoria, misión, equipo y sucursales, un formulario de contacto que permite elegir el servicio de interés, la política de privacidad y el aviso de cookies según la ley chilena. Todo pensado para ordenar una oferta técnica muy amplia y que cada cliente llegue rápido a su solución. Próximamente en sandiman.cl.',
   },
 ]
+
+// Vista previa liviana (public/mockups/preview); la imagen original se carga solo al ampliar
+const preview = (src) => src.replace('/mockups/', '/mockups/preview/').replace('isabel.mobile', 'isabel-mobile')
+
+const siteLabel = (p) => p.url ? new URL(p.url).hostname.replace(/^www\./, '') : p.name.toLowerCase().replace(/[^a-z0-9]/g, '') + '.cl'
+
+function BrowserMockup({ src, url, alt, onClick }) {
+  return (
+    <div className={styles.browser} onClick={onClick}>
+      <div className={styles.browserBar}>
+        <span className={styles.browserDots}><i /><i /><i /></span>
+        <span className={styles.browserUrl}>{url}</span>
+      </div>
+      <div className={styles.browserScreen}>
+        <img src={src} alt={alt} className={styles.scrollOnHover} loading="lazy" decoding="async" />
+      </div>
+    </div>
+  )
+}
+
+function PhoneMockup({ src, alt, onClick, autoScroll, large }) {
+  return (
+    <div className={`${styles.phone} ${large ? styles.phoneLarge : ''}`} onClick={large ? e => e.stopPropagation() : onClick}>
+      <div className={styles.phoneScreen}>
+        <div className={styles.phoneStatus}>
+          <span>9:41</span>
+          <span className={styles.phoneIcons}>
+            <svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+            <svg viewBox="0 0 16 12"><path d="M8 11.5 5.6 9a3.4 3.4 0 0 1 4.8 0L8 11.5Zm-4.2-4.3L2.2 5.6a8.2 8.2 0 0 1 11.6 0l-1.6 1.6a5.9 5.9 0 0 0-8.4 0ZM.6 4 0 3.4a11.3 11.3 0 0 1 16 0l-.6.6-.9.9a10 10 0 0 0-13 0L.6 4Z"/></svg>
+            <svg viewBox="0 0 27 12"><rect x="0.5" y="0.5" width="22" height="11" rx="3.2" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="19" height="8" rx="2"/><path d="M24 4v4c.8-.3 1.4-1.1 1.4-2s-.6-1.7-1.4-2Z" opacity=".4"/></svg>
+          </span>
+        </div>
+        <div className={styles.phoneIsland} />
+        <div className={large ? styles.phoneScrollArea : styles.phoneViewport}>
+          <img src={src} alt={alt} className={large ? styles.phoneImgFull : autoScroll ? styles.phoneAutoScroll : styles.scrollOnHover} loading="lazy" decoding="async" />
+        </div>
+        <div className={styles.phoneHomeBar} />
+      </div>
+    </div>
+  )
+}
 
 export default function Projects({ hideHeader = false }) {
   const [active, setActive] = useState('Todos')
@@ -365,19 +406,13 @@ export default function Projects({ hideHeader = false }) {
               {modal.mockup && (
                 <div className={modal.mockup.mobile ? styles.mockupRow : styles.mockupRowSingle}>
                   <div className={styles.mockupDesktop}>
-                    <span className={styles.mockupLabel}>Desktop <span className={styles.clickHint}>· click para ampliar</span></span>
-                    <img src={modal.mockup.desktop} alt={modal.name + ' desktop'} className={styles.mockupImgDesktop} onClick={() => setDesktopFullscreen(true)} style={{cursor:'pointer'}} />
+                    <span className={styles.mockupLabel}>Desktop <span className={styles.clickHint}>· pasa el mouse · click para ampliar</span></span>
+                    <BrowserMockup src={preview(modal.mockup.desktop)} url={siteLabel(modal)} alt={modal.name + ' desktop'} onClick={() => setDesktopFullscreen(true)} />
                   </div>
                   {modal.mockup.mobile && (
                     <div className={styles.mockupMobile}>
                       <span className={styles.mockupLabel}>Mobile <span className={styles.clickHint}>· click para ampliar</span></span>
-                      <div className={styles.iphoneFrame} onClick={() => setMobileFullscreen(true)}>
-                        <div className={styles.iphoneNotch} />
-                        <div className={styles.iphoneScreen}>
-                          <img src={modal.mockup.mobile} alt={modal.name + ' mobile'} className={modal.mockup.mobileScroll ? styles.mobileScrollImg : styles.mobileStaticImg} />
-                        </div>
-                        <div className={styles.iphoneHome} />
-                      </div>
+                      <PhoneMockup src={preview(modal.mockup.mobile)} alt={modal.name + ' mobile'} autoScroll={modal.mockup.mobileScroll} onClick={() => setMobileFullscreen(true)} />
                     </div>
                   )}
                 </div>
@@ -412,13 +447,7 @@ export default function Projects({ hideHeader = false }) {
               )}
               {mobileFullscreen && modal.mockup?.mobile && (
                 <div className={styles.fullscreenOverlay} onClick={() => setMobileFullscreen(false)}>
-                  <div className={styles.fullscreenIphone}>
-                    <div className={styles.iphoneNotchLg} />
-                    <div className={styles.fullscreenScreen}>
-                      <img src={modal.mockup.mobile} alt="mobile fullscreen" className={styles.fullscreenImg} />
-                    </div>
-                    <div className={styles.iphoneHomeLg} />
-                  </div>
+                  <PhoneMockup src={modal.mockup.mobile} alt="mobile fullscreen" large />
                   <span className={styles.fullscreenClose}>✕ cerrar</span>
                 </div>
               )}

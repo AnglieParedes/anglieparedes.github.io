@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link, useLocation } from 'react-router-dom'
-import logoBlack from '../assets/logo-black.png'
+import logoBlack from '../assets/logo-black.webp'
 import styles from './Navbar.module.css'
 
 const links = [

@@ -1,4 +1,4 @@
-import logoBlack from '../assets/logo-black.png'
+import logoBlack from '../assets/logo-black.webp'
 import styles from './Footer.module.css'
 
 export default function Footer() {

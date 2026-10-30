@@ -18,8 +18,8 @@ export default function Cursor() {
     }
 
     const animate = () => {
-      ring.current.x += (pos.current.x - ring.current.x) * 0.1
-      ring.current.y += (pos.current.y - ring.current.y) * 0.1
+      ring.current.x += (pos.current.x - ring.current.x) * 0.35
+      ring.current.y += (pos.current.y - ring.current.y) * 0.35
       if (ringRef.current) {
         ringRef.current.style.transform = `translate(${ring.current.x - 18}px, ${ring.current.y - 18}px)`
       }
@@ -43,7 +43,7 @@ export default function Cursor() {
         width: 10, height: 10,
         background: 'var(--orange)', borderRadius: '50%',
         pointerEvents: 'none', zIndex: 9999,
-        mixBlendMode: 'difference',
+        willChange: 'transform',
       }} />
       <div ref={ringRef} style={{
         position: 'fixed', top: 0, left: 0,
@@ -51,6 +51,7 @@ export default function Cursor() {
         border: '1px solid rgba(255,68,0,0.5)',
         borderRadius: '50%',
         pointerEvents: 'none', zIndex: 9998,
+        willChange: 'transform',
       }} />
     </>
   )
