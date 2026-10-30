@@ -255,6 +255,13 @@ const projects = [
     detail: 'Proyecto colaborativo en equipo para un taller independiente especializado en Jeep, Dodge, Chrysler y RAM, que vende repuestos en línea y agenda servicios. Mi participación: desarrollo del sitio y de un plugin propio con widgets de Elementor para las partes clave de la compra. Diseñé el header con carrito lateral, la ficha de producto con productos relacionados, el carrito y un checkout personalizado. Creé un cotizador en línea donde el cliente elige servicio y vehículo, ve un precio estimado y reserva su hora en tres pasos, conectado a un sistema interno de reservas. También desarrollé una página de seguimiento para consultar el estado de un pedido de repuestos o de una hora en el taller, un centro de ayuda con buscador, el botón de WhatsApp y un aviso de cookies según la ley chilena. Todo pensado para que cotizar, comprar y agendar sea rápido y claro desde cualquier dispositivo.',
     mockup: { desktop: '/mockups/totalmecanica-desktop.webp', mobile: '/mockups/totalmecanica-mobile.webp' },
   },
+  {
+    num: '31', name: 'Sandiman', cat: 'Landing', cat2: 'Sistema / Dev', wip: true,
+    type: 'Robótica e ingeniería industrial · WordPress + widgets Elementor a medida · Morestudio',
+    tags: ['WordPress', 'Elementor Pro', 'PHP', 'JavaScript', 'Plugin a medida', 'Widgets Elementor a medida', 'Mega menú', 'Buscador interno', 'Formulario de contacto', 'Cookies Ley chilena', 'Sitio corporativo', 'UX/UI', 'Responsive'],
+    bg: '#0a1218', url: null,
+    detail: 'Proyecto colaborativo en equipo para Sandiman, empresa chilena de ingeniería aplicada con más de 20 años en robótica industrial, levante hidráulico, intervención de tuberías y nanoburbujas, realizado dentro de Morestudio. Mi participación: diseño y desarrollo de todo el sitio, salvo el cotizador de productos, que hizo otro compañero. Creé un plugin propio con widgets de Elementor: header con mega menú para cuatro líneas de negocio y buscador con accesos rápidos; un inicio con carrusel de soluciones y cifras de la empresa; y una plantilla de página de servicio que se repite en más de 15 servicios, con qué resolvemos, aplicaciones, tecnología, ventajas, experiencia, proceso de trabajo y contacto, más migas de pan para orientarse. También diseñé la página de quiénes somos con trayectoria, misión, equipo y sucursales, un formulario de contacto que permite elegir el servicio de interés, la política de privacidad y el aviso de cookies según la ley chilena. Todo pensado para ordenar una oferta técnica muy amplia y que cada cliente llegue rápido a su solución. Próximamente en sandiman.cl.',
+  },
 ]
 
 export default function Projects({ hideHeader = false }) {
