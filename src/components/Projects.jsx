@@ -139,14 +139,14 @@ const projects = [
     gallery: ['/mockups/logo-la-nueva-vencedora.webp', '/mockups/pendon-nueva-vencedora-01.webp', '/mockups/pendon-nueva-vencedora-02.webp'],
   },
   {
-    num: '17', name: 'Viraly', cat: 'Landing',
-    type: 'Marketing viral · Landings de conversión · WordPress · Morestudio',
-    tags: ['Landing page', 'WordPress', 'Hosting', 'Elementor Pro', 'SMTP', 'Diseño web', 'Responsive', 'UX/UI'],
+    num: '17', name: 'Viraly', cat: 'Landing', cat2: 'Sistema / Dev',
+    type: 'Agencia de marketing · Landings + Plugin a medida · WordPress',
+    tags: ['WordPress', 'Elementor Pro', 'PHP', 'JavaScript', 'Plugin a medida', 'Widget Elementor', 'Landing page', 'Cookies Ley chilena', 'Consent Mode v2', 'Política de privacidad', 'Responsive', 'UX/UI'],
     bg: '#0d0a1a', url: 'https://viraly.cl/servicio-viraly-formulario/',
     url2: 'https://viraly.cl/servicio-viraly-agendar-llamada/',
     url2Label: 'Landing agendar llamada →',
     urlLabel: 'Landing formulario →',
-    detail: 'Proyecto colaborativo en equipo. Mi participación: diseño y desarrollo de dos landings de conversión en WordPress con Elementor Pro, HTML y CSS — una con formulario de contacto y otra orientada a agendar llamada —, diseños varios en distintas secciones del sitio, configuración de hosting, integración de SMTP y cambios generales.',
+    detail: 'Proyecto colaborativo en equipo para una agencia de marketing. Mi participación: diseño y desarrollo de dos landings de conversión en WordPress con Elementor Pro, una con formulario de contacto y otra para agendar llamada, además de diseños en distintas secciones del sitio, hosting y SMTP. También desarrollé un plugin propio de cookies con la identidad de la marca: un banner con tres opciones claras, un panel para elegir qué cookies aceptar y un botón para cambiar la elección cuando quieras. El plugin bloquea el Meta Pixel y las cookies de medición hasta que el visitante da su permiso, borra las cookies si lo retira y deja el sitio listo para Google Consent Mode v2. Además creé un widget de Elementor para la política de privacidad, redactada para una agencia B2B según la ley chilena de datos personales, con 14 secciones, índice que te acompaña mientras lees y datos de la empresa editables. Lo probé en desktop, tablet y celular. Todo pensado para que el sitio cumpla la ley sin perder su estilo.',
     mockup: { desktop: '/mockups/viraly-desktop.webp', mobile: '/mockups/viraly-mobile.webp' },
   },
   {
