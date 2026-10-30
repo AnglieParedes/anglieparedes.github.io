@@ -240,11 +240,12 @@ const projects = [
     mockup: { desktop: '/mockups/imedica-desktop.webp', mobile: '/mockups/imedica-mobile.webp' },
   },
   {
-    num: '29', name: 'Atrys', cat: 'Landing', cat2: 'Sistema / Dev', wip: true,
-    type: 'Salud digital · WordPress + código a medida',
-    tags: ['WordPress', 'Elementor Pro', 'Código a medida', 'Diseño web', 'UX/UI', 'Responsive'],
-    bg: '#0a141a', url: null,
-    detail: 'Diseño y desarrollo completo del sitio web para Atrys, empresa de salud digital de origen español con operación en Chile. Desarrollo en WordPress con Elementor Pro y código a medida. Próximamente en atrys.cl.',
+    num: '29', name: 'Atrys', cat: 'Landing', cat2: 'Sistema / Dev',
+    type: 'Salud digital B2B · WordPress + widgets Elementor a medida',
+    tags: ['WordPress', 'Elementor Pro', 'PHP', 'JavaScript', 'Widgets Elementor a medida', 'Mega menú', 'Mapa interactivo', 'Formulario B2B', 'Sitio corporativo', 'Diseño web', 'UX/UI', 'Responsive'],
+    bg: '#0a141a', url: 'https://atrys.cl',
+    detail: 'Diseño y desarrollo completo del sitio web de Atrys Chile, filial del grupo español Atrys Health, especializada en telemedicina y telediagnóstico para hospitales y clínicas. Proyecto desarrollado dentro de Morestudio. Diseñé un sitio corporativo B2B claro para un tema complejo: un inicio con los servicios organizados en pestañas, testimonios de instituciones y logos de clientes; ocho páginas de servicio, como teleradiología, telecardiología y laboratorio clínico, con cifras, modalidades y el flujo de trabajo explicado paso a paso; y páginas de tecnología, clientes, quiénes somos y contacto. En desarrollo creé un set de widgets propios para Elementor: header con mega menú, selector de país y buscador; mapa interactivo de Chile con la presencia por región; mapa mundial del grupo; carruseles de logos y pestañas personalizadas; y tarjetas de contacto con formulario para solicitar propuestas. Todo pensado para que una institución de salud entienda rápido qué ofrece Atrys y pida una propuesta.',
+    mockup: { desktop: '/mockups/atrys-desktop.webp', mobile: '/mockups/atrys-mobile.webp' },
   },
   {
     num: '30', name: 'Total Mecánica', cat: 'E-commerce', cat2: 'Sistema / Dev',
