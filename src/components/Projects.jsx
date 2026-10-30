@@ -3,7 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import FadeUp from './FadeUp'
 import styles from './Projects.module.css'
 
+// Categorías ocultas: se quita el filtro y los proyectos que solo pertenecen a ellas (no se borran)
+const hiddenCategories = ['Contenido de RRSS']
 const categories = ['Todos', 'E-commerce', 'Sistema / Dev', 'Landing', 'Identidad & Branding', 'Contenido de RRSS']
+  .filter(c => !hiddenCategories.includes(c))
 
 const projects = [
   {
@@ -252,7 +255,8 @@ export default function Projects({ hideHeader = false }) {
   const [desktopFullscreen, setDesktopFullscreen] = useState(false)
   const [galleryFullscreen, setGalleryFullscreen] = useState(null)
 
-  const filtered = (active === 'Todos' ? projects : projects.filter(p => p.cat === active || p.cat2 === active || p.cat3 === active))
+  const visible = projects.filter(p => [p.cat, p.cat2, p.cat3].some(c => c && !hiddenCategories.includes(c)))
+  const filtered = (active === 'Todos' ? visible : visible.filter(p => p.cat === active || p.cat2 === active || p.cat3 === active))
     .slice()
     .sort((a, b) => (a.wip ? 1 : 0) - (b.wip ? 1 : 0))
 
