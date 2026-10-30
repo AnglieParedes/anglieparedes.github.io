@@ -116,10 +116,10 @@ const projects = [
   },
   {
     num: '14', name: 'Remedycell', cat: 'E-commerce', cat2: 'Landing', cat3: 'Sistema / Dev',
-    type: 'Suplementos · WordPress + WooCommerce · Morestudio',
-    tags: ['WordPress', 'Hosting Kinsta', 'WooCommerce', 'Elementor Pro', 'PHP', 'SMTP', 'Email Marketing', 'Microsoft Clarity', 'Diseño web'],
+    type: 'Suplementos · WordPress + WooCommerce · Plugin a medida',
+    tags: ['WordPress', 'WooCommerce', 'Elementor Pro', 'PHP', 'JavaScript', 'Plugin a medida', 'Widget Elementor', 'Programa de fidelización', 'Cupones y promociones', 'Carrito AJAX', 'Hosting Kinsta', 'Email Marketing', 'Microsoft Clarity'],
     bg: '#0d1a15', url: 'https://remedycell.cl',
-    detail: 'Proyecto colaborativo en equipo para marca de suplementos y bienestar celular. Mi participación: soporte y gestión del hosting en Kinsta, diseño y desarrollo de páginas de productos con foco en conversión, landings internas varias, configuración de checkout personalizado con PHP, integración de SMTP, campañas de email marketing, implementación de Microsoft Clarity para análisis de comportamiento de usuarios, cambios generales de diseño y mejoras de rendimiento.',
+    detail: 'Proyecto colaborativo en equipo para una marca de suplementos y bienestar celular. Mi participación: soporte y gestión del hosting en Kinsta, páginas de producto con foco en conversión, landings internas, SMTP, campañas de email marketing y Microsoft Clarity para entender cómo navegan los usuarios. Además desarrollé un plugin propio que reúne todo el código a medida del sitio en un solo lugar, con un menú de administración ordenado por áreas. Incluye un programa de fidelización con 15% de descuento y panel de seguimiento por cliente, reglas de cupones para clientes recurrentes y promociones como el 2x1 visibles por nombre en el carrito y el checkout. Rediseñé el header como widget de Elementor, con menú lateral para celular, buscador propio con resultados instantáneos y un carrito lateral que permite aplicar cupones y cambiar cantidades sin recargar la página. También reemplacé plugins externos por soluciones propias más livianas, como el botón de WhatsApp y el aviso de cookies, y agregué una barra de compra fija en la ficha de producto. Todo pensado para que comprar sea más rápido y el sitio más fácil de administrar.',
     mockup: { desktop: '/mockups/remedycell-desktop.webp', mobile: '/mockups/remedycell-mobile.webp' },
   },
   {
