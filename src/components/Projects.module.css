@@ -25,6 +25,7 @@
 
 .card {
   position: relative; overflow: hidden;
+  container-type: inline-size;
   aspect-ratio: 16/8.5; cursor: pointer;
   transition: transform 0.4s ease;
 }
@@ -37,9 +38,11 @@
   position: absolute; top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   font-family: var(--font-display); font-weight: 800;
-  font-size: clamp(2.5rem, 5vw, 6rem);
+  /* se ajusta al ancho de la tarjeta: --len = palabra más larga o media frase (máx. 2 líneas) */
+  font-size: min(6rem, calc(88cqw / (var(--len) * 1.35)));
   color: rgba(255,255,255,0.08);
-  white-space: nowrap; user-select: none; line-height: 1; text-align: center;
+  width: 92%; text-wrap: balance;
+  user-select: none; line-height: 1; text-align: center;
 }
 .hoverLayer {
   position: absolute; inset: 0;

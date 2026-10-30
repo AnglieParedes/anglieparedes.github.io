@@ -310,7 +310,7 @@ export default function Projects({ hideHeader = false }) {
                 style={{ background: p.bg }}
                 onClick={() => setModal(p)}
               >
-                <div className={styles.bgLabel}>{p.name.toUpperCase()}</div>
+                <div className={styles.bgLabel} style={{ '--len': Math.max(...p.name.split(' ').map(w => w.length), Math.ceil(p.name.length / 2)) }}>{p.name.toUpperCase()}</div>
                 <div className={styles.hoverLayer} />
                 {p.highlight && <span className={styles.featBadge}>Destacado ◆</span>}
                 {p.wip && <span className={styles.wipBadge}>Próximamente</span>}
