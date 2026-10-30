@@ -246,6 +246,13 @@ const projects = [
     bg: '#0a141a', url: null,
     detail: 'Diseño y desarrollo completo del sitio web para Atrys, empresa de salud digital de origen español con operación en Chile. Desarrollo en WordPress con Elementor Pro y código a medida. Próximamente en atrys.cl.',
   },
+  {
+    num: '30', name: 'Total Mecánica', cat: 'E-commerce', cat2: 'Sistema / Dev',
+    type: 'Taller mecánico especializado · WordPress + WooCommerce · Plugin a medida',
+    tags: ['WordPress', 'WooCommerce', 'Elementor Pro', 'PHP', 'JavaScript', 'Plugin a medida', 'Cotizador en línea', 'Sistema de reservas', 'Seguimiento de pedidos', 'Checkout personalizado', 'Cookies Ley chilena', 'UX/UI mobile'],
+    bg: '#0a1020', url: 'https://totalmecanica.cl',
+    detail: 'Proyecto colaborativo en equipo para un taller independiente especializado en Jeep, Dodge, Chrysler y RAM, que vende repuestos en línea y agenda servicios. Mi participación: desarrollo del sitio y de un plugin propio con widgets de Elementor para las partes clave de la compra. Diseñé el header con carrito lateral, la ficha de producto con productos relacionados, el carrito y un checkout personalizado. Creé un cotizador en línea donde el cliente elige servicio y vehículo, ve un precio estimado y reserva su hora en tres pasos, conectado a un sistema interno de reservas. También desarrollé una página de seguimiento para consultar el estado de un pedido de repuestos o de una hora en el taller, un centro de ayuda con buscador, el botón de WhatsApp y un aviso de cookies según la ley chilena. Todo pensado para que cotizar, comprar y agendar sea rápido y claro desde cualquier dispositivo.',
+  },
 ]
 
 export default function Projects({ hideHeader = false }) {
