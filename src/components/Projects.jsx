@@ -234,9 +234,9 @@ const projects = [
   {
     num: '28', name: 'iMedica', cat: 'Landing', cat2: 'Sistema / Dev',
     type: 'Centro médico e imagenológico · WordPress + código a medida',
-    tags: ['WordPress', 'Elementor Pro', 'Código a medida', 'Buscador interno', 'Integraciones', 'Diseño web', 'UX/UI', 'Responsive'],
+    tags: ['WordPress', 'Elementor Pro', 'PHP', 'JavaScript', 'Código a medida', 'Buscador interno', 'Tabla de aranceles', 'Integración agenda online', 'Portal de resultados', 'Diseño web', 'UX/UI', 'Responsive'],
     bg: '#150a18', url: 'https://imedica.cl',
-    detail: 'Diseño y desarrollo completo del sitio web para iMedica, centro médico e imagenológico — proyecto desarrollado dentro de la empresa, con revisión y aprobación interna. Desarrollo en WordPress con Elementor Pro y código a medida: buscador interno de servicios médicos, integración con sistema externo de agendamiento de horas y con sistema externo de resultados de examen, además del diseño UX/UI completo del sitio.',
+    detail: 'Diseño y desarrollo completo del sitio web de iMedica, centro médico e imagenológico en Providencia, realizado dentro de Morestudio con revisión y aprobación interna. Diseñé la experiencia completa: un inicio con accesos directos para agendar hora, ver resultados, consultar valores y conocer a los profesionales; páginas para cada servicio, como ecografía, radiografía, scanner, consultas y atención a domicilio; un directorio del equipo médico y una sección de convenios con Fonasa e Isapres. En desarrollo, programé un buscador interno de exámenes, servicios y médicos, una tabla de aranceles con búsqueda por nombre o código Fonasa y filtros por tipo de examen, y la conexión con los sistemas externos de agendamiento y de resultados de exámenes. Todo pensado para que el paciente encuentre lo que necesita y agende en pocos pasos.',
     mockup: { desktop: '/mockups/imedica-desktop.webp', mobile: '/mockups/imedica-mobile.webp' },
   },
   {
