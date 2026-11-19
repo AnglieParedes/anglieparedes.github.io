@@ -89,7 +89,7 @@ const es = {
     heading: ['Educación &', 'Certificaciones.'],
     items: [
       { ico: '🎓', deg: 'Técnico en Diseño Gráfico', school: 'Universidad Virtual Internacional', year: '2020 — 2022' },
-      { ico: '🏆', deg: 'Certificación UX (3/7 en curso)', school: 'Google', year: 'En progreso' },
+      { ico: '🏆', deg: 'Certificación UX (4/8 en curso)', school: 'Google', year: 'En progreso' },
       { ico: '⚡', deg: 'Certificado en JavaScript', school: 'Coderhouse', year: '2024 — Online' },
       { ico: '📊', deg: 'Diplomado Finanzas Corporativas', school: 'Universidad Virtual Internacional', year: '2022' },
       { ico: '✏️', deg: 'Diplomado en Diseño Gráfico', school: 'Shaw Academy', year: '2020' },
