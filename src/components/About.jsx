@@ -1,43 +1,17 @@
 import { Link } from 'react-router-dom'
 import FadeUp from './FadeUp'
+import { useLang } from '../i18n/LanguageContext'
 import styles from './About.module.css'
 
-const stats = [
-  { n: '+5', l: 'Años exp.' },
-  { n: '+30', l: 'Proyectos' },
-  { n: '+20', l: 'Herramientas' },
-  { n: 'A2', l: 'Inglés' },
-]
-
-const skills = [
-  {
-    cat: 'Diseño & UX/UI',
-    tags: ['Figma','Adobe XD','Illustrator','Photoshop','InDesign','After Effects','Premiere','Canva','Lightroom'],
-  },
-  {
-    cat: 'Desarrollo Web',
-    tags: ['WordPress','Elementor Pro','Shopify','HTML','CSS','JavaScript','WooCommerce','Cursor','VS Code'],
-  },
-  {
-    cat: 'Flujo de Trabajo',
-    tags: ['GitHub','Git','Node.js'],
-  },
-  {
-    cat: 'Marketing & Analytics',
-    tags: ['Google Analytics','Google Ads','Mailchimp','Metricool','Jira'],
-  },
-  {
-    cat: 'IA Aplicada',
-    tags: ['Claude','ChatGPT','Claude Code','Prompt engineering','Automatización de flujos','Desarrollo asistido por IA'],
-  },
-]
-
 export default function About() {
+  const { t } = useLang()
+  const a = t.about
+  const { stats, skills } = a
   return (
     <section className={styles.about} id="about">
       <FadeUp>
-        <div className={styles.secLabel}>01 — Sobre mí</div>
-        <h2 className={styles.heading}>Diseño que<br />conecta.</h2>
+        <div className={styles.secLabel}>{a.label}</div>
+        <h2 className={styles.heading}>{a.heading[0]}<br />{a.heading[1]}</h2>
         <div className={styles.divider} />
       </FadeUp>
 
@@ -51,14 +25,14 @@ export default function About() {
               </div>
             ))}
           </div>
-          <p>Diseñadora gráfica especializada en Branding, UX/UI y desarrollo web, creando experiencias digitales que comunican, conectan y convierten — sin importar dónde estés.</p>
-          <p>Actualmente trabajo como <strong>Desarrolladora Web en MoreStudio</strong>, creando soluciones digitales para clientes en Chile y Latinoamérica.</p>
-          <p>Integro IA (Claude, ChatGPT) en mi flujo de trabajo para desarrollar, automatizar y entregar más rápido.</p>
+          <p>{a.p1}</p>
+          <p>{a.p2.pre}<strong>{a.p2.strong}</strong>{a.p2.post}</p>
+          <p>{a.p3}</p>
           <blockquote className={styles.quote}>
-            "Hagamos un mundo más sencillo por medio del diseño. Simple, lógico y con estilo."
+            {a.quote}
           </blockquote>
           <Link to="/experiencia" className={styles.btnMore}>
-            Ver mi trayectoria completa →
+            {a.more}
           </Link>
         </FadeUp>
 

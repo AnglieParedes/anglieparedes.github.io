@@ -1,63 +1,14 @@
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import FadeUp from '../components/FadeUp'
+import { useLang, esValues } from '../i18n/LanguageContext'
 import styles from './Servicios.module.css'
 
-const services = [
-  {
-    num: '01',
-    name: 'Landing Page',
-    desc: 'Páginas de aterrizaje diseñadas para convertir visitantes en clientes. Rápidas, atractivas y optimizadas.',
-    tags: ['WordPress', 'Vercel', 'GitHub'],
-    entregables: [],
-  },
-  {
-    num: '02',
-    name: 'E-commerce',
-    desc: 'Tiendas online completas con pasarela de pagos, gestión de productos y experiencia de compra optimizada.',
-    tags: ['WordPress', 'WooCommerce', 'Vercel', 'Shopify'],
-    entregables: [],
-  },
-  {
-    num: '03',
-    name: 'Sitio Corporativo',
-    desc: 'Presencia web profesional para empresas que quieren destacar, con diseño a medida y resultados reales.',
-    tags: ['WordPress', 'Vercel', 'GitHub'],
-    entregables: [],
-  },
-  {
-    num: '04',
-    name: 'Identidad & Branding',
-    desc: 'Desarrollo de identidad corporativa, branding, rebranding y renovación de identidad corporativa. Tu marca con carácter y coherencia visual.',
-    tags: [],
-    entregables: ['PNG', 'JPG', 'SVG', 'PDF', 'Manual de marca', 'Manual corporativo'],
-  },
-  {
-    num: '05',
-    name: 'Publicidad Digital',
-    desc: 'Creación, gestión y optimización de campañas publicitarias en Meta Ads (Facebook e Instagram) y Google Ads. Segmentación de audiencias, seguimiento de resultados y reportes mensuales para maximizar tu inversión.',
-    tags: ['Meta Ads', 'Google Ads'],
-    entregables: [],
-  },
-  {
-    num: '06',
-    name: 'Consultoría',
-    desc: 'Asesoría estratégica en diseño de marca, identidad visual, desarrollo web y registro de marca. Te acompaño desde la idea hasta la ejecución: definición de naming, paleta de color, tipografía, manual de marca, manual corporativo y posicionamiento digital.',
-    tags: [],
-    entregables: [],
-  },
-]
-
-const serviceOptions = [
-    'Landing Page',
-    'E-commerce',
-    'Sitio Corporativo',
-    'Identidad & Branding',
-    'Consultoría',
-    'Otro',
-]
-
 export default function Servicios() {
+  const { t } = useLang()
+  const sp = t.servicesPage
+  const f = t.form
+  const services = sp.list
   const [form, setForm] = useState({ name: '', email: '', service: '', message: '' })
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
@@ -77,7 +28,7 @@ export default function Servicios() {
       setTimeout(() => setSent(false), 4000)
     } catch (err) {
       console.error(err)
-      alert('Error al enviar, intenta de nuevo.')
+      alert(f.error)
     } finally {
       setSending(false)
     }
@@ -88,14 +39,13 @@ export default function Servicios() {
       {/* HERO */}
       <section className={styles.pageHero}>
         <FadeUp>
-          <div className={styles.secLabel}>02 — Servicios</div>
+          <div className={styles.secLabel}>{sp.label}</div>
           <h1 className={styles.heading}>
-            Mis<br />
-            <span className={styles.accent}>Servicios.</span>
+            {sp.heading[0]}<br />
+            <span className={styles.accent}>{sp.heading[1]}</span>
           </h1>
           <p className={styles.heroSub}>
-            Soluciones digitales completas pensadas para marcas y emprendedores
-            que quieren crecer con diseño estratégico y resultados reales.
+            {sp.heroSub}
           </p>
         </FadeUp>
       </section>
@@ -127,13 +77,13 @@ export default function Servicios() {
       <section className={styles.contactSection}>
         <div className={styles.contactInner}>
           <FadeUp>
-            <div className={styles.contactLabel}>¿Listo para empezar?</div>
+            <div className={styles.contactLabel}>{sp.contactLabel}</div>
             <h2 className={styles.contactHeading}>
-              Hablemos de<br />
-              <span className={styles.accent}>tu proyecto.</span>
+              {sp.contactHeading[0]}<br />
+              <span className={styles.accent}>{sp.contactHeading[1]}</span>
             </h2>
             <p className={styles.contactSub}>
-              Cuéntame qué necesitas y te respondo en menos de 24 horas.
+              {sp.contactSub}
             </p>
           </FadeUp>
 
@@ -141,32 +91,32 @@ export default function Servicios() {
             <form className={styles.form} onSubmit={handleSubmit}>
               <div className={styles.row2}>
                 <div className={styles.group}>
-                  <label className={styles.label}>Nombre</label>
+                  <label className={styles.label}>{f.name}</label>
                   <input
                     name="name"
                     value={form.name}
                     onChange={handleChange}
                     className={styles.input}
-                    placeholder="Tu nombre"
+                    placeholder={f.namePlaceholder}
                     required
                   />
                 </div>
                 <div className={styles.group}>
-                  <label className={styles.label}>Email</label>
+                  <label className={styles.label}>{f.email}</label>
                   <input
                     name="email"
                     type="email"
                     value={form.email}
                     onChange={handleChange}
                     className={styles.input}
-                    placeholder="tu@email.com"
+                    placeholder={f.emailPlaceholder}
                     required
                   />
                 </div>
               </div>
 
               <div className={styles.group}>
-                <label className={styles.label}>Servicio de interés</label>
+                <label className={styles.label}>{f.service}</label>
                 <select
                   name="service"
                   value={form.service}
@@ -174,21 +124,21 @@ export default function Servicios() {
                   className={styles.select}
                   required
                 >
-                  <option value="" disabled>Selecciona un servicio...</option>
-                  {serviceOptions.map((opt) => (
-                    <option key={opt} value={opt}>{opt}</option>
+                  <option value="" disabled>{f.selectService}</option>
+                  {f.serviceOptions.map((opt, i) => (
+                    <option key={esValues.serviceOptions[i]} value={esValues.serviceOptions[i]}>{opt}</option>
                   ))}
                 </select>
               </div>
 
               <div className={styles.group}>
-                <label className={styles.label}>Mensaje</label>
+                <label className={styles.label}>{f.message}</label>
                 <textarea
                   name="message"
                   value={form.message}
                   onChange={handleChange}
                   className={styles.textarea}
-                  placeholder="Cuéntame sobre tu proyecto..."
+                  placeholder={f.messagePlaceholder}
                   required
                 />
               </div>
@@ -198,7 +148,7 @@ export default function Servicios() {
                 className={`${styles.btn} ${sent ? styles.sent : ''}`}
                 disabled={sending}
               >
-                {sending ? 'Enviando...' : sent ? '✓ ¡Mensaje enviado!' : 'Enviar mensaje →'}
+                {sending ? f.sending : sent ? f.sentShort : f.submit}
               </button>
             </form>
           </FadeUp>

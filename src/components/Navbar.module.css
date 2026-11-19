@@ -75,3 +75,22 @@
   }
 }
 .links a.active { color: var(--orange); }
+
+.actions { display: flex; align-items: center; gap: 1.5rem; }
+.lang {
+  display: flex; align-items: center; gap: 0.2rem;
+  font-family: var(--font-mono, 'DM Mono', monospace);
+}
+.langBtn {
+  background: none; border: none; cursor: pointer;
+  padding: 0.3rem 0.4rem; min-height: 32px; min-width: 32px;
+  font-family: inherit; font-size: 0.72rem; letter-spacing: 0.12em;
+  color: #aaa; transition: color 0.2s;
+}
+.langBtn:hover { color: var(--white); }
+.langBtn.langActive { color: var(--orange); }
+.langBtn + .langBtn { border-left: 1px solid #333; padding-left: 0.6rem; }
+
+@media (max-width: 768px) {
+  .actions { margin-left: auto; margin-right: 1rem; }
+}

@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import FadeUp from './FadeUp'
+import { useLang } from '../i18n/LanguageContext'
+import { projectsEn, tagsEn, categoriesEn } from '../i18n/projectsEn'
 import styles from './Projects.module.css'
 
 // Categorías ocultas: se quita el filtro y los proyectos que solo pertenecen a ellas (no se borran)
 const hiddenCategories = ['Contenido de RRSS']
+// El filtro activo se guarda con el nombre en español; solo la etiqueta visible se traduce
 const categories = ['Todos', 'E-commerce', 'Sistema / Dev', 'Landing', 'Identidad & Branding', 'Contenido de RRSS']
   .filter(c => !hiddenCategories.includes(c))
 
@@ -306,6 +309,8 @@ function PhoneMockup({ src, alt, onClick, autoScroll, large }) {
 }
 
 export default function Projects({ hideHeader = false }) {
+  const { lang, t } = useLang()
+  const pt = t.projects
   const [active, setActive] = useState('Todos')
   const [modal, setModal] = useState(null)
   const [mobileFullscreen, setMobileFullscreen] = useState(false)
@@ -316,6 +321,14 @@ export default function Projects({ hideHeader = false }) {
   const filtered = (active === 'Todos' ? visible : visible.filter(p => p.cat === active || p.cat2 === active || p.cat3 === active))
     .slice()
     .sort((a, b) => (a.wip ? 1 : 0) - (b.wip ? 1 : 0))
+
+  // Versión del proyecto en el idioma activo (los datos base están en español)
+  const localize = (p) => {
+    if (lang !== 'en') return p
+    const en = projectsEn[p.num] || {}
+    return { ...p, ...en, cat: categoriesEn[p.cat] || p.cat, tags: p.tags.map(x => tagsEn[x] || x) }
+  }
+  const m = modal ? localize(modal) : null
 
   const closeModal = () => {
     setModal(null)
@@ -328,10 +341,10 @@ export default function Projects({ hideHeader = false }) {
     <section className={styles.projects} id="projects">
       {!hideHeader && (
   <FadeUp>
-    <div className={styles.secLabel}>03 — Proyectos</div>
+    <div className={styles.secLabel}>{pt.label}</div>
     <div className={styles.headerRow}>
-      <h2 className={styles.heading}>Trabajo<br />seleccionado.</h2>
-      <span className={styles.count}>{projects.length} proyectos</span>
+      <h2 className={styles.heading}>{pt.heading[0]}<br />{pt.heading[1]}</h2>
+      <span className={styles.count}>{projects.length} {pt.count}</span>
     </div>
     <div className={styles.divider} />
   </FadeUp>
@@ -345,18 +358,20 @@ export default function Projects({ hideHeader = false }) {
         className={`${styles.filter} ${active === cat ? styles.filterActive : ''}`}
         onClick={() => setActive(cat)}
       >
-        {cat}
+        {lang === 'en' ? categoriesEn[cat] || cat : cat}
       </button>
     ))}
     <span className={styles.count} style={{marginLeft: 'auto', alignSelf: 'center'}}>
-      {filtered.length} proyectos
+      {filtered.length} {pt.count}
     </span>
   </div>
 </FadeUp>
 
       <motion.div className={styles.grid} layout>
         <AnimatePresence mode="popLayout">
-          {filtered.map((p) => (
+          {filtered.map((base) => {
+            const p = localize(base)
+            return (
             <motion.div
               key={p.num}
               layout
@@ -369,12 +384,12 @@ export default function Projects({ hideHeader = false }) {
               <div
                 className={`${styles.card} ${p.highlight ? styles.wideCard : ''}`}
                 style={{ background: p.bg }}
-                onClick={() => setModal(p)}
+                onClick={() => setModal(base)}
               >
                 <div className={styles.bgLabel} style={{ '--len': Math.max(...p.name.split(' ').map(w => w.length), Math.ceil(p.name.length / 2)) }}>{p.name.toUpperCase()}</div>
                 <div className={styles.hoverLayer} />
-                {p.highlight && <span className={styles.featBadge}>Destacado ◆</span>}
-                {p.wip && <span className={styles.wipBadge}>Próximamente</span>}
+                {p.highlight && <span className={styles.featBadge}>{pt.featured}</span>}
+                {p.wip && <span className={styles.wipBadge}>{pt.soon}</span>}
                 <div className={styles.info}>
                   <span className={styles.num}>{p.num}</span>
                   <div className={styles.name}>{p.name}</div>
@@ -383,10 +398,11 @@ export default function Projects({ hideHeader = false }) {
                     {p.tags.map(t => <span key={t} className={styles.tag}>{t}</span>)}
                   </div>
                 </div>
-                <div className={styles.viewHint}>Ver detalle →</div>
+                <div className={styles.viewHint}>{pt.viewDetail}</div>
               </div>
             </motion.div>
-          ))}
+            )
+          })}
         </AnimatePresence>
       </motion.div>
 
@@ -396,22 +412,22 @@ export default function Projects({ hideHeader = false }) {
             <motion.div className={styles.overlay} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} onClick={closeModal} />
             <motion.div className={styles.modalWrap} initial={{opacity:0,y:40}} animate={{opacity:1,y:0}} exit={{opacity:0,y:20}} transition={{ease:[0.22,1,0.36,1],duration:0.4}}>
             <div className={styles.modal}>
-              <button className={styles.close} onClick={closeModal}>✕</button>
-              <div className={styles.modalNum}>{modal.num} — {modal.cat}</div>
-              <h3 className={styles.modalName}>{modal.name} {modal.wip && <span className={styles.wipBadgeModal}>Próximamente</span>}</h3>
-              <p className={styles.modalDetail}>{modal.detail}</p>
+              <button className={styles.close} onClick={closeModal} aria-label={pt.closeAria}>✕</button>
+              <div className={styles.modalNum}>{m.num} — {m.cat}</div>
+              <h3 className={styles.modalName}>{m.name} {m.wip && <span className={styles.wipBadgeModal}>{pt.soon}</span>}</h3>
+              <p className={styles.modalDetail}>{m.detail}</p>
               <div className={styles.modalTags}>
-                {modal.tags.map(t => <span key={t} className={styles.tag}>{t}</span>)}
+                {m.tags.map(t => <span key={t} className={styles.tag}>{t}</span>)}
               </div>
               {modal.mockup && (
                 <div className={modal.mockup.mobile ? styles.mockupRow : styles.mockupRowSingle}>
                   <div className={styles.mockupDesktop}>
-                    <span className={styles.mockupLabel}>Desktop <span className={styles.clickHint}>· pasa el mouse · click para ampliar</span></span>
+                    <span className={styles.mockupLabel}>Desktop <span className={styles.clickHint}>· {pt.hoverDesktop}</span></span>
                     <BrowserMockup src={preview(modal.mockup.desktop)} url={siteLabel(modal)} alt={modal.name + ' desktop'} onClick={() => setDesktopFullscreen(true)} />
                   </div>
                   {modal.mockup.mobile && (
                     <div className={styles.mockupMobile}>
-                      <span className={styles.mockupLabel}>Mobile <span className={styles.clickHint}>· click para ampliar</span></span>
+                      <span className={styles.mockupLabel}>Mobile <span className={styles.clickHint}>· {pt.hoverMobile}</span></span>
                       <PhoneMockup src={preview(modal.mockup.mobile)} alt={modal.name + ' mobile'} autoScroll={modal.mockup.mobileScroll} onClick={() => setMobileFullscreen(true)} />
                     </div>
                   )}
@@ -448,7 +464,7 @@ export default function Projects({ hideHeader = false }) {
               {mobileFullscreen && modal.mockup?.mobile && (
                 <div className={styles.fullscreenOverlay} onClick={() => setMobileFullscreen(false)}>
                   <PhoneMockup src={modal.mockup.mobile} alt="mobile fullscreen" large />
-                  <span className={styles.fullscreenClose}>✕ cerrar</span>
+                  <span className={styles.fullscreenClose}>{pt.close}</span>
                 </div>
               )}
               {desktopFullscreen && modal.mockup?.desktop && (
@@ -456,7 +472,7 @@ export default function Projects({ hideHeader = false }) {
                   <div className={styles.fullscreenDesktop}>
                     <img src={modal.mockup.desktop} alt="desktop fullscreen" className={styles.fullscreenDesktopImg} />
                   </div>
-                  <span className={styles.fullscreenClose}>✕ cerrar</span>
+                  <span className={styles.fullscreenClose}>{pt.close}</span>
                 </div>
               )}
               {galleryFullscreen && (
@@ -466,17 +482,17 @@ export default function Projects({ hideHeader = false }) {
                   ) : (
                     <img src={galleryFullscreen} alt="fullscreen" style={{maxWidth:'70%', maxHeight:'75vh', objectFit:'contain', borderRadius:'8px'}} />
                   )}
-                  <span className={styles.fullscreenClose}>✕ cerrar</span>
+                  <span className={styles.fullscreenClose}>{pt.close}</span>
                 </div>
               )}
               {modal.url && (
                 <a href={modal.url} target="_blank" rel="noreferrer" className={styles.modalLink}>
-                  {modal.urlLabel || 'Visitar sitio web →'}
+                  {m.urlLabel || pt.visit}
                 </a>
               )}
               {modal.url2 && (
                 <a href={modal.url2} target="_blank" rel="noreferrer" className={styles.modalLink} style={{marginTop:'0.75rem'}}>
-                  {modal.url2Label}
+                  {m.url2Label}
                 </a>
               )}
             </div>

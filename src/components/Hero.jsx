@@ -1,15 +1,7 @@
 import { motion } from 'framer-motion'
 import logoBlack from '../assets/logo-black.webp'
+import { useLang } from '../i18n/LanguageContext'
 import styles from './Hero.module.css'
-
-const tags = [
-  { label: 'Branding' },
-  { label: 'UX / UI', highlight: true },
-  { label: 'WordPress' },
-  { label: 'Social Media' },
-  { label: 'Web Design', highlight: true },
-  { label: 'Identidad Corporativa', accent: true },
-]
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 30 },
@@ -18,12 +10,15 @@ const fadeUp = (delay = 0) => ({
 })
 
 export default function Hero() {
+  const { t } = useLang()
+  const h = t.hero
+  const tags = h.tags
   return (
     <section className={styles.hero} id="hero">
       <div className={styles.left}>
         <motion.div className={styles.badge} {...fadeUp(0.2)}>
           <span className={styles.dot} />
-          Disponible para proyectos
+          {h.badge}
         </motion.div>
 
         <motion.h1 {...fadeUp(0.35)}>
@@ -32,18 +27,17 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p className={styles.sub} {...fadeUp(0.5)}>
-          Diseñadora Gráfica & UX/UI · Branding · Web · Social Media.
-          Creo experiencias digitales claras, estratégicas y con estilo.
+          {h.sub1}{' '}{h.sub2}
         </motion.p>
 
         <motion.div className={styles.actions} {...fadeUp(0.65)}>
-        <a href="/portafolio" className={styles.btnPrimary}>Ver proyectos</a>
-         <a href="https://wa.me/56967531358" target="_blank" rel="noopener noreferrer" className={styles.btnOutline}>Escribir al Whatsapp</a>
+        <a href="/portafolio" className={styles.btnPrimary}>{h.projects}</a>
+         <a href="https://wa.me/56967531358" target="_blank" rel="noopener noreferrer" className={styles.btnOutline}>{h.whatsapp}</a>
         </motion.div>
 
         <motion.div className={styles.scrollHint} {...fadeUp(0.85)}>
           <span className={styles.scrollLine} />
-          scroll
+          {h.scroll}
         </motion.div>
       </div>
 
@@ -55,7 +49,7 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className={styles.glow} />
-          <img src={logoBlack} alt="AP" className={styles.logoImg} width="300" height="300" />
+          <img src={logoBlack} alt={h.logoAlt} className={styles.logoImg} width="300" height="300" />
         </motion.div>
 
         {tags.map((tag, i) => (

@@ -1,11 +1,9 @@
+import { useLang } from '../i18n/LanguageContext'
 import styles from './Marquee.module.css'
 
-const items = [
-  'Diseño Gráfico','UX / UI','Branding','Web Design',
-  'E-commerce','Social Media','WordPress','Identidad Corporativa',
-]
-
 export default function Marquee() {
+  const { t } = useLang()
+  const items = t.marquee
   const doubled = [...items, ...items]
   return (
     <div className={styles.wrap}>

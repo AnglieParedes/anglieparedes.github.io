@@ -2,19 +2,15 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link, useLocation } from 'react-router-dom'
 import logoBlack from '../assets/logo-black.webp'
+import { useLang } from '../i18n/LanguageContext'
 import styles from './Navbar.module.css'
-
-const links = [
-  { label: 'Sobre mí', href: '/' },
-  { label: 'Servicios', href: '/servicios' },
-  { label: 'Experiencia', href: '/experiencia' },
-  { label: 'Portafolio', href: '/portafolio' },
-]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const location = useLocation()
+  const { lang, setLang, t } = useLang()
+  const links = t.nav.links
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -54,9 +50,26 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <a href="/#contact" className={styles.cta}>Contacto</a>
+      <div className={styles.actions}>
+      <div className={styles.lang} role="group" aria-label={t.lang.switchLabel}>
+        {['es', 'en'].map((code) => (
+          <button
+            key={code}
+            type="button"
+            className={`${styles.langBtn} ${lang === code ? styles.langActive : ''}`}
+            onClick={() => setLang(code)}
+            aria-pressed={lang === code}
+            lang={code}
+          >
+            {code.toUpperCase()}
+          </button>
+        ))}
+      </div>
 
-      <button className={styles.burger} onClick={() => setOpen(!open)} aria-label="menu">
+      <a href="/#contact" className={styles.cta}>{t.nav.cta}</a>
+      </div>
+
+      <button className={styles.burger} onClick={() => setOpen(!open)} aria-label={t.nav.menu}>
         <span className={open ? styles.x1 : ''} />
         <span className={open ? styles.x2 : ''} />
       </button>
